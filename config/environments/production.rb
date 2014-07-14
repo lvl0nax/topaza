@@ -35,6 +35,8 @@ Topaza::Application.configure do
   # Version of your assets, change this if you want to expire all your assets.
   config.assets.version = '1.0'
 
+  config.assets.precompile << /\.(?:svg|eot|woff|ttf|otf)\z/
+
   # Specifies the header that your server uses for sending files.
   # config.action_dispatch.x_sendfile_header = "X-Sendfile" # for apache
   # config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect' # for nginx
@@ -58,7 +60,7 @@ Topaza::Application.configure do
   # config.action_controller.asset_host = "http://assets.example.com"
 
   # Precompile additional assets.
-  # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
+  # application.js, application.css.scss, and all non-JS/CSS in app/assets folder are already added.
   # config.assets.precompile += %w( search.js )
 
   # Ignore bad email addresses and do not raise email delivery errors.

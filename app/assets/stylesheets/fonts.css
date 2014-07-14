@@ -1,0 +1,54 @@
+@font-face {
+  font-family: 'baufra';
+  src: url('Baufra/Baufra.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'baufra';
+  src: url('Baufra/Baufra-Bold.otf');
+  font-weight: bolder;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'baufra';
+  src: url('Baufra/Baufra-Semi-Bold.otf');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Oldsman';
+  src: url('Oldsman-No_1/Oldsman-No.1.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Oldsman';
+  src: url('Oldsman-No_1/Oldsman-No.1-Italic.otf');
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Open Sans';
+  src: url('Open_Sans/OpenSans-Regular.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Open Sans';
+  src: url('Open_Sans/OpenSans-Bold.ttf');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Open Sans';
+  src: url('Open_Sans/OpenSans-BoldItalic.ttf');
+  font-weight: bold;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Open Sans';
+  src: url('Open_Sans/OpenSans-Italic.ttf');
+  font-weight: normal;
+  font-style: italic;
+}
