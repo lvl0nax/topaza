@@ -58,3 +58,8 @@ gem 'unicorn'
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+gem 'activeadmin', github: 'gregbell/active_admin'
+gem 'devise'
+gem 'ckeditor'
+gem 'jquery-fileupload-rails'

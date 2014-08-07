@@ -1,0 +1,11 @@
+= semantic_form_for [:admin, @image, @publication], url: admin_publications_path, method: :post do |f|
+  =f.inputs 'Publication' do
+    = f.input :title, label: 'Title'
+    = f.input :body, label: 'Body', as: :ckeditor
+  = f.inputs 'Images' do
+    = f.fields_for :image  do |image|
+      = image.file_field :name, multiple: :true, name: 'publication[image][name][]'
+      /= image.check_box :_destroy
+      /= image.label :_destroy, 'Remove'
+  = f.actions
+
