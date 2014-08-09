@@ -9,4 +9,7 @@
   .main_container
     .header
       = render 'layouts/header'
-    = yield
+    .main_content
+      = yield
+    .footer
+      = render 'layouts/footer'
