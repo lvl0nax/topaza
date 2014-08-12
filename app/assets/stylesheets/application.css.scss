@@ -11,7 +11,188 @@
  *= require_self
  *= require_tree .
  */
+html,body,div,span,h1,h2,h3,h4,b,u,i,s,em,form,fieldset,label,legend,input,button,textarea,a,p,table,caption,tbody,thead,tr,th,td, ul, li, ol{margin:0;padding:0;outline:none;}
+table {border-collapse:collapse;border-spacing:0; font-size:inherit;font:100%;}
+fieldset,img {border:0;}
+caption,th,td{text-align:left; padding: 0 10px; }
+/*ul,ol{list-style: none}*/
+input,button,textarea,select,th,optgroup,option {font-family:inherit;font-size:inherit;font-style:inherit;font-weight:inherit;}
+/* global styles */
+html, body {height:100%; color: #58595b}
+a, .jslink{color: blue}
+a:hover, .jslink:hover{color: #F15A2A}
+.jslink{text-decoration: underline; cursor: pointer}
+.jslink:hover{text-decoration: none}
+body{font: 13px Helvetica,sans-serif;background: #fff}
+a{cursor: pointer}
+
+h1 {font-size: 26px;}
+h2 {font-size: 21px;}
+h3 {font-size: 19px;}
+h4 {font-size: 17px;}
+h1, h2, h3, .normal {font-weight: normal;color: #333132;margin: 0 0 0.35em;line-height: 1em;}
 
 #root_page{
   font-family: 'Oldsman';
 }
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+.main_container{
+  position: relative;
+  min-height:100%;
+}
+.main_content{
+  padding-bottom: 350px;
+}
+/*--------------HEADER-----------------*/
+.header{
+  width: 100%;
+  min-width: 600px;
+  min-height: 207px;
+  background-color: rgba(225, 225, 234, 0.5);
+  color: #8b8b9f;
+  a{
+    line-height: 50px;
+    color: #8b8b9f;
+    text-decoration: none;
+    &:hover{
+      text-decoration: underline;
+      background-color: rgba(225, 225, 234, 0);
+      color: #8b8b9f;
+    }
+  }
+}
+.header_container{
+  max-width: 1200px;
+  margin: 0 auto;
+  outline: 1px solid red;
+}
+.header_container__title{
+  width: 300px;
+  height: 88px;
+  margin: 0 auto;
+  font-family: 'Oldsman';
+  font-size: 30px;
+  text-align: center;
+  padding-top: 15px;
+  line-height: 70px;
+}
+.header_link{
+  font-family: 'baufra_light';
+  font-size: 14px;
+  line-height: 50px;
+  width: 178px;
+  height: 11px;
+  font-weight: bold;
+  margin-top: 25px;
+}
+.header_container__shop_link{
+  float: left;
+  text-align: left;
+}
+.header_container__fitting{
+  float: right;
+  text-align: right;
+}
+.header_container__menu{
+  margin-top: 10px;
+  text-align: center;
+  font-family: 'baufra_light';
+  font-size: 16px;
+  line-height: 50px;
+  font-weight: bold;
+  border: 1px solid #8b8b9f;
+  a{
+    padding: 0 3%;
+  }
+}
+/*--------------END HEADER-----------------*/
+
+/*--------------footer-----------------*/
+.footer{
+  min-width: 600px;
+  min-height: 350px;
+  color: #8b8b9f;
+  background-color: rgba(225, 225, 234, 0.5);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.footer_container__title{
+  margin-top: 30px;
+  font-family: 'baufra_light';
+  color:  #13131c;
+  font-size: 25px; /* Approximation due to font substitution */
+  font-weight: bolder;
+  line-height: 30px;
+}
+
+.footer_container__underline{
+  background-color: #a6a5ad;
+  width: 300px;
+  height: 1px;
+  margin: 20px auto;
+}
+
+.footer_container__contacts{
+  margin-bottom: 10px;
+  .footer_container__contacts__left{
+    display: inline-block;
+    text-align: right;
+    margin-right: 10px;
+  }
+  .footer_container__contacts__right{
+    display: inline-block;
+    text-align: left;
+    margin-left: 10px;
+  }
+  .footer_phone{
+    font-family: 'baufra_light';
+    color:  #13131c;
+    font-size: 25px;
+    font-weight: bold;
+    line-height: 40px;
+  }
+  .footer_address{
+    font-family: 'Open Sans';
+    color:  #5f5d5d;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 25px;
+  }
+}
+
+.footer_container__fitting_button{
+  margin: 30px 0;
+  a{
+    padding: 10px 20px;
+    text-decoration: none;
+    font-family: 'baufra_light';
+    color:  #7c7c8a;
+    font-size: 23.4px;
+    font-weight: bold;
+    border: 1px solid #7c7c8a;
+    line-height: 50px;
+    &:hover{
+      color:  #13131c;
+      border: 1px solid #13131c;
+    }
+  }
+}
+
+.footer_container__social_links{
+  font-family: 'Oldsman';
+  a{
+    padding: 2%;
+    color:  #13131c;
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 40px;
+  }
+}
+/*--------------END footer-----------------*/

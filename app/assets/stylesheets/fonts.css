@@ -5,6 +5,12 @@
   font-style: normal;
 }
 @font-face {
+  font-family: 'baufra_light';
+  src: url('Baufra/Baufra-Light.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
   font-family: 'baufra';
   src: url('Baufra/Baufra-Bold.otf');
   font-weight: bolder;
