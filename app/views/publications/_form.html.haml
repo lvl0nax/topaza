@@ -1,8 +1,11 @@
-= semantic_form_for [:admin, @image, @publication], url: admin_publications_path, method: :post do |f|
+= semantic_form_for [:admin,@publication], url: admin_publications_path, method: :post do |f|
+  = f.semantic_errors *f.object.errors.keys
   =f.inputs 'Title' do
     = f.input :title, label: false
   =f.inputs 'Body' do
-    = f.input :body, as: :ckeditor, :input_html => { :cols => 10 }, label: false
+    = f.input :body, as: :ckeditor, label: false
+  =f.inputs 'Short body' do
+    = f.input :short_body, label: false
   = f.inputs 'Images' do
     = f.fields_for :image  do |image|
       = image.file_field :name, multiple: :true, name: 'publication[image][name][]'
