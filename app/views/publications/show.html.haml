@@ -1,12 +1,17 @@
-%p#notice= notice
+.container
+  .p_container
+    .p_left
+      - @publication.images.each do |image|
+        = image_tag image.name.url(:p_show)
+    .p_right
+      %p
+        %b Title:
+        = @publication.title
+      %p
+        %b Body:
+        = raw(@publication.body)
 
-%p
-  %b Title:
-  = @publication.title
-%p
-  %b Body:
-  = @publication.body
+      %p
+        = sanitize @publication.short_body
 
-= link_to 'Edit', edit_publication_path(@publication)
-\|
 = link_to 'Back', publications_path

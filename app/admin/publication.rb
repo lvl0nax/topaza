@@ -35,7 +35,7 @@ ActiveAdmin.register Publication do
 
     def create
       short_body = ''
-      params[:publication][:body].split('. ')[0..4].each { |sentence| short_body << sentence + '. '} if params[:publication][:short_body].blank?
+      ActionView::Base.full_sanitizer.sanitize(params[:publication][:body]).split('. ')[0..4].each { |sentence| short_body << sentence + '. '} if params[:publication][:short_body].blank?
       @publication = Publication.new(title: params[:publication][:title],
                                         body: params[:publication][:body],
                                         short_body: short_body,
