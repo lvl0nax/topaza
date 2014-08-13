@@ -34,8 +34,11 @@ ActiveAdmin.register Publication do
     end
 
     def create
-      short_body = ''
-      ActionView::Base.full_sanitizer.sanitize(params[:publication][:body]).split('. ')[0..4].each { |sentence| short_body << sentence + '. '} if params[:publication][:short_body].blank?
+      short_body = if params[:publication][:short_body].blank?
+        ActionView::Base.full_sanitizer.sanitize(params[:publication][:body]).split('. ')[0..4].join('. ')
+      else
+        params[:publication][:short_body]
+      end
       @publication = Publication.new(title: params[:publication][:title],
                                         body: params[:publication][:body],
                                         short_body: short_body,
@@ -46,18 +49,11 @@ ActiveAdmin.register Publication do
 
       respond_to do |format|
         if @publication.save
-          format.html { redirect_to admin_publications_path, notice: 'Video was successfully created.' }
+          format.html { redirect_to admin_publications_path, notice: 'Publication was successfully created.' }
         else
-          format.html { render action: 'new', notice: 'Video not created.' }
+          format.html { render action: 'new', notice: 'Publication not created.' }
         end
       end
-
-
-      #if @publication.save
-      #  redirect_to admin_publications_path
-      #else
-      #  redirect_to new_admin_publication_path
-      #end
     end
   end
 end
