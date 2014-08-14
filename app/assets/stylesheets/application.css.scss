@@ -11,6 +11,7 @@
  *= require_self
  *= require_tree .
  */
+$min-width: 800px;
 html,body,div,span,h1,h2,h3,h4,b,u,i,s,em,form,fieldset,label,legend,input,button,textarea,a,p,table,caption,tbody,thead,tr,th,td, ul, li, ol{margin:0;padding:0;outline:none;}
 table {border-collapse:collapse;border-spacing:0; font-size:inherit;font:100%;}
 fieldset,img {border:0;}
@@ -25,6 +26,9 @@ a:hover, .jslink:hover{color: #F15A2A}
 .jslink:hover{text-decoration: none}
 body{font: 13px Helvetica,sans-serif;background: #fff}
 a{cursor: pointer}
+.clearfix{
+  clear: both;
+}
 
 h1 {font-size: 26px;}
 h2 {font-size: 21px;}
@@ -50,7 +54,7 @@ html, body {
 /*--------------HEADER-----------------*/
 .header{
   width: 100%;
-  min-width: 600px;
+  min-width: 800px;
   min-height: 207px;
   background-color: rgba(225, 225, 234, 0.5);
   color: #8b8b9f;
@@ -68,7 +72,6 @@ html, body {
 .header_container{
   max-width: 1200px;
   margin: 0 auto;
-  outline: 1px solid red;
 }
 .header_container__title{
   width: 300px;
@@ -113,7 +116,7 @@ html, body {
 
 /*--------------footer-----------------*/
 .footer{
-  min-width: 600px;
+  min-width: 800px;
   min-height: 350px;
   color: #8b8b9f;
   background-color: rgba(225, 225, 234, 0.5);
