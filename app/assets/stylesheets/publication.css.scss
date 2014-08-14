@@ -83,3 +83,29 @@
 }
 
 /*------------------end show publication -------------*/
+/*------------------index publication -------------*/
+.publications_index{
+  text-align: center;
+}
+.publications_index__title{
+  font-family: 'baufra_light';
+  color:  #13131c;
+  background-color: rgba(225, 225, 234, 0.5);
+  padding-bottom: 20px;
+  h1{
+    font-weight: bold;
+  }
+}
+
+.publications_index__banner{
+  width: 100%;
+  height: 100px;
+  background-color: yellowgreen;
+}
+
+.publications_index__item{
+  border-bottom: 1px solid #dddce4;
+}
+/*------------------end index publication -------------*/
+
+
