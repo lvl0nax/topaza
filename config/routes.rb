@@ -1,5 +1,6 @@
 Topaza::Application.routes.draw do
   resources :publications, only: [:show, :index]
+  resources :brides, only: [:create, :index]
 
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
