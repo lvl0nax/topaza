@@ -1,21 +1,24 @@
 .new_bride_popup
   .new_bride_popup__title
     ПОДЕЛИТЕСЬ ИСТОРИЕЙ
-  .new_bride_popup__form
+  .new_bride_popup__error
+  %form.new_bride_popup__form{enctype: 'multipart/form-data'}
     .bride_name
-      %input.white_with_underline{type: 'text', name: 'bride[name]', id: 'bride_name', placeholder: 'ВАШЕ ИМЯ' }
+      %input.white_with_underline{type: 'text', name: 'bride[name]', id: 'new_bride_name', placeholder: 'ВАШЕ ИМЯ' }
     .dress_name
-      %input.white_with_underline{type: 'text', name: 'bride[name]', id: 'bride_name', placeholder: 'НАЗВАНИЕ ПЛАТЬЯ' }
+      %input.white_with_underline{type: 'text', name: 'bride[dress_name]', id: 'new_bride_dress_name', placeholder: 'НАЗВАНИЕ ПЛАТЬЯ' }
     .comment
-      %input.white_with_underline{type: 'text', name: 'bride[name]', id: 'bride_name', placeholder: 'КОММЕНТАРИЙ' }
+      %input.white_with_underline{type: 'text', name: 'bride[comment]', id: 'new_bride_comment', placeholder: 'КОММЕНТАРИЙ' }
     .bride_picture
+      .bride_picture__input
+        %input{id: 'new_bride_fileupload', type: 'file', name: 'bride[picture]'}
       .bride_picture__left
-        %a{href: '#'}
+        %a.js_upload_image{href: '#'}
           .circle_with_plus +
       .bride_picture__right
         Присыллайте фотографии вертикального формата размером не менее 600x800px.
       .clearfix
-    %a.submit_button ОТПРАВИТЬ ФОТОГРАФИЮ
+    %a.js_submit_button.submit_button ОТПРАВИТЬ ФОТОГРАФИЮ
 
 
   .new_bride_popup__
