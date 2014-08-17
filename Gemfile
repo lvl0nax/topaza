@@ -19,6 +19,8 @@ gem 'mime-types', require: 'mime/types'
 gem 'rmagick'
 gem 'mini_magick'
 
+gem 'handlebars_assets'
+
 gem 'friendly_id'         # slug
 
 # Use SCSS for stylesheets

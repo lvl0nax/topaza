@@ -84,6 +84,11 @@ GEM
       activesupport (>= 3.1, < 4.1)
       haml (>= 3.1, < 4.1)
       railties (>= 3.1, < 4.1)
+    handlebars_assets (0.17.1)
+      execjs (>= 1.2.9)
+      multi_json
+      sprockets (>= 2.0.3)
+      tilt
     has_scope (0.6.0.rc)
       actionpack (>= 3.2, < 5)
       activesupport (>= 3.2, < 5)
@@ -215,6 +220,7 @@ DEPENDENCIES
   friendly_id
   haml
   haml-rails
+  handlebars_assets
   jbuilder (~> 1.2)
   jquery-fileupload-rails
   jquery-rails
