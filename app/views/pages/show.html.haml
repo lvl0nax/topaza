@@ -1,4 +1,7 @@
-%h1
-  = @page.title
-%h2
-  = raw(@page.body)
+.pages-container
+  .pages_title
+    %h1
+      = @page.title
+  .pages-body
+    %h4
+      = raw(@page.body)
