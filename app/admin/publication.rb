@@ -1,5 +1,5 @@
 ActiveAdmin.register Publication do
-  permit_params(:publication => [:body, :title, :short_body, :seo_title, :seo_description, :seo_title, :image => [:name]])
+  permit_params(:publication => [:body, :title, :short_body, :seo_title, :seo_description, :seo_keywords, :image => [:name]])
 
   form :partial => 'admin/publications/form'
 
@@ -29,12 +29,12 @@ ActiveAdmin.register Publication do
   end
 
   controller do
-    def new
-      @publication = Publication.new
+    def find_resource
+      scoped_collection.friendly.find(params[:id])
     end
 
     def update
-      @publication = Publication.find(params[:id])
+      @publication = Publication.friendly.find(params[:id])
       short_body = if params[:publication][:short_body].blank?
                      ActionView::Base.full_sanitizer.sanitize(params[:publication][:body]).split('. ')[0..4].join('. ')
                    else
