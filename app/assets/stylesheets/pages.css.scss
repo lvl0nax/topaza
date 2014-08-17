@@ -1,0 +1,18 @@
+.pages-container {
+  width: 100%;
+  min-width: 800px;
+
+  .pages_title {
+    font-family: 'Open Sans';
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 50px;
+    margin-top: 50px;
+  }
+
+  .pages-body {
+    padding-left: 5%;
+    padding-right: 2%;
+    font-size: 14px;
+  }
+}
