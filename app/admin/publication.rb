@@ -1,7 +1,7 @@
 ActiveAdmin.register Publication do
   permit_params(:publication => [:body, :title, :short_body, :seo_title, :seo_description, :seo_title, :image => [:name]])
 
-  form :partial => 'publications/form'
+  form :partial => 'admin/publications/form'
 
   show do |publication|
     attributes_table do

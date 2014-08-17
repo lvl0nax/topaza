@@ -19,6 +19,8 @@ gem 'mime-types', require: 'mime/types'
 gem 'rmagick'
 gem 'mini_magick'
 
+gem 'handlebars_assets'
+
 gem 'friendly_id'         # slug
 
 # Use SCSS for stylesheets
@@ -41,6 +43,8 @@ gem 'turbolinks'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
+
+gem 'russian'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.

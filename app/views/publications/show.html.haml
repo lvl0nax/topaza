@@ -1,17 +1,21 @@
-.container
-  .p_container
-    .p_left
-      - @publication.images.each do |image|
-        = image_tag image.name.url(:p_show)
-    .p_right
-      %p
-        %b Title:
-        = @publication.title
-      %p
-        %b Body:
-        = raw(@publication.body)
+.show_publication
+  .show_publication__left
+    - @publication.images.each do |image|
+      = image_tag image.name.url(:p_show)
+  .show_publication__right
+    .show_publication__right__date
+      .middle_line
+      = Russian::strftime(@publication.created_at, '%B %Y')
+      .middle_line
+    .show_publication__right__title
+      = @publication.title
+      .publication_underline
 
-      %p
-        = sanitize @publication.short_body
-
-= link_to 'Back', publications_path
+    .show_publication__right__body
+      = raw(@publication.body)
+  .clearfix
+.navigation_publication
+  .navigation_publication__left
+    = link_to 'ВСЕ ПУБЛИКАЦИИ ', publications_path
+  .navigation_publication__right
+    = link_to 'СЛЕДУЮЩАЯ СТАТЬЯ', publications_path

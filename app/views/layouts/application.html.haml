@@ -13,3 +13,8 @@
       = yield
     .footer
       = render 'layouts/footer'
+    .popup_container
+      .popup
+        %a.close_popup_button.js_close_popup{href: '#'} X
+        .popup_content
+          Text in Popup

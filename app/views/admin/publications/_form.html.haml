@@ -5,7 +5,7 @@
   =f.inputs 'Body' do
     = f.input :body, as: :ckeditor, label: false
   =f.inputs 'Short body' do
-    = f.input :short_body, label: false
+    = f.input :short_body, label: false, as: :text
   = f.inputs 'Images' do
     = f.fields_for :image  do |image|
       = image.file_field :name, multiple: :true, name: 'publication[image][name][]'

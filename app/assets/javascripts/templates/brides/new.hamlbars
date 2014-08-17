@@ -1,0 +1,21 @@
+.new_bride_popup
+  .new_bride_popup__title
+    ПОДЕЛИТЕСЬ ИСТОРИЕЙ
+  .new_bride_popup__form
+    .bride_name
+      %input.white_with_underline{type: 'text', name: 'bride[name]', id: 'bride_name', placeholder: 'ВАШЕ ИМЯ' }
+    .dress_name
+      %input.white_with_underline{type: 'text', name: 'bride[name]', id: 'bride_name', placeholder: 'НАЗВАНИЕ ПЛАТЬЯ' }
+    .comment
+      %input.white_with_underline{type: 'text', name: 'bride[name]', id: 'bride_name', placeholder: 'КОММЕНТАРИЙ' }
+    .bride_picture
+      .bride_picture__left
+        %a{href: '#'}
+          .circle_with_plus +
+      .bride_picture__right
+        Присыллайте фотографии вертикального формата размером не менее 600x800px.
+      .clearfix
+    %a.submit_button ОТПРАВИТЬ ФОТОГРАФИЮ
+
+
+  .new_bride_popup__
