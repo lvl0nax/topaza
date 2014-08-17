@@ -33,6 +33,28 @@ ActiveAdmin.register Publication do
       @publication = Publication.new
     end
 
+    def update
+      @publication = Publication.find(params[:id])
+      short_body = if params[:publication][:short_body].blank?
+                     ActionView::Base.full_sanitizer.sanitize(params[:publication][:body]).split('. ')[0..4].join('. ')
+                   else
+                     params[:publication][:short_body]
+                   end
+      params[:publication][:image][:name].each {|name| @publication.images << Image.create(name: name)} unless params[:publication][:image].blank?
+      respond_to do |format|
+        if @publication.update_attributes(title: params[:publication][:title],
+                                          body: params[:publication][:body],
+                                          short_body: short_body,
+                                          seo_description: params[:publication][:seo_description],
+                                          seo_title: params[:publication][:seo_title],
+                                          seo_keywords: params[:publication][:seo_keywords])
+          format.html { redirect_to admin_publications_path, notice: 'Publication was successfully created.' }
+        else
+          format.html { render action: 'new', notice: 'Publication not created.' }
+        end
+      end
+    end
+
     def create
       short_body = if params[:publication][:short_body].blank?
         ActionView::Base.full_sanitizer.sanitize(params[:publication][:body]).split('. ')[0..4].join('. ')

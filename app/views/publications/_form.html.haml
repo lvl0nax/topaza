@@ -1,4 +1,4 @@
-= semantic_form_for [:admin,@publication], url: admin_publications_path, method: :post do |f|
+= semantic_form_for [:admin, @publication]  do |f|
   = f.semantic_errors *f.object.errors.keys
   =f.inputs 'Title' do
     = f.input :title, label: false
@@ -9,6 +9,11 @@
   = f.inputs 'Images' do
     = f.fields_for :image  do |image|
       = image.file_field :name, multiple: :true, name: 'publication[image][name][]'
+    %br
+    - if @publication.persisted?
+      - @publication.images.each do |image|
+        = image_tag(image.name.url(:admin_show))
+
   = f.inputs 'SEO' do
     = f.input :seo_title, label: 'SEO Title'
     = f.input :seo_description, label: 'SEO Description'
