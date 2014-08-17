@@ -13,6 +13,7 @@
     - if @publication.persisted?
       - @publication.images.each do |image|
         = image_tag(image.name.url(:admin_show))
+        = link_to 'Destroy', admin_image_path(image), method: :delete, data: { confirm: 'Are you sure?' }
 
   = f.inputs 'SEO' do
     = f.input :seo_title, label: 'SEO Title'

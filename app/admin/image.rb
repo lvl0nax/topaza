@@ -1,18 +1,17 @@
 ActiveAdmin.register Image do
 
+  controller do
+    def destroy
+      @image = Image.find(params[:id])
+      @publication = @image.publication
+      if @image.destroy
+        redirect_to edit_admin_publication_path(@publication), notice: 'Image was successfully destroyed'
+      else
+        redirect_to edit_admin_publication_path(@publication), notice: 'Image not destroyed'
+      end
+    end
 
-  # See permitted parameters documentation:
-  # https://github.com/gregbell/active_admin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
-  #
-  # permit_params :list, :of, :attributes, :on, :model
-  #
-  # or
-  #
-  # permit_params do
-  #  permitted = [:permitted, :attributes]
-  #  permitted << :other if resource.something?
-  #  permitted
-  # end
+  end
 
 
 end

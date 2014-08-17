@@ -1,0 +1,13 @@
+= semantic_form_for [:admin, @page]  do |f|
+  = f.semantic_errors *f.object.errors.keys
+  =f.inputs 'Title' do
+    = f.input :title, label: false
+  =f.inputs 'Body' do
+    = f.input :body, as: :ckeditor, label: false
+
+  = f.inputs 'SEO' do
+    = f.input :seo_title, label: 'SEO Title'
+    = f.input :seo_description, label: 'SEO Description'
+    = f.input :seo_keywords, label: 'SEO Keywords'
+  = f.actions
+

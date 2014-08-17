@@ -21,7 +21,7 @@ gem 'mini_magick'
 
 gem 'handlebars_assets'
 
-gem 'friendly_id'         # slug
+gem 'friendly_id', '~> 5.0.0'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.2'
@@ -66,4 +66,3 @@ gem 'unicorn'
 gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'devise'
 gem 'ckeditor'
-gem 'jquery-fileupload-rails'
