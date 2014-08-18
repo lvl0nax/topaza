@@ -13,16 +13,16 @@
   margin-bottom: 20px;
 }
 .white_with_underline{
-  background-color: #f5f5f7;
-  border-top: none;
-  border-right: none;
-  border-left: none;
-  border-bottom: 1px solid #babac7;
-  width: 340px;
+  background-color: #f5f5f7 !important;
+  border-top: none !important;
+  border-right: none !important;
+  border-left: none !important;
+  border-bottom: 1px solid #babac7 !important;
+  width: 340px !important;
   margin: 17px 0;
-  font-family: 'baufra_light';
-  font-size: 20px;
-  font-weight: bold;
+  font-family: 'baufra_light' !important;
+  font-size: 20px !important;
+  font-weight: bold !important;
   line-height: 35px;
 }
 a.submit_button{
@@ -40,9 +40,13 @@ a.submit_button{
     border-color: #8b8b9f;
   }
 }
+.new_bride_popup__error{
+  color: red;
+}
 .bride_picture__left{
   float: left;
   a{
+    overflow: hidden;
     display: block;
     border: 1px dashed #c7aea2;
     width: 123px;
@@ -67,5 +71,8 @@ a.submit_button{
   color:  #8b8b9f;
   font-size: 14px;
   line-height: 20px;
+}
+.bride_picture__input{
+  display: none;
 }
 /*-----------------end new bride popup-----------------------*/
