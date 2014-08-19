@@ -1,0 +1,24 @@
+= semantic_form_for [:admin, @dress]  do |f|
+  = f.semantic_errors *f.object.errors.keys
+  = f.inputs 'Title' do
+    = f.input :title, label: false
+  = f.inputs 'Body' do
+    = f.input :body, label: false
+  = f.inputs 'Material' do
+    = f.fields_for :dress_consist  do |dress_consist|
+      = dress_consist.input :mate, as: :select
+  = f.inputs 'Images' do
+    = f.fields_for :image  do |image|
+      = image.file_field :name, multiple: :true, name: 'dress[image][name][]'
+    %br
+    - if @dress.persisted?
+      - @dress.images.each do |image|
+        = image_tag(image.name.url(:admin_show))
+        = link_to 'Destroy', admin_image_path(image), method: :delete, data: { confirm: 'Are you sure?' }
+
+  = f.inputs 'SEO' do
+    = f.input :seo_title, label: 'SEO Title'
+    = f.input :seo_description, label: 'SEO Description'
+    = f.input :seo_keywords, label: 'SEO Keywords'
+  = f.actions
+
