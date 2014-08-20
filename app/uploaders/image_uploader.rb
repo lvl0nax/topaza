@@ -40,6 +40,10 @@ class ImageUploader < CarrierWave::Uploader::Base
     process :resize_to_fill => [467, 435]
   end
 
+  version :dress_consist, :if => :is_dress_consist? do
+    process :resize_to_fit => [150, 100]
+  end
+
   # Add a white list of extensions which are allowed to be uploaded.
   # For images you might use something like this:
   def extension_white_list
@@ -51,5 +55,10 @@ class ImageUploader < CarrierWave::Uploader::Base
   # def filename
   #   "something.jpg" if original_filename
   # end
+
+  protected
+  def is_dress_consist? picture
+    model.class.name == 'DressConsist'
+  end
 
 end

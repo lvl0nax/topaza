@@ -6,7 +6,10 @@
     = f.input :body, label: false
   = f.inputs 'Material' do
     = f.fields_for :dress_consist  do |dress_consist|
-      = dress_consist.input :mate, as: :select
+      = dress_consist.input :material, as: :select, :collection => DressConsist.where(property: 'Material'), :include_blank => false, label: false
+  = f.inputs 'Embroidery' do
+    = f.fields_for :dress_consist  do |dress_consist|
+      = dress_consist.input :embroidery, as: :select, :collection => DressConsist.where(property: 'Embroidery'), :include_blank => false, label: false
   = f.inputs 'Images' do
     = f.fields_for :image  do |image|
       = image.file_field :name, multiple: :true, name: 'dress[image][name][]'
