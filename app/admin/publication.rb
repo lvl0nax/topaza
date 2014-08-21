@@ -22,9 +22,6 @@ ActiveAdmin.register Publication do
       end
 
     end
-    publication.images.each do |image|
-      image_tag(image.name.url(:admin_show))
-    end
     active_admin_comments
   end
 

@@ -1,17 +1,37 @@
 ActiveAdmin.register Dress do
-  permit_params(:dress => [:dress_id, :body, :title, :seo_title, :seo_description, :seo_keywords, :image => [:name], :dress_consist => [:material, :embroidery]])
+  permit_params(:dress => [:body, :title, :seo_title, :seo_description, :seo_keywords, :image => [:name], :dress_consist => [:material, :embroidery]])
 
   form :partial => 'admin/dresses/form'
 
+  show do |dress|
+    attributes_table do
+      row :title
+      row :body
+      row :slug
+      row :seo_title
+      row :seo_description
+      row :seo_keywords
+      row :image do
+        ul do
+          dress.images.each do |image|
+            li do
+              image_tag(image.name.url(:admin_show))
+            end
+          end
+        end
+      end
+
+    end
+    active_admin_comments
+  end
 
   controller do
-    #def find_resource
-    #  scoped_collection.friendly.find(params[:id])
-    #end
+    def find_resource
+      scoped_collection.friendly.find(params[:id])
+    end
 
     def update
-      #dress = Dress.friendly.find(params[:id])
-      @dress = Dress.find(params[:id])
+      @dress = Dress.friendly.find(params[:id])
       params[:dress][:image][:name].each {|name| @dress.images << Image.create(name: name)} unless params[:dress][:image].blank?
       respond_to do |format|
         if @dress.update_attributes(title: params[:dress][:title],
