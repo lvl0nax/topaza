@@ -20,7 +20,11 @@ ActiveAdmin.register Dress do
           end
         end
       end
-
+    end
+    panel 'Category' do
+      attributes_table_for dress.category do
+        rows :title
+      end
     end
     active_admin_comments
   end
@@ -33,13 +37,17 @@ ActiveAdmin.register Dress do
     def update
       @dress = Dress.friendly.find(params[:id])
       params[:dress][:image][:name].each {|name| @dress.images << Image.create(name: name)} unless params[:dress][:image].blank?
+      @dress.dress_consists.delete_all
+      @dress.dress_consists << DressConsist.find(params[:dress][:dress_consist][:material].to_i)
+      @dress.dress_consists << DressConsist.find(params[:dress][:dress_consist][:embroidery].to_i)
+      @dress.category_id = params[:dress][:category][:category_id].to_i
       respond_to do |format|
         if @dress.update_attributes(title: params[:dress][:title],
                                           body: params[:dress][:body],
                                           seo_description: params[:dress][:seo_description],
                                           seo_title: params[:dress][:seo_title],
                                           seo_keywords: params[:dress][:seo_keywords])
-          format.html { redirect_to admin_dressess_path, notice: 'Dress was successfully created.' }
+          format.html { redirect_to admin_dresses_path, notice: 'Dress was successfully created.' }
         else
           format.html { render action: 'new', notice: 'Dress not created.' }
         end
@@ -55,6 +63,7 @@ ActiveAdmin.register Dress do
       params[:dress][:image][:name].each {|name| @dress.images << Image.create(name: name)} unless params[:dress][:image].blank?
       @dress.dress_consists << DressConsist.find(params[:dress][:dress_consist][:material].to_i)
       @dress.dress_consists << DressConsist.find(params[:dress][:dress_consist][:embroidery].to_i)
+      @dress.category_id = params[:dress][:category][:category_id].to_i
 
       respond_to do |format|
         if @dress.save
