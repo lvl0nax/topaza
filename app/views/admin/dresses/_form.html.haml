@@ -16,12 +16,7 @@
     = f.fields_for :image do |image|
       = image.file_field :name, multiple: :true, name: 'image[name][]'
     %br
-    - if @dress.persisted?
-      - @dress.images.each do |image|
-        = image_tag(image.name.url(:admin_show))
-        - unless image.main
-          = link_to 'Set main image', main_admin_image_path(image), data: { confirm: 'Are you sure to make this image the main?' }
-        = link_to 'Destroy', admin_image_path(image), method: :delete, data: { confirm: 'Are you sure?' }
+    = render 'partials/images', item: @dress
 
   = f.inputs 'SEO' do
     = f.input :seo_title, label: 'SEO Title'
