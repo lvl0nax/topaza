@@ -37,12 +37,11 @@ ActiveAdmin.register Dress do
     end
 
     def update
+      hash = params[:dress]
       @dress = Dress.friendly.find(params[:id])
-      params[:image][:name].each {|name| @dress.images << Image.create(name: name)} if params[:image].present?
       @dress.dress_consists.delete_all
-      @dress.dress_consists << DressConsist.find(params[:dress][:dress_consist][:material].to_i)
-      @dress.dress_consists << DressConsist.find(params[:dress][:dress_consist][:embroidery].to_i)
-      @dress.category = Category.find(params[:dress][:category_id].to_i)
+      set_relations(@dress, hash)
+
       respond_to do |format|
         if @dress.update_attributes(permitted_params[:dress])
           format.html { redirect_to admin_dresses_path, notice: 'Dress was successfully updates.' }
@@ -53,11 +52,9 @@ ActiveAdmin.register Dress do
     end
 
     def create
+      hash = params[:dress]
       @dress = Dress.new(permitted_params[:dress])
-      params[:name].each {|name| @dress.images << Image.create(name: name)} if params[:image].present?
-      @dress.dress_consists << DressConsist.find(params[:dress][:dress_consist][:material].to_i)
-      @dress.dress_consists << DressConsist.find(params[:dress][:dress_consist][:embroidery].to_i)
-      @dress.category = Category.find(params[:dress][:category_id].to_i)
+      set_relations(@dress, hash)
 
       respond_to do |format|
         if @dress.save
@@ -66,6 +63,13 @@ ActiveAdmin.register Dress do
           format.html { render action: 'new', notice: 'Dress not created.' }
         end
       end
+    end
+
+    def set_relations(dress, hash)
+      params[:image][:name].each {|name| dress.images << Image.create(name: name)} if params[:image].present?
+      dress.dress_consists << DressConsist.find(hash[:dress_consist][:material].to_i)
+      dress.dress_consists << DressConsist.find(hash[:dress_consist][:embroidery].to_i)
+      dress.category = Category.find(hash[:category_id].to_i)
     end
   end
 
