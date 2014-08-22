@@ -9,7 +9,7 @@ ActiveAdmin.register DressConsist do
       f.input :image, label: false, as: :file
     end
     f.inputs 'Property' do
-      f.input :property, as: :select, :collection => %w(Material Embroidery), :include_blank => false
+      f.input :property, as: :select, collection: %w(Material Embroidery), include_blank: false, label: false
     end
     f.actions
   end
