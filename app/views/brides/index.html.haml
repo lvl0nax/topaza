@@ -1,50 +1,35 @@
-%a.js_add_new_bride{href: '#'} Добавить платье
-.test_container
-  dsf asfsadfsdfsadf sd
-  f safasf as fas fasf
-  %br
-  saf asf asfasf as fas
-  fas fasf asfsaf
-  %br
-  asf as fasf asf
-  %br
-  asf asf asdfasf asf
-  %br
-  asf asf asf asd
-  %br
-  asf asf asdfasf asf
-  %br
-  asf asf asf asd
-  %br
-  asf asf asdfasf asf
-  %br
-  asf asf asf asd
-  %br
-  asf asf asdfasf asf
-  %br
-  asf asf asf asd
-  %br
-  asf asf asdfasf asf
-  %br
-  asf asf asf asd
-  %br
-  asf
-  %br asf asdfasf asf
-  asf asf asf asd
-  %br
-  asf asf asdfasf asf
-  %br
-  asf asf asf asd
-  %br
-  asf
-  %br asf asdfasf asf
-  asf asf asf asd
-  %br
-  asf
-  %br asf asdfasf asf
-  asf asf asf asd
-  %br
-  asf
-  %br asf asdfasf asf
-  asf asf asf asd
-  %br
+.brides_header
+  %h1.brides_header__title НАШИ НЕВЕСТЫ
+  .publications_index__item
+  .brides_message
+    В приватных беседах с нашими гостями мы уловили одну тенденцию. Красиво одеваться, независимо от повода, хочет каждая женщина. Однако просто "одеться красиво" - это только половина мечты.
+.brides__container
+  .brides_container__before_banner
+    - (brides = @brides.first(6)).each do |b|
+      = render partial: 'bride_item', locals: {bride: b}
+    - if brides.size < 6
+      = render 'add_bride_item'
+  .brides_container__banner_subscribe
+    %span.banner__text
+      ПОДПИСЫВАЙТЕСЬ И СЛЕДИТЕ ЗА ОБНОВЛЕНИЯМИ
+    %span.banner__links
+      %a.banner__links__vk
+        .banner__links__title
+          VKONTAKTE
+        .banner__links__underline
+        .banner__links__address
+          vk.com/topazapella
+      %a.banner__links__instagram
+        .banner__links__title
+          INSTAGRAM
+        .banner__links__underline
+        .banner__links__address
+          @topazapell_couture
+    .clearfix
+  - if brides.size == 6
+    .brides_container__after_banner
+      = render 'add_bride_item'
+      - @brides.limit(5).offset(6).each do |b|
+        = render partial: 'bride_item', locals: {bride: b}
+
+

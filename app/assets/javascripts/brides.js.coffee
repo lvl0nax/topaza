@@ -54,6 +54,7 @@ $(document).on 'click', '.js_add_new_bride', (e)->
   e.preventDefault()
   $('.popup_content').html(JST['brides/new'])
   PopUpShow()
+  $( "body" ).scrollTop(10);
 
 $(document).on 'click', '.js_close_popup', (e)->
   e.preventDefault()

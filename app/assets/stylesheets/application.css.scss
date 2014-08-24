@@ -9,7 +9,8 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
- *= require_tree .
+ *= require fonts
+ *= require_tree ./css_folders
  */
 $min-width: 800px;
 html,body,div,span,h1,h2,h3,h4,b,u,i,s,em,form,fieldset,label,legend,input,button,textarea,a,p,table,caption,tbody,thead,tr,th,td, ul, li, ol{margin:0;padding:0;outline:none;}
@@ -19,7 +20,7 @@ caption,th,td{text-align:left; padding: 0 10px; }
 /*ul,ol{list-style: none}*/
 input,button,textarea,select,th,optgroup,option {font-family:inherit;font-size:inherit;font-style:inherit;font-weight:inherit;}
 /* global styles */
-html, body {height:100%; color: #58595b}
+html, body {height:100%; color: #58595b;}
 a, .jslink{color: blue}
 a:hover, .jslink:hover{color: #F15A2A}
 .jslink{text-decoration: underline; cursor: pointer}
@@ -43,6 +44,7 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
+  max-width: 1400px;
 }
 .main_container{
   position: relative;
