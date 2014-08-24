@@ -1,7 +1,7 @@
 class BridesController < ApplicationController
 
   def index
-    @brides = Bride.all
+    @brides = Bride.approved.all
   end
 
   def create
