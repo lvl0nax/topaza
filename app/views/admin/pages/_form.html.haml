@@ -1,16 +1,9 @@
-= semantic_form_for [:admin, @publication]  do |f|
+= semantic_form_for [:admin, @page]  do |f|
   = f.semantic_errors *f.object.errors.keys
   =f.inputs 'Title' do
     = f.input :title, label: false
   =f.inputs 'Body' do
     = f.input :body, as: :ckeditor, label: false
-  =f.inputs 'Short body' do
-    = f.input :short_body, label: false, as: :text
-  = f.inputs 'Images' do
-    = f.fields_for :image  do |image|
-      = image.file_field :name, multiple: :true, name: 'publication[image][name][]'
-    %br
-    = render 'partials/images', item: @publication
 
   = f.inputs 'SEO' do
     = f.input :seo_title, label: 'SEO Title'

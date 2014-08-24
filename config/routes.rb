@@ -1,9 +1,12 @@
 Topaza::Application.routes.draw do
   resources :publications, only: [:show, :index]
   resources :brides, only: [:create, :index]
+  resources :pages, only: :show
 
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
+
+  mount Ckeditor::Engine => '/ckeditor'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
