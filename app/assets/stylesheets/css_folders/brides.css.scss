@@ -1,0 +1,273 @@
+/*-----------------new bride popup-----------------------*/
+.new_bride_popup{
+  width: 340px;
+  margin: 50px auto 40px;
+}
+.new_bride_popup__title{
+  font-family: 'baufra_light';
+  color:  #13131c;
+  font-size: 42px;
+  font-weight: bold;
+  line-height: 55px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.white_with_underline{
+  background-color: #f5f5f7 !important;
+  border-top: none !important;
+  border-right: none !important;
+  border-left: none !important;
+  border-bottom: 1px solid #babac7 !important;
+  width: 340px !important;
+  margin: 17px 0;
+  font-family: 'baufra_light' !important;
+  font-size: 20px !important;
+  font-weight: bold !important;
+  line-height: 35px;
+}
+a.submit_button{
+  margin: 10px auto;
+  display: block;
+  width: 100%;
+  text-align: center;
+  border: 1px solid #babac7;
+  padding: 10px 0;
+  color:  #babac7;
+  text-decoration: none;
+  font-size: 22px;
+  &:hover{
+    color: #8b8b9f;
+    border-color: #8b8b9f;
+  }
+}
+.new_bride_popup__error{
+  color: red;
+}
+.bride_picture__left{
+  float: left;
+  a{
+    overflow: hidden;
+    display: block;
+    border: 1px dashed #c7aea2;
+    width: 123px;
+    height: 167px;
+    text-decoration: none;
+    .circle_with_plus{
+      border-radius: 50%;
+      border: 1px solid #c7aea2;
+      margin: 47px auto;
+      text-align: center;
+      line-height: 67px;
+      width: 67px;
+      height: 67px;
+      font-size: 55px;
+      color: #c7aea2;
+    }
+  }
+}
+.bride_picture__right{
+  margin-left: 137px;
+  font-family: 'opensans';
+  color:  #8b8b9f;
+  font-size: 14px;
+  line-height: 20px;
+}
+.bride_picture__input{
+  display: none;
+}
+/*-----------------end new bride popup-----------------------*/
+
+
+/*----------------- brides index page-----------------------*/
+.brides_header{
+  background-color:  rgba(225, 225, 234, 0.5);
+  width: 100%;
+  height: 175px;
+  text-align: center;
+  .publications_index__item{
+    width: 300px;
+    margin: 0 auto 10px;
+  }
+}
+.brides_header__title{
+  font-family: 'baufra_light';
+  font-weight: bold;
+}
+.brides_message{
+  margin: 0 auto;
+  width: 550px;
+  font-family: 'opensans';
+  font-size: 16px;
+  line-height: 25px;
+}
+
+.bride_item{
+  width: 466px;
+  height: 680px;
+  margin: -1.5px -2px;
+  overflow: hidden;
+  display: inline-block;
+  &:hover{
+    .bride_item__info{
+      background-color: rgba(0,0,0,0.5);
+      position: relative;
+    }
+    .bride_item__info__bordered{
+      outline: 1px solid white;
+      padding-top: 80px;
+      height: 540px;
+    }
+    .bride_item__comment{
+      padding: 280px 20px 0;
+      height: 140px;
+      display: block;
+      font-family: 'opensans';
+      color:  #ffffff;
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 25px;
+      overflow: hidden;
+    }
+  }
+  .bride_item__info{
+    padding: 30px;
+    text-align: center;
+    margin-top: -685px;
+    height: 622px;
+  }
+  .bride_item__info__bordered{
+    width: 100%;
+    height: 185px;
+    padding-top: 430px;
+  }
+  .publications_index__item{
+    width: 200px;
+    margin: 10px auto 0;
+    color: white;
+    height: 1px;
+    position: relative;
+  }
+  .birde_item__name{
+    font-family: 'oldsman';
+    color:  #f7f7fa;
+    font-size: 34px;
+    font-weight: bold;
+    line-height: 35px;
+  }
+  .birde_item__dress_name{
+    font-family: 'baufra_light';
+    color:  #f7f7fa;
+    font-size: 21px;
+    font-weight: bold;
+    line-height: 45px;
+  }
+  .bride_item__comment{
+    display: none;
+  }
+
+}
+
+
+.brides__container{
+  text-align: center;
+}
+
+.brides_container__banner_subscribe{
+  min-width: 800px;
+  width: 100%;
+  min-height: 250px;
+  max-height: 500px;
+  background-color:  #f5f2f1;
+  text-align: center;
+}
+.banner__text{
+  vertical-align: middle;
+  margin: 65px 0 20px 0;
+  width: 350px;
+  font-family: 'baufra_light';
+  color:  #13131c;
+  font-size: 35px;
+  font-weight: bold;
+  line-height: 40px;
+  display: inline-block;
+}
+.banner__links{
+  display: inline-block;
+  margin: 65px 0 20px 0;
+  vertical-align: middle;
+  width: 700px;
+  a{
+    text-align: center;
+    width: 300px;
+    height: 120px;
+    display: inline-block;
+    text-decoration: none;
+    background-color: #8b8b9f;
+  }
+  .banner__links__vk{
+    margin-right: 7%;
+  }
+}
+.banner__links__underline{
+  width: 150px;
+  background-color: #fff;
+  height: 1px;
+  margin: 10px auto 10px;
+}
+.banner__links__title{
+  font-family: 'oldsman';
+  color:  #ffffff;
+  font-size: 35px;
+  line-height: 50px;
+}
+.banner__links__address{
+  font-family: 'baufra_light';
+  color:  #ffffff;
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 40px;
+}
+
+.add_bride{
+  text-align: center;
+  outline: 1px solid #7c7c8a;
+}
+.add_bride__title{
+  width: 350px;
+  font-family: 'baufra_light';
+  color:  #13131c;
+  font-size: 35px;
+  font-weight: bold;
+  line-height: 45px;
+  margin: 140px auto 0;
+}
+.add_bride__underline{
+  margin: 20px auto;
+  width: 160px;
+  height: 1px;
+  background-color: #7c7c8a;
+}
+.add_bride__text{
+  font-family: 'opensans';
+  color:  #48485d;
+  font-size: 16px;
+  line-height: 25px;
+  width: 370px;
+  margin: 0 auto 20px;
+}
+.add_bride__button{
+  text-decoration: none;
+  font-family: 'baufra_light';
+  color:  #7c7c8a;
+  font-size: 23px;
+  font-weight: bold;
+  line-height: 50px;
+  padding: 10px 20px;
+  outline: 1px solid #7c7c8a;
+  &:hover{
+    color:  #48485d;
+    outline: 1px solid  #48485d;
+  }
+}
+/*-----------------end brides index page-----------------------*/
+
