@@ -1,7 +1,5 @@
 ActiveAdmin.register Publication do
-  permit_params(:publication => [:body, :title, :short_body, :seo_title, :seo_description, :seo_keywords, :image => [:name]])
-
-  form :partial => 'admin/publications/form'
+  form partial: 'admin/publications/form'
 
   show do |publication|
     attributes_table do
@@ -22,52 +20,38 @@ ActiveAdmin.register Publication do
       end
 
     end
-    publication.images.each do |image|
-      image_tag(image.name.url(:admin_show))
-    end
     active_admin_comments
   end
 
   controller do
+    def permitted_params
+      params.permit publication: [:body, :title, :short_body, :seo_title, :seo_description, :seo_keywords]
+    end
+
     def find_resource
       scoped_collection.friendly.find(params[:id])
     end
 
     def update
+      hash = params[:publication]
       @publication = Publication.friendly.find(params[:id])
-      short_body = if params[:publication][:short_body].blank?
-                     ActionView::Base.full_sanitizer.sanitize(params[:publication][:body]).split('. ')[0..4].join('. ')
-                   else
-                     params[:publication][:short_body]
-                   end
-      params[:publication][:image][:name].each {|name| @publication.images << Image.create(name: name)} unless params[:publication][:image].blank?
+      set_short_body(hash[:body], hash[:short_body])
+      add_images(@publication, hash[:image])
+
       respond_to do |format|
-        if @publication.update_attributes(title: params[:publication][:title],
-                                          body: params[:publication][:body],
-                                          short_body: short_body,
-                                          seo_description: params[:publication][:seo_description],
-                                          seo_title: params[:publication][:seo_title],
-                                          seo_keywords: params[:publication][:seo_keywords])
-          format.html { redirect_to admin_publications_path, notice: 'Publication was successfully created.' }
+        if @publication.update_attributes(permitted_params[:publication])
+          format.html { redirect_to admin_publications_path, notice: 'Publication was successfully updated.' }
         else
-          format.html { render action: 'new', notice: 'Publication not created.' }
+          format.html { render action: 'new', notice: 'Publication not updated.' }
         end
       end
     end
 
     def create
-      short_body = if params[:publication][:short_body].blank?
-        ActionView::Base.full_sanitizer.sanitize(params[:publication][:body]).split('. ')[0..4].join('. ')
-      else
-        params[:publication][:short_body]
-      end
-      @publication = Publication.new(title: params[:publication][:title],
-                                        body: params[:publication][:body],
-                                        short_body: short_body,
-                                        seo_description: params[:publication][:seo_description],
-                                        seo_title: params[:publication][:seo_title],
-                                        seo_keywords: params[:publication][:seo_keywords])
-      params[:publication][:image][:name].each {|name| @publication.images << Image.create(name: name)} unless params[:publication][:image].blank?
+      hash = params[:publication]
+      set_short_body(hash[:body], hash[:short_body])
+      @publication = Publication.new(permitted_params[:publication])
+      add_images(@publication, hash[:image])
 
       respond_to do |format|
         if @publication.save
@@ -76,6 +60,14 @@ ActiveAdmin.register Publication do
           format.html { render action: 'new', notice: 'Publication not created.' }
         end
       end
+    end
+
+    def set_short_body(body, short_body)
+      params[:publication][:short_body] = ActionView::Base.full_sanitizer.sanitize(body).split('. ')[0..2].join('. ') if short_body.blank?
+    end
+
+    def add_images(object, image)
+      image[:name].each {|name| object.images << Image.create(name: name)} unless image.blank?
     end
   end
 end

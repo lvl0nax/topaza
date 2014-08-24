@@ -10,10 +10,7 @@
     = f.fields_for :image  do |image|
       = image.file_field :name, multiple: :true, name: 'publication[image][name][]'
     %br
-    - if @publication.persisted?
-      - @publication.images.each do |image|
-        = image_tag(image.name.url(:admin_show))
-        = link_to 'Destroy', admin_image_path(image), method: :delete, data: { confirm: 'Are you sure?' }
+    = render 'partials/images', item: @publication
 
   = f.inputs 'SEO' do
     = f.input :seo_title, label: 'SEO Title'
