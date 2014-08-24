@@ -6,7 +6,7 @@ ActiveAdmin.register Image do
     end
   end
 
-  member_action :main, :method => :get do
+  member_action :main, method: :get do
     @image = Image.find(params[:id].to_i)
     main_image = model_name(@image).constantize.find(@image.imageable_id).images.where(main: true).first
     main_image.update_attribute('main', false) if main_image.present?

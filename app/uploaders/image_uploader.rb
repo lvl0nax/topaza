@@ -31,17 +31,17 @@ class ImageUploader < CarrierWave::Uploader::Base
 
   # Create different versions of your uploaded files:
   version :admin_show do
-    process :resize_to_fit => [150,150]
+    process resize_to_fit: [150,150]
   end
   version :p_show do
-    process :resize_to_fit => [467,1463]
+    process resize_to_fit: [467,1463]
   end
   version :p_index do
-    process :resize_to_fill => [467, 435]
+    process resize_to_fill: [467, 435]
   end
 
   version :dress_consist, :if => :is_dress_consist? do
-    process :resize_to_fit => [150, 100]
+    process resize_to_fit: [150, 100]
   end
 
   # Add a white list of extensions which are allowed to be uploaded.

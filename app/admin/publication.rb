@@ -1,5 +1,5 @@
 ActiveAdmin.register Publication do
-  form :partial => 'admin/publications/form'
+  form partial: 'admin/publications/form'
 
   show do |publication|
     attributes_table do

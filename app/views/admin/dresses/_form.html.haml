@@ -5,7 +5,7 @@
   = f.inputs 'Body' do
     = f.input :body, label: false
   = f.inputs 'Category' do
-    = f.select :category_id, options_from_collection_for_select(Category.all, :id, :title, @dress.category_id), :include_blank => false, label: false
+    = f.select :category_id, options_from_collection_for_select(Category.all, :id, :title, @dress.category_id), include_blank: false, label: false
   = f.inputs 'Material' do
     = f.fields_for :dress_consist do |dress_consist|
       = dress_select(dress_consist, 'Material', @dress)

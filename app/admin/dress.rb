@@ -1,5 +1,5 @@
 ActiveAdmin.register Dress do
-  form :partial => 'admin/dresses/form'
+  form partial: 'admin/dresses/form'
 
   show do |dress|
     attributes_table do
