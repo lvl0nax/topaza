@@ -1,5 +1,6 @@
 Topaza::Application.routes.draw do
   resources :publications, only: [:show, :index]
+  resources :dresses, only: [:show, :index]
   resources :brides, only: [:create, :index]
   resources :pages, only: :show
 

@@ -1,0 +1,26 @@
+.show_dress
+  .show_dress__left
+    .show_dress__left__title
+      = @dress.title
+    .middle_line_dress
+    .show_dress__left
+      .show_dress__left__body
+        = @dress.body
+      - @dress.dress_consists.each do |dress_consist|
+        .show_dress__left__dress_consist
+          = image_tag dress_consist.image.url(:dress_consist)
+          .show_dress__left__dress_consist__title
+            = dress_consist.title
+    - @dress.images.limit(3).each do |image|
+      = image_tag image.name.url(:dress_small)
+  .show_dress__right
+    - @dress.images.offset(3).limit(2).each do |image|
+      = image_tag image.name.url(:dress_large)
+
+
+  .clearfix
+.navigation_dress
+  .navigation_dress__left
+    = link_to 'ВСЕ ПУБЛИКАЦИИ ', dresses_path
+  .navigation_dress__right
+    = link_to 'СЛЕДУЮЩАЯ СТАТЬЯ', dresses_path

@@ -40,8 +40,16 @@ class ImageUploader < CarrierWave::Uploader::Base
     process resize_to_fill: [467, 435]
   end
 
+  version :dress_large do
+    process resize_to_fill: [828, 1411]
+  end
+
+  version :dress_small do
+    process resize_to_fill: [468, 678]
+  end
+
   version :dress_consist, :if => :is_dress_consist? do
-    process resize_to_fit: [150, 100]
+    process resize_to_fill: [468, 200]
   end
 
   # Add a white list of extensions which are allowed to be uploaded.
@@ -59,6 +67,10 @@ class ImageUploader < CarrierWave::Uploader::Base
   protected
   def is_dress_consist? picture
     model.class.name == 'DressConsist'
+  end
+
+  def is_dress? picture
+    model.class.name == 'Dress'
   end
 
 end
