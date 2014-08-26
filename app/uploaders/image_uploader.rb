@@ -41,7 +41,7 @@ class ImageUploader < CarrierWave::Uploader::Base
   end
 
   version :dress_large do
-    process resize_to_fill: [828, 1411]
+    process resize_to_fill: [800, 1452]
   end
 
   version :dress_small do

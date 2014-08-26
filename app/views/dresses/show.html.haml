@@ -12,12 +12,11 @@
           .show_dress__left__dress_consist__title
             = dress_consist.title
     - @dress.images.limit(3).each do |image|
-      = image_tag image.name.url(:dress_small)
+      .show_dress__left__image
+        = image_tag image.name.url(:dress_small)
   .show_dress__right
     - @dress.images.offset(3).limit(2).each do |image|
       = image_tag image.name.url(:dress_large)
-
-
   .clearfix
 .navigation_dress
   .navigation_dress__left
