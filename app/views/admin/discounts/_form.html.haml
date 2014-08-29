@@ -1,0 +1,16 @@
+= semantic_form_for [:admin, @discount]  do |f|
+  = f.semantic_errors *f.object.errors.keys
+  =f.inputs 'Title' do
+    = f.input :title, label: false
+  =f.inputs 'Body' do
+    = f.input :body, as: :text, label: false
+  =f.inputs 'Button name' do
+    = f.input :button_name, label: false
+  =f.inputs 'Button url' do
+    = f.input :button_url, label: false
+  = f.inputs 'Picture' do
+    = f.input :picture, as: :file, label: false
+    - if @discount.present?
+      = image_tag(@discount.picture.url(:discount))
+
+  = f.actions
