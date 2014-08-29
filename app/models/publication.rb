@@ -5,5 +5,5 @@ class Publication < ActiveRecord::Base
   extend FriendlyId
   friendly_id :title, use: :slugged
 
-  has_many :images, as: :imageable
+  has_many :images, as: :imageable, dependent: :destroy
 end
