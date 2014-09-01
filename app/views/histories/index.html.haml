@@ -1,0 +1,7 @@
+- @histories.each do |history|
+  %p
+    = history.date
+    %br
+    = history.title
+    %br
+    = raw(history.body)

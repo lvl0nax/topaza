@@ -1,0 +1,11 @@
+= semantic_form_for [:admin, @history]  do |f|
+  = f.semantic_errors *f.object.errors.keys
+  =f.inputs 'Title' do
+    = f.input :title, label: false
+  =f.inputs 'Body' do
+    = f.input :body, as: :ckeditor, label: false
+  =f.inputs 'Date' do
+    = f.input :date, label: false, :start_year => 1995, :end_year => Date.today.year
+
+  = f.actions
+
