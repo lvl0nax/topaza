@@ -32,6 +32,10 @@ class PictureUploader < CarrierWave::Uploader::Base
     process resize_to_fill: [468, 200]
   end
 
+  version :banner, :if => :is_banner? do
+    process resize_to_fill: [300, 50]
+  end
+
   # Provide a default URL as a default if there hasn't been a file uploaded:
   # def default_url
   #   # For Rails 3.1+ asset pipeline compatibility:
@@ -71,6 +75,10 @@ class PictureUploader < CarrierWave::Uploader::Base
 
   def is_dress_consist? picture
     model.class.name == 'DressConsist'
+  end
+
+  def is_banner? picture
+    model.class.name == 'Banner'
   end
 
 end
