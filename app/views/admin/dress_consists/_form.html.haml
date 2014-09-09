@@ -1,0 +1,12 @@
+= semantic_form_for [:admin, @dress_consist]  do |f|
+  = f.semantic_errors *f.object.errors.keys
+  =f.inputs 'Title' do
+    = f.input :title, label: false
+  =f.inputs 'Property' do
+    = f.input :property, as: :select, collection: %w(Material Embroidery), include_blank: false, label: false
+  = f.inputs 'Picture' do
+    = f.input :picture, as: :file, label: false
+    - if @dress_consist.present?
+      = image_tag(@dress_consist.picture.url(:dress_consist))
+
+  = f.actions

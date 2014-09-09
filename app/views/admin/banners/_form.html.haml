@@ -1,0 +1,12 @@
+= semantic_form_for [:admin, @banner]  do |f|
+  = f.semantic_errors *f.object.errors.keys
+  =f.inputs 'Url' do
+    = f.input :url, label: false, placeholder: 'http://google.com'
+  =f.inputs 'Positions' do
+    = f.input :positions, label: false, as: :check_boxes, collection: [['Main', 1, checked: @banner.positions.include?('1')], ['Publicatons', 2, checked: @banner.positions.include?('2')]]
+  = f.inputs 'Picture' do
+    = f.input :picture, as: :file, label: false
+    - if @banner.present?
+      = image_tag(@banner.picture.url(:banner))
+
+  = f.actions

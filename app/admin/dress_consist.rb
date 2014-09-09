@@ -1,25 +1,14 @@
 ActiveAdmin.register DressConsist do
-  permit_params :title, :image, :property
+  permit_params :title, :picture, :property
 
-  form do |f|
-    f.inputs 'Title' do
-      f.input :title, label: false
-    end
-    f.inputs 'Image' do
-      f.input :image, label: false, as: :file
-    end
-    f.inputs 'Property' do
-      f.input :property, as: :select, collection: %w(Material Embroidery), include_blank: false, label: false
-    end
-    f.actions
-  end
+  form partial: 'admin/dress_consists/form'
 
   show do |dress_consist|
     attributes_table do
       row :title
       row :property
-      row :image do
-        image_tag(dress_consist.image.url(:dress_consist))
+      row :picture do
+        image_tag(dress_consist.picture.url(:dress_consist))
       end
 
     end
