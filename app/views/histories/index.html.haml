@@ -1,7 +1,36 @@
-- @histories.each do |history|
-  %p
-    = history.date
-    %br
-    = history.title
-    %br
-    = raw(history.body)
+.index_histories-header
+  .index_histories-header-title
+    TOPAZA PELLA
+  .index_histories-header-middle_line
+  .index_histories-header-text
+    Мода существует только в настоящем времени. Последние 20 лет, мы напоминаем себе об этом каждый день. Эти 20 лет - непрерывный поиск вдохновения, преодоления трудностей. Но всё же, как и рубиновый колибри topaza pella - больше половины времени мы проводим в полёте.
+.index_histories-items
+  - @histories.each_with_index do |history, index|
+    - unless index % 2 == 0
+      .index_histories-item
+        .index_histories-item-left
+          .index_histories-item-left-number
+            .middle_line
+            = "№ #{index+1}"
+            .middle_line
+          .index_histories-item-left-title
+            = history.title.upcase
+          .index_histories-header-middle_line
+          .index_histories-item-left-body
+            = raw(history.body)
+        .index_histories-item-right_image
+          = image_tag Discount.first.picture.url(:discount)
+    - else
+      .index_histories-item
+        .index_histories-item-left_image
+          = image_tag Discount.first.picture.url(:discount)
+        .index_histories-item-right
+          .index_histories-item-right-number
+            .middle_line
+            = "№ #{index+1}"
+            .middle_line
+          .index_histories-item-right-title
+            = history.title.upcase
+          .index_histories-header-middle_line
+          .index_histories-item-right-body
+            = raw(history.body)
