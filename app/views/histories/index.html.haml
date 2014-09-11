@@ -19,11 +19,11 @@
           .index_histories-item-left-body
             = raw(history.body)
         .index_histories-item-right_image
-          = image_tag Discount.first.picture.url(:discount)
+          = image_tag history.picture.url(:history)
     - else
       .index_histories-item
         .index_histories-item-left_image
-          = image_tag Discount.first.picture.url(:discount)
+          = image_tag history.picture.url(:history)
         .index_histories-item-right
           .index_histories-item-right-number
             .middle_line
