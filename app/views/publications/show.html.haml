@@ -19,3 +19,23 @@
     = link_to 'ВСЕ ПУБЛИКАЦИИ ', publications_path
   .navigation_publication__right
     = link_to 'СЛЕДУЮЩАЯ СТАТЬЯ', publications_path
+
+:javascript
+  $(window).bind("load", function() {
+    var $bgobj = $('.show_publication__left')
+    var lheight = $bgobj.height()
+    var rheight = $('.show_publication__right').height()
+    console.log(lheight)
+    console.log(rheight)
+    if (lheight > rheight) {
+      $('.show_publication').height(lheight)
+    }
+    else{
+      var h = $('.header_container').height()
+      $(window).scroll(function() {
+        var yPos = ($(window).scrollTop() * (rheight-lheight)/($(document).height() - $(window).height()) );
+        var coords = yPos + 'px';
+        $bgobj.css({ top: coords });
+      });
+    }
+  });
