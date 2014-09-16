@@ -8,18 +8,36 @@
         = @dress.body
       - @dress.dress_consists.each do |dress_consist|
         .show_dress__left__dress_consist
-          = image_tag dress_consist.image.url(:dress_consist)
+          = image_tag dress_consist.picture.url(:dress_consist)
           .show_dress__left__dress_consist__title
             = dress_consist.title
-    - @dress.images.limit(3).each do |image|
-      .show_dress__left__image
+    - @dress.images.each do |image|
+      .show_dress__left__image.js-clickable-dress-img{data: {src: image.name.url(:dress_large)}}
         = image_tag image.name.url(:dress_small)
-  .show_dress__right
-    - @dress.images.offset(3).limit(2).each do |image|
-      = image_tag image.name.url(:dress_large)
+  .show_dress__right.js-big-dress{style: "height: #{@dress.images.size*678+790}px; background-image: url(#{@dress.images.first.name_url(:dress_large)});" }
+
   .clearfix
 .navigation_dress
   .navigation_dress__left
     = link_to 'ВСЕ ПУБЛИКАЦИИ ', dresses_path
   .navigation_dress__right
     = link_to 'СЛЕДУЮЩАЯ СТАТЬЯ', dresses_path
+
+:javascript
+  $(document).ready(function(){
+    var $bgobj = $('.js-big-dress'); // создаем объект
+    var m = $('.js-big-dress').width()/$(document).width()*100
+    var h = $('.header_container').height()
+    $bgobj.css('backround-size', m + '%;')
+    $(window).scroll(function() {
+      // вычисляем коэффициент
+      //1452 large image version size(height)
+      // 800 - large image version size(width)
+      var yPos = h - ($(window).scrollTop() / ($(document).height()/(1452 * ($('.js-big-dress').width()/800) )));
+
+      // Присваиваем значение background-position
+      var coords = '100% '+ yPos + 'px';
+      // Создаем эффект Parallax Scrolling
+      $bgobj.css({ backgroundPosition: coords });
+    });
+  });
