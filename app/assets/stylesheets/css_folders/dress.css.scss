@@ -18,7 +18,7 @@
   margin: 0px 0 20px 0;
   font-size: 35px;
   line-height: 40px;
-  display: inline-block;
+  float: left;
 }
 .show_dress__left__title{
   font-family: 'Oldsman';
@@ -70,31 +70,16 @@
   width: 468px;
   margin: 0 auto;
   line-height: 1px;
+  cursor: pointer;
 }
 
-
-
 .show_dress__right{
-
-  display: inline-block;
-  margin: 0px 0 20px 0;
+  margin: 0px 0 20px 470px;
   vertical-align: middle;
-  width: 800px;
-  //text-align: center;
-  //
-  //display: inline-block;
-  //margin: 65px 0 20px 0;
-  //margin-left: 467px;
-  //vertical-align: middle;
-  //width: 932px;
-  //img{
-  //  text-align: center;
-  //  width: 932px;
-  //  height: 1331px;
-  //  display: inline-block;
-  //  text-decoration: none;
-  //  //background-color: #8b8b9f;
-  //}
+  background-position: 100% 207px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 65%;
 }
 
 .navigation_dress{
