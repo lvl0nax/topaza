@@ -37,6 +37,7 @@
 .index_histories-item-right {
   margin-left: 467px;
 }
+
 .index_histories-item-right-number {
   padding-top: 50px;
   font-family: 'Oldsman';
@@ -71,14 +72,28 @@
 .index_histories-item {
   background-color: white;
   height: 435px;
+  min-width: 1024px;
 }
+/*--- img right---*/
 
 .index_histories-item-right_image {
-  float: right;
+  position: absolute; /* Абсолютное позиционирование */
+  width: 190px; /* Ширина слоя */
+  right: 0; /* Положение от левого края окна */
+  background: #800000; /* Цвет фона левой колонки */
+  padding: 5px; /* Поля вокруг текста */
+}
+.index_histories-item-left {
+  margin-right: 200px; /* Отступ слева */
+  background: #e0e0e0; /* Цвет фона правой колонки */
+  padding: 10px; /* Поля вокруг текста */
+
+
 }
 
-.index_histories-item-left {
-  float: left;
+
+.index_histories-item-left-block{
+  margin-right: 467px;
 }
 .index_histories-item-left-number {
   padding-top: 50px;
