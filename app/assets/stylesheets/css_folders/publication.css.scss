@@ -2,12 +2,12 @@
 .show_publication{
   max-width: 1400px;
   min-width: 800px;
-  width: 100%
-
+  width: 100%;
+  position: relative;
 }
 
 .show_publication__left{
-  float: left;
+  position: absolute;
   width: 467px;
   img{
     vertical-align: middle;
