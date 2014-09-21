@@ -80,7 +80,7 @@ set :scm,             :git
 
 ## Если ваш репозиторий в GitHub, используйте такую конфигурацию
 set :repository,    "git@github.com:lvl0nax/topaza.git"
-set :branch, 'master'
+set :branch, 'dev'
 ## --- Ниже этого места ничего менять скорее всего не нужно ---
 
 before 'deploy:finalize_update', 'set_current_release'
