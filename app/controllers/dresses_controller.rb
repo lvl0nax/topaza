@@ -1,5 +1,8 @@
 class DressesController < ApplicationController
-  def index
+  def bridal
+    @dresses = Dress.all
+  end
+  def evening
     @dresses = Dress.all
   end
 
