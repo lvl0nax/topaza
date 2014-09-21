@@ -1,5 +1,5 @@
 .show_dress
-  .show_dress__left
+  .show_dress__left.js-left-column
     .show_dress__left__title
       = @dress.title
     .middle_line_dress
@@ -24,19 +24,25 @@
     = link_to 'СЛЕДУЮЩАЯ СТАТЬЯ', dresses_path
 
 :javascript
-  $(document).ready(function(){
+  $(window).bind("load", function() {
     var $bgobj = $('.js-big-dress'); // создаем объект
-    var m = $('.js-big-dress').width()/$(document).width()*100
-    var h = $('.header_container').height()
+    var m = $bgobj.width()/$(document).width()*100
+    var h = $('.header').height()
+    var footer = $(document).height() - ($('.js-left-column').height() + $('.header').height())
+    console.log('============='+footer)
     $bgobj.css('backround-size', m + '%;')
+    var yPos = h-($(window).scrollTop() * ((1452 * ($bgobj.width()/800)) - $(window).height() + h + footer) / ($(document).height() - $(window).height()));
+    var coords = '100% '+ yPos + 'px';
+    $bgobj.css({ backgroundPosition: coords });
     $(window).scroll(function() {
       // вычисляем коэффициент
       //1452 large image version size(height)
       // 800 - large image version size(width)
-      var yPos = h - ($(window).scrollTop() / ($(document).height()/(1452 * ($('.js-big-dress').width()/800) )));
+      //var yPos = h - ($(window).scrollTop() / ($(document).height()/(1452 * ($('.js-big-dress').width()/800) )));
+      yPos = h-($(window).scrollTop() * ((1452 * ($bgobj.width()/800)) - $(window).height() + h + footer) / ($(document).height() - $(window).height()));
 
       // Присваиваем значение background-position
-      var coords = '100% '+ yPos + 'px';
+      coords = '100% '+ yPos + 'px';
       // Создаем эффект Parallax Scrolling
       $bgobj.css({ backgroundPosition: coords });
     });
