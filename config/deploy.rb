@@ -40,6 +40,7 @@ load 'deploy/assets'
 ssh_options[:forward_agent] = true
 # set :password, ask('Server password', nil)
 # server 'neon.locum.ru', user: 'hosting_lvl0nax', port: 22, password: fetch(:password), roles: %w{web app db}
+set :ssh_options,   :keys => "/home/#{user}/.ssh/id_rsa"
 
 # Имя вашего проекта в панели управления.
 # Не меняйте это значение без необходимости, оно используется дальше.
