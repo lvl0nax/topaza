@@ -1,0 +1,109 @@
+/*-------HEADER-----*/
+.index_histories-header {
+  width: 100%;
+  min-width: 800px;
+  height: 200px;
+  background-color: rgba(225, 225, 234, 0.5);
+}
+
+.index_histories-header-title {
+  font-family: 'baufra_light';
+  font-size: 35px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.index_histories-header-middle_line {
+  background-color: #A6A5AD;
+  width: 300px;
+  height: 1px;
+  margin: 20px auto;
+}
+
+.index_histories-header-text {
+  font-family: 'Open Sans';
+  font-size: 12px;
+  text-align: center;
+  width: 600px;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+/*-----END HEADER-----*/
+/*---img left---*/
+.index_histories-item-left_image {
+  float: left;
+}
+
+.index_histories-item-right {
+  margin-left: 467px;
+}
+.index_histories-item-right-number {
+  padding-top: 50px;
+  font-family: 'Oldsman';
+  color:  #48485d;
+  font-size: 35px;
+  line-height: 35px;
+  text-align: center;
+}
+
+.index_histories-item-right-title {
+  padding-top: 20px;
+  font-family: 'Open Sans';
+  color:  #48485d;
+  font-size: 35px;
+  line-height: 35px;
+  text-align: center;
+}
+
+.index_histories-item-right-body {
+  font-family: 'baufra_light';
+  color:  #48485d;
+  font-size: 12px;
+  text-align: center;
+  font-weight: bold;
+  width: 250px;
+  margin: 40px auto;
+}
+/*---end img left---*/
+.index_histories-items{
+  width: 100%;
+}
+.index_histories-item {
+  background-color: white;
+  height: 435px;
+}
+
+.index_histories-item-right_image {
+  float: right;
+}
+
+.index_histories-item-left {
+  float: left;
+}
+.index_histories-item-left-number {
+  padding-top: 50px;
+  font-family: 'Oldsman';
+  color:  #48485d;
+  font-size: 35px;
+  line-height: 35px;
+  text-align: center;
+}
+
+.index_histories-item-left-title {
+  padding-top: 20px;
+  font-family: 'Open Sans';
+  color:  #48485d;
+  font-size: 35px;
+  line-height: 35px;
+  text-align: center;
+}
+
+.index_histories-item-left-body {
+  font-family: 'baufra_light';
+  color:  #48485d;
+  font-size: 12px;
+  text-align: center;
+  font-weight: bold;
+  width: 250px;
+  margin: 40px auto;
+}
