@@ -39,7 +39,8 @@
         ИСТОРИЯ
         %br
         TOPAZA PELLA
-        .body__histories__item__title__middle_line
+        //.body__histories__item__title__middle_line
+        %hr{:align => 'center', :width => '250'}
     .body__histories__item__text
       О том, с чего начинали, к чему сремимся, и о том, как день за днём мы приближаемся к невозможному - идеальному свадебному платью.
   .body__histories__item
@@ -84,6 +85,14 @@
         ИСТОРИЯ
         %br
         TOPAZA PELLA
-        .body__article__text__title__middle_line
+        .body__histories__item__title__middle_line
     .body__article__text__text
       О том, с чего начинали, к чему сремимся, и о том, как день за днём мы приближаемся к невозможному - идеальному свадебному платью.
+.body__text
+  .body__discount__title__years__middle_line
+  НЕВЕСТЫ
+  .body__discount__title__years__middle_line
+.brides__container
+  .brides_container__before_banner
+    - Bride.first(3).each do |b|
+      = render partial: 'brides/bride_item', locals: {bride: b}
