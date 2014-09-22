@@ -12,7 +12,7 @@
   .body__header__middle_line
 .body__dresses
   .body__dresses__item
-    = image_tag Dress.find(20).images.first.name.url
+    = image_tag Category.first.picture.url
   .body__dresses__item
     .body__dresses__item__title-top
       СВАДЕБНЫЕ
@@ -27,7 +27,7 @@
       %br
       ПЛАТЬЯ
   .body__dresses__item
-    = image_tag Dress.find(20).images.first.name.url
+    = image_tag Category.offset(1).first.picture.url
 .body__histories
   .body__histories__item
     .body__histories__item__title
@@ -44,24 +44,31 @@
     .body__histories__item__text
       О том, с чего начинали, к чему сремимся, и о том, как день за днём мы приближаемся к невозможному - идеальному свадебному платью.
   .body__histories__item
-    = image_tag Dress.find(20).images.first.name.url
+    = image_tag DressConsist.where(property: 'Embroidery').first.picture.url
   .body__histories__item
-    = image_tag Dress.find(20).images.first.name.url
+    = image_tag DressConsist.where(property: 'Material').first.picture.url
 .body__text
   ПЛАТЬЕ TOPAZA PELLA ПОМОЖЕТ СОЗДАТЬ ОБРАЗ,
   %br
   КОТОРЫЙ ВЫ ДАВНО ДЛЯ СЕБЯ ЗАГАДАЛИ
 .body__collections
   - Dress.first(3).each do |d|
-    .body__collections__item
-      = image_tag d.images.where(main:true).first.name.url
-      .body__collections__item__info
-        .body__collections__item__info__bordered
-          .body__collections__item__name
-            = d.title
-          .publications_index__item
-          .body__collections__item__dress_name
-            = d.title
+    .dress_item
+      .dress_items__image_container
+        = image_tag d.images.where(main:true).first.name.url(:dress_small)
+        .dress_item__name
+          = d.title
+        .dress_item__underline
+        .dress_item__to_fitting
+    //.body__collections__item
+    //  = image_tag d.images.where(main:true).first.name.url
+    //  .body__collections__item__info
+    //    .body__collections__item__info__bordered
+    //      .body__collections__item__name
+    //        = d.title
+    //      .publications_index__item
+    //      .body__collections__item__dress_name
+    //        = d.title
 .body__discount
   .body__discount__title
     .body__discount__title__years

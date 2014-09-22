@@ -38,6 +38,10 @@ class PictureUploader < CarrierWave::Uploader::Base
 
   version :history, :if => :is_history? do
     process resize_to_fill: [467, 435]
+    end
+
+  version :category, :if => :is_category? do
+    process resize_to_fill: [462, 440]
   end
 
   # Provide a default URL as a default if there hasn't been a file uploaded:
@@ -87,6 +91,10 @@ class PictureUploader < CarrierWave::Uploader::Base
 
   def is_history? picture
     model.class.name == 'History'
+    end
+
+  def is_category? picture
+    model.class.name == 'Category'
   end
 
 end
