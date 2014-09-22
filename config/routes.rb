@@ -1,6 +1,7 @@
 Topaza::Application.routes.draw do
   resources :publications, only: [:show, :index]
   get 'dresses' => 'dresses#bridal'
+  get 'contacts' => 'contacts#index'
   resources :dresses, only: [:show ] do
     collection do
       get :bridal
