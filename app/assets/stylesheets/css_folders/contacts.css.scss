@@ -92,6 +92,8 @@
       font-size: 18px;
       padding-left: 10px;
       vertical-align: top;
+      font-family: 'Open Sans';
+      src: url('Open_Sans/OpenSans-Bold.ttf');
       .contacts_agency_item_city{
         font-size: 24px;
         margin-bottom: 10px;
@@ -99,10 +101,7 @@
         font-weight: bold;
         height: 30px;
       }
-      .contacts_agency_item_name{
-        font-family: 'Open Sans';
-        src: url('Open_Sans/OpenSans-Bold.ttf');
-        font-weight: bold;
+      .contacts_agency_item_name{font-weight: bold;
       }
       .contacts_agency_item_address{margin: 3px 0}
       .contacts_agency_item_tel{margin: 3px 0}
