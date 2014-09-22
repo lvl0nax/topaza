@@ -1,0 +1,120 @@
+.contacts_header{
+  height: 180px;
+  background-color:  rgba(225, 225, 234, 0.5);
+  width: 100%;
+  text-align: center;
+  .contacts_header__title{
+    font-family: 'Open Sans';
+    src: url('Open_Sans/OpenSans-Regular.ttf');
+    font-size: 30px;
+
+  }
+  .publications_index__item{
+    width: 300px;
+    margin: 0 auto 10px;
+  }
+}
+.contacts_body{
+  height: 633px;
+  width: 1400px;
+  min-width: 1024;
+  margin: 0 auto;
+  .contacts_body_text{
+    height: 633px;
+    width: 35%;
+    float: left;
+    .contacts_item{
+      margin: 40px auto;
+      width: 400px;
+      height: 100px;
+      .contacts_item_title{
+        margin: 10px 0;
+        font-family: 'baufra_light';
+        font-weight: bold;
+        font-size: 25px;
+      }
+      .contacts_item_left{
+        float: left;
+        width: 50%;
+      }
+      .contacts_item_right{
+        float: right;
+        width: 50%;
+      }
+    }
+
+    .contacts_body_stuff{
+      margin: 40px auto;
+      width: 400px;
+      .contacts_body_stuff_item{
+        margin: 30px 0;
+        .contacts_body_stuff_item_title{
+          font-weight: bold;
+          margin: 5px 0;
+        }
+        .contacts_body_stuff_item_email{
+          font-style: italic;
+          margin: 5px 0;
+        }
+      }
+
+    }
+
+  }
+  .contacts_body_map{
+    height: 633px;
+    width: 65%;
+    float: right;
+    overflow:hidden;
+  }
+}
+
+.contacts_agency{
+  background-color:  rgba(225, 225, 234, 0.5);
+  width: 100%;
+  height: 821px;
+  .contacts_agency_title{
+    text-align: center;
+    font-size: 25px;
+    padding: 40px 0;
+    font-family: 'Open Sans';
+    src: url("Open_Sans/OpenSans-Italic.ttf");
+    color: #13131C;
+  }
+  .contacts_agency_items{
+    width: 1400px;
+    min-width: 1024px;
+    margin: 0 auto;
+    .contacts_agency_item{
+      width: 24%;
+      margin-bottom: 50px;
+      display: inline-block;
+      font-size: 18px;
+      padding-left: 10px;
+      vertical-align: top;
+      font-family: 'Open Sans';
+      src: url('Open_Sans/OpenSans-Bold.ttf');
+      .contacts_agency_item_city{
+        font-size: 24px;
+        margin-bottom: 10px;
+        font-family: 'baufra_light';
+        font-weight: bold;
+        height: 30px;
+      }
+      .contacts_agency_item_name{font-weight: bold;
+      }
+      .contacts_agency_item_address{margin: 3px 0}
+      .contacts_agency_item_tel{margin: 3px 0}
+      .contacts_agency_item_time{margin: 3px 0}
+      .contacts_agency_item_site{
+        margin: 3px 0;
+        text-decoration: underline;
+      }
+      .contacts_agency_item_text{
+        margin: 3px 0;
+        font-style: italic;
+      }
+    }
+  }
+
+}

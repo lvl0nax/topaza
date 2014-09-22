@@ -1,0 +1,65 @@
+.contacts_header
+  %h1.contacts_header__title TOPAZA PELLA В САНКТ-ПЕТЕРБУРГЕ
+  .publications_index__item
+  .brides_message
+    Примерка проходитпо адресу Белинского, д.1. Выберите для примерки лучшее время, чтобы ни о чем больше не волноваться.
+.contacts_body
+  .contacts_body_text
+    .contacts_item
+      .contacts_item_title
+        ул. Белинского, д.1
+      .contacts_item_left
+        тел./fax.:
+        %b(812) 272-55-84
+        %iПредварительная запись
+
+      .contacts_item_right
+        Пн-Сб:
+        %b 10:00 - 12:00
+        %br
+        Вс:
+        %b 10:00 - 17:00
+    .contacts_item
+      .contacts_item_title
+        ул. Руднева, д.22/1
+      .contacts_item_left
+        тел./fax.:
+        %b(812) 272-55-84
+        %iПредварительная запись
+
+      .contacts_item_right
+        Пн-Сб:
+        %b 10:00 - 12:00
+        %br
+        Вс:
+        %b 10:00 - 17:00
+    .contacts_body_stuff
+      .contacts_body_stuff_item
+        .contacts_body_stuff_item_title
+          Коммерческий отдел
+        .contacts_body_stuff_item_email
+          kolibri@topaza-pella.ru
+        .contacts_body_stuff_item_email
+          marina-topaza@topaza-pella.ru
+      .contacts_body_stuff_item
+        .contacts_body_stuff_item_title
+          Коммерческий отдел
+        .contacts_body_stuff_item_email
+          tatiana-topaza@topaza-pella.ru
+      .contacts_body_stuff_item
+        .contacts_body_stuff_item_title
+          PR отдел
+        .contacts_body_stuff_item_email
+          tatiana-topaza@topaza-pella.ru
+  .contacts_body_map
+    = image_tag Dress.first.images.first.name.url
+.contacts_agency
+  .contacts_agency_title
+    ПРЕДСТАВИТЕЛЬСТВО В ДРУГИХ ГОРОДАХ
+  .contacts_agency_items
+    - @contacts.each_with_index do |contact, index|
+      = render 'contacts/contacts_item', contact: contact, index: index
+
+
+
+
