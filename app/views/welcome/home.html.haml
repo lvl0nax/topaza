@@ -1,15 +1,14 @@
-%div#root_page
-  Это стартовая страница проекта TOPAZA
 .body__header
   .body__header__text
     .body__header__year
       .body__header__year__middle_line
       2014
       .body__header__year__middle_line
-    НОВАЯ КОЛЛЕКЦИЯ
-    %br
-    СВАДЕБНЫХ ПЛАТЬЕВ
-  .body__header__middle_line
+    .body__header__text__title
+      НОВАЯ КОЛЛЕКЦИЯ
+      %br
+      СВАДЕБНЫХ ПЛАТЬЕВ
+    .body__header__middle_line
 .body__dresses
   .body__dresses__item
     = image_tag Category.first.picture.url
@@ -20,7 +19,7 @@
       ПЛАТЬЯ
     .body__dresses__item__center-block
       .body__dresses__item__center-block__middle-line
-      AND
+      = image_tag 'AND_для_категорий.png'
       .body__dresses__item__center-block__middle-line
     .body__dresses__item__title-bottom
       ВЕЧЕРНИЕ
@@ -29,8 +28,8 @@
   .body__dresses__item
     = image_tag Category.offset(1).first.picture.url
 .body__histories
-  .body__histories__item
-    .body__histories__item__title
+  .body__histories__left
+    .body__histories__left__title
       .body__histories__item__title__years
         .body__histories__item__title__years__middle_line
         2012-2014
@@ -43,10 +42,10 @@
         %hr{:align => 'center', :width => '250'}
     .body__histories__item__text
       О том, с чего начинали, к чему сремимся, и о том, как день за днём мы приближаемся к невозможному - идеальному свадебному платью.
-  .body__histories__item
-    = image_tag DressConsist.where(property: 'Embroidery').first.picture.url
-  .body__histories__item
-    = image_tag DressConsist.where(property: 'Material').first.picture.url
+  .body__histories__right
+    = image_tag 'истории_главная2.png'
+  //.body__histories__item
+  //  = image_tag DressConsist.where(property: 'Material').first.picture.url
 .body__text
   ПЛАТЬЕ TOPAZA PELLA ПОМОЖЕТ СОЗДАТЬ ОБРАЗ,
   %br
@@ -70,6 +69,8 @@
     //      .body__collections__item__dress_name
     //        = d.title
 .body__discount
+  .body__discount__image-left
+    = image_tag 'мал_роза_главная_баннер.png'
   .body__discount__title
     .body__discount__title__years
       .body__discount__title__years__middle_line
@@ -81,19 +82,23 @@
       дешевле на 10% процентов.
     .index_discounts-item-right-link
       = link_to Discount.first.button_name, Discount.first.button_url
+  .body__discount__image-right
+    = image_tag 'роза_главная_баннер.png'
 .body__article
-  .body__article__text
-    .body__article__text__title
-      .body__article__text__title__name
-        .body__article__text__title__name__middle_line
+  .body__article__left
+    = image_tag 'платья_публикации.png'
+  .body__article__right
+    .body__article__right__title
+      .body__article__right__title__name
+        .body__article__right__title__name__middle_line
         СТАТЬЯ
-        .body__article__text__title__name__middle_line
-      .body__article__text__title__text
+        .body__article__right__title__name__middle_line
+      .body__article__right__title__text
         ИСТОРИЯ
         %br
         TOPAZA PELLA
         .body__histories__item__title__middle_line
-    .body__article__text__text
+    .body__article__right__text
       О том, с чего начинали, к чему сремимся, и о том, как день за днём мы приближаемся к невозможному - идеальному свадебному платью.
 .body__text
   .body__discount__title__years__middle_line

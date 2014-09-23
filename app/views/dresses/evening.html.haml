@@ -1,0 +1,11 @@
+.dress_index
+  - @dresses.each_with_index do |dress, i|
+    = render 'dress_item', dress: dress
+    - if i == 0
+      = render 'firts_evening_info_block', dress: dress
+    - if i == 4
+      = render 'second_evening_info_block', dress: dress
+    - if i == 6
+      =# render banner
+    - if i == 12
+      = render 'third_evening_info_block', dress: dress
