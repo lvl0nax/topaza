@@ -1,26 +1,25 @@
+.publications__title
+  %h1 НОВОСТИ И СТАТЬИ
 .publications_index
-  .publications_index__title
-    %h1 НОВОСТИ И СТАТЬИ
-
-  - @publications.each_with_index do |publication, index|
-    .publications_index__item
-      .show_publication__left
-        = image_tag publication.images.first.name_url(:p_index)
-      .show_publication__right
-        .show_publication__right__date
-          .middle_line
-          = Russian::strftime(publication.created_at, '%B %Y')
-          .middle_line
-        .show_publication__right__title
-          = publication.title
-          .publication_underline
-
-        .show_publication__right__body
-          = publication.short_body
-      .clearfix
-    - if index == 1
-      .publications_index__banner
-        ЗДЕСЬ МОГЛА БЫТЬ ВАША РЕКЛАМА
+  .show_publication
+    - @publications.each_with_index do |publication, index|
+      .show_publication_item
+        .show_publication__left
+          = image_tag publication.images.first.name_url(:p_index)
+        .show_publication__right
+          .show_publication__right__date
+            .middle_line
+            = Russian::strftime(publication.created_at, '%B %Y')
+            .middle_line
+          .show_publication__right__title
+            = publication.title
+            .publication_underline
+          .show_publication__right__body
+            = publication.short_body
+        .clearfix
+      - if index == 1
+        .publications_index__banner
+          ЗДЕСЬ МОГЛА БЫТЬ ВАША РЕКЛАМА
   .navigation_publication
     ЗДЕСЬ БУДЕТ ПАГИНАЦИЯ
 
