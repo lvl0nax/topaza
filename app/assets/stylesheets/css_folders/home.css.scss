@@ -6,6 +6,7 @@
   max-width: 1400px;
   background: url('/assets/главная_хедер.png');
   background-size: cover;
+  color: #000000;
   .body__header__text{
     margin: 0 auto;
     text-align: center;
@@ -85,28 +86,61 @@
 
 
 .body__histories{
-  height: 319px;
+  height: 436px;
   width: 100%;
   margin: 0 auto;
   min-width: 1024px;
   max-width: 1400px;
   background-size: 100% auto;
   .body__histories__left{
-    height: 319px;
+    height: 436px;
     display: inline-block;
     width: 33%;
-    overflow: hidden;
+    //overflow: hidden;
+    float: left;
     .body__histories__left__title{
       margin: 0 auto;
       text-align: center;
     }
   }
   .body__histories__right{
-    height: 319px;
+    height: 436px;
     display: inline-block;
     width: 66%;
-    overflow: hidden;
+    img {
+      position: relative;
+      top: -196px;
+    }
   }
+}
+.body__histories__right__girl{
+  width: 126px;
+  position: relative;
+  z-index: 1;
+  top: 220px;
+  left: 780px;
+  img {
+    width:auto;
+    max-width:100%;
+    height:auto;
+  }
+}
+.body__histories__right__girl__hanger{
+  position: relative;
+  top: -80px;
+  left: 25px;
+  img {
+    width:auto;
+    max-width:100%;
+    height:auto;
+  }
+}
+.body__histories__right__girl__count{
+  position: relative;
+  color: #FFF;
+  font-size: 35px;
+  top: -310px;
+  left: 70px;
 }
 .body__histories__item__title__years{
   margin: 0 auto;
