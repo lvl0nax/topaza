@@ -6,10 +6,10 @@
   .header_container__title
     TOPAZA PELLA
   .header_container__menu
-    %a СВАДЕБНЫЕ
-    %a ВЕЧЕРНИЕ
-    %a ИСТОРИЯ
-    %a ПУБЛИКАЦИИ
-    %a{href: brides_path} НЕВЕСТЫ
-    %a СКИДКИ
-    %a КОНТАКТЫ
+    = link_to 'СВАДЕБНЫЕ', bridal_dresses_path
+    = link_to 'ВЕЧЕРНИЕ', evening_dresses_path
+    = link_to 'ИСТОРИЯ', histories_path
+    = link_to 'ПУБЛИКАЦИИ', publications_path
+    = link_to 'НЕВЕСТЫ', brides_path
+    = link_to 'СКИДКИ', discounts_path
+    = link_to 'КОНТАКТЫ', contacts_path
