@@ -1,16 +1,18 @@
 .body__header{
-  height: 227px;
+  height: 312px;
   width: 100%;
   margin: 0 auto;
   min-width: 1024px;
   max-width: 1400px;
-  background-size: 100% auto;
-  background: #c7b39b url(1.jpg);
+  background: url('/assets/главная_хедер.png');
+  background-size: cover;
   .body__header__text{
     margin: 0 auto;
     text-align: center;
     font-family: 'baufra';
     font-size: 38px;
+    padding-top: 50px;
+    .body__header__text__title{}
   }
 }
 .body__header__year{
@@ -89,16 +91,21 @@
   min-width: 1024px;
   max-width: 1400px;
   background-size: 100% auto;
-  .body__histories__item{
+  .body__histories__left{
     height: 319px;
     display: inline-block;
     width: 33%;
     overflow: hidden;
-    .body__histories__item__title{
+    .body__histories__left__title{
       margin: 0 auto;
       text-align: center;
     }
-
+  }
+  .body__histories__right{
+    height: 319px;
+    display: inline-block;
+    width: 66%;
+    overflow: hidden;
   }
 }
 .body__histories__item__title__years{
@@ -221,6 +228,7 @@
   margin: 0 auto;
   min-width: 1024px;
   max-width: 1400px;
+  overflow: hidden;
 }
 .body__discount__title{
   margin: 0 auto;
@@ -257,23 +265,43 @@
   text-align: center;
   margin-top: 20px;
 }
+.body__discount__image-left{
+  position: relative;
+  height: 0;
+  right: 420px;
+  bottom: 23px;
+}
+.body__discount__image-right{
+  position: relative;
+  height: 0;
+  left: 480px;
+  bottom: 300px;
 
+}
 
 
 
 .body__article{
-  height: 324px;
-  .body__article__text{
+  height: 437px;
+  width: 1400px;
+  min-width: 1024px;
+  margin: 0 auto;
+  .body__article__left{
+    display: inline-block;
+    width: 64%;
+    height: 437px;
+  }
+  .body__article__right{
     display: inline-block;
     width: 33%;
     overflow: hidden;
-
-    height: 324px;
-    float: right;
-    margin: 20px;
+    height: 437px;
   }
 }
-.body__article__text__title__name{
+.body__article__right__tittle{
+  padding-top: 50px;
+}
+.body__article__right__title__name{
   margin: 0 auto;
   text-align: center;
   font-size: 19px;
@@ -281,7 +309,7 @@
   font-family: 'Oldsman';
   margin-top: 52px;
 }
-.body__article__text__title__name__middle_line{
+.body__article__right__title__name__middle_line{
   background-color: #000;
   width: 70px;
   height: 1px;
@@ -289,13 +317,13 @@
   line-height: 25px;
   display: inline-block;
 }
-.body__article__text__title__text{
+.body__article__right__title__text{
   font-family: 'baufra';
   font-size: 18px;
   height: 40px;
   text-align: center;
 }
-.body__article__text__title__middle_line{
+.body__article__right__title__middle_line{
   background-color: #000;
   width: 70px;
   height: 1px;
@@ -306,7 +334,7 @@
   text-align: center;
   margin-top: 20px;
 }
-.body__article__text__text{
+.body__article__right__text{
   margin: 30px auto;
   text-align: center;
   font-family: 'Open Sans';

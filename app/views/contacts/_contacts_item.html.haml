@@ -1,0 +1,17 @@
+.contacts_agency_item
+  .contacts_agency_item_city
+    - unless @contacts[index-1][:city] == contact[:city]
+      = contact[:city]
+  .contacts_agency_item_name
+    = raw(contact[:name])
+  .contacts_agency_item_address
+    = contact[:address]
+  .contacts_agency_item_tel
+    тел./fax.:
+    = contact[:tel]
+  .contacts_agency_item_time
+    = raw(contact[:time])
+  .contacts_agency_item_site
+    = contact[:site]
+  .contacts_agency_item_text
+    = contact[:text]

@@ -86,16 +86,21 @@
 /*------------------index publication -------------*/
 .publications_index{
   text-align: center;
+  width: 1400px;
+  min-width: 1024px;
+  margin: 0 auto;
 }
-.publications_index__title{
+.publications__title{
   font-family: 'baufra_light';
   color:  #13131c;
   background-color: rgba(225, 225, 234, 0.5);
   padding-bottom: 20px;
+  text-align: center;
   h1{
     font-weight: bold;
   }
 }
+
 
 .publications_index__banner{
   width: 100%;
@@ -104,6 +109,11 @@
 }
 
 .publications_index__item{
+  border-bottom: 1px solid #dddce4;
+}
+
+.show_publication_item{
+  height: 435px;
   border-bottom: 1px solid #dddce4;
 }
 /*------------------end index publication -------------*/
