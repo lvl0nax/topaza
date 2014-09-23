@@ -22,6 +22,12 @@ task :copy_database_config, roles => :app do
   run "cp #{db_config} #{release_path}/config/database.yml"
 end
 
+after "deploy:update_code", :copy_assets
+task :copy_database_config, roles => :app do
+  db_config = "#{shared_path}/config/database.yml"
+  run "cp #{db_config} #{release_path}/config/database.yml"
+end
+
 # В rails 3 по умолчанию включена функция assets pipelining,
 # которая позволяет значительно уменьшить размер статических
 # файлов css и js.
@@ -79,6 +85,9 @@ set :scm,             :git
 ## Если ваш репозиторий в GitHub, используйте такую конфигурацию
 set :repository,    "git@github.com:lvl0nax/topaza.git"
 set :branch, 'master'
+
+set :keep_releases, 4
+after "deploy:update", "deploy:cleanup"
 ## --- Ниже этого места ничего менять скорее всего не нужно ---
 
 before 'deploy:finalize_update', 'set_current_release'
