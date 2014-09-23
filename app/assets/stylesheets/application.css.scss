@@ -85,12 +85,11 @@ html, body {
   line-height: 70px;
 }
 .header_link{
-  font-family: 'baufra_light';
+  font-family: 'baufra';
   font-size: 14px;
   line-height: 50px;
   width: 178px;
   height: 11px;
-  font-weight: bold;
   margin-top: 25px;
 }
 .header_container__shop_link{
@@ -104,10 +103,9 @@ html, body {
 .header_container__menu{
   margin-top: 10px;
   text-align: center;
-  font-family: 'baufra_light';
+  font-family: 'baufra';
   font-size: 16px;
   line-height: 50px;
-  font-weight: bold;
   border: 1px solid #8b8b9f;
   a{
     padding: 0 3%;
@@ -129,10 +127,9 @@ html, body {
 
 .footer_container__title{
   margin-top: 30px;
-  font-family: 'baufra_light';
+  font-family: 'baufra';
   color:  #13131c;
-  font-size: 25px; /* Approximation due to font substitution */
-  font-weight: bolder;
+  font-size: 25px;
   line-height: 30px;
 }
 
@@ -156,10 +153,9 @@ html, body {
     margin-left: 10px;
   }
   .footer_phone{
-    font-family: 'baufra_light';
+    font-family: 'baufra';
     color:  #13131c;
     font-size: 25px;
-    font-weight: bold;
     line-height: 40px;
   }
   .footer_address{
@@ -176,10 +172,9 @@ html, body {
   a{
     padding: 10px 20px;
     text-decoration: none;
-    font-family: 'baufra_light';
+    font-family: 'baufra';
     color:  #7c7c8a;
     font-size: 23.4px;
-    font-weight: bold;
     border: 1px solid #7c7c8a;
     line-height: 50px;
     &:hover{
