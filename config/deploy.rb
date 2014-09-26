@@ -79,6 +79,9 @@ set :scm,             :git
 ## Если ваш репозиторий в GitHub, используйте такую конфигурацию
 set :repository,    "git@github.com:lvl0nax/topaza.git"
 set :branch, 'master'
+
+set :keep_releases, 4
+after "deploy:update", "deploy:cleanup"
 ## --- Ниже этого места ничего менять скорее всего не нужно ---
 
 before 'deploy:finalize_update', 'set_current_release'
@@ -87,6 +90,12 @@ task :set_current_release, :roles => :app do
 end
 
 set :unicorn_start_cmd, "(cd #{deploy_to}/current; rvm use #{rvm_ruby_string} do bundle exec unicorn_rails -Dc #{unicorn_conf})"
+
+after "deploy:update_code", :create_custome_symlink
+desc 'Make symlink for additional topaza files'
+task :create_custome_symlink do
+  run "ln -nfs #{shared_path}/uploads                    #{release_path}/public/uploads"
+end
 
 
 # - for unicorn - #
