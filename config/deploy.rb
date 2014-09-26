@@ -91,6 +91,12 @@ end
 
 set :unicorn_start_cmd, "(cd #{deploy_to}/current; rvm use #{rvm_ruby_string} do bundle exec unicorn_rails -Dc #{unicorn_conf})"
 
+after "deploy:update_code", :create_custome_symlink
+desc 'Make symlink for additional topaza files'
+task :create_custome_symlink do
+  run "ln -nfs #{shared_path}/uploads                    #{release_path}/public/uploads"
+end
+
 
 # - for unicorn - #
 namespace :deploy do
