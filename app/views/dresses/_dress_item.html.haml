@@ -1,7 +1,10 @@
-.dress_item
-  .dress_items__image_container
-    = image_tag dress.images.first.name_url(:dress_small)
-    .dress_item__name
-      = dress.title
-    .dress_item__underline
-    .dress_item__to_fitting
+%a{ href: url_for(dress) }
+  .dress_item
+    .dress_items__image_container
+      = image_tag dress.images.first.name_url(:dress_small)
+      .dress_item__name
+        = dress.title
+      .dress_item__underline
+      .dress_item__to_fitting
+        %a.js_to_fitting{ href: '#', data: { id: dress.id, image_src: dress.images.first.name_url(:dress_small) } }
+          = image_tag asset_path('to_fitting.png')
