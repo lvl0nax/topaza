@@ -12,6 +12,7 @@ Topaza::Application.routes.draw do
   resources :pages, only: :show
   resources :histories, only: :index
   resources :discounts, only: :index
+  resources :fittings, only: [:new, :create]
 
   mount Ckeditor::Engine => '/ckeditor'
 
