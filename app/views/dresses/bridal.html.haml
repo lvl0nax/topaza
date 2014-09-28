@@ -6,6 +6,7 @@
     - if i == 4
       = render 'second_bridal_info_block', dress: dress
     - if i == 6
-      =# render banner
+      - @banners.each do |banner|
+        = render 'admin/banners/show', banner: banner
     - if i == 12
       = render 'third_bridal_info_block', dress: dress

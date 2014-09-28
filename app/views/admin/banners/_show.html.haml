@@ -1,0 +1,16 @@
+- if defined?(banner)
+  - @banner = banner
+.body__discount
+  .body__discount__image-left{:style => ('bottom: 177px' if controller_name=='discounts')}
+    = image_tag 'мал_роза_главная_баннер.png'
+  .body__discount__title
+    .body__discount__title__years
+      .body__discount__title__years__middle_line
+      = @banner.title
+      .body__discount__title__years__middle_line
+    .body__discount__title__text{style: 'line-height:normal'}
+      = raw(@banner.body)
+    .index_discounts-item-right-link
+      = link_to @banner.button_name, @banner.url
+  .body__discount__image-right
+    = image_tag 'роза_главная_баннер.png'
