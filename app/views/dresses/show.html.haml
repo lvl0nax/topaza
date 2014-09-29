@@ -15,7 +15,6 @@
       .show_dress__left__image.js-clickable-dress-img{data: {src: image.name.url(:dress_large)}}
         = image_tag image.name.url(:dress_small)
   .show_dress__right.js-big-dress{style: "height: #{@dress.images.size*678+790}px; background-image: url(#{@dress.images.first.name_url(:dress_large)});" }
-
   .clearfix
 .navigation_dress
   .navigation_dress__left
@@ -35,12 +34,12 @@
           = link_to '>', dress_path(@next_dress)
         - else
           >
-      //= will_paginate @dresses, previous_label: '<', next_label: '>'
 
 :javascript
-  $('.pagination').find('a:not(.next_page)').remove();
-  $('.pagination').find('.current').remove();
-  $('.pagination').append('<a href="#"><img src="/assets/наведение_на_платье.png" /></a>');
+  var pagination = $('.pagination');
+  pagination.find('a:not(.next_page)').remove();
+  pagination.find('.current').remove();
+  pagination.append('<a href="#"><img src="/assets/наведение_на_платье.png" /></a>');
 
   $(window).bind("load", function() {
     var $bgobj = $('.js-big-dress'); // создаем объект

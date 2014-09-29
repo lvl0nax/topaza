@@ -14,20 +14,6 @@
     .show_publication__right__body
       = raw(@publication.body)
   .clearfix
-/.navigation_publication
-/  .navigation_publication__left
-/    = link_to 'ВСЕ ПУБЛИКАЦИИ ', publications_path
-/  .navigation_publication__right
-/    .navigation_publication__right__prev
-/      - if @prev_publication.present?
-/        = link_to 'ПРЕДЫДУЩАЯ СТАТЬЯ', dress_path(@prev_publication)
-/      - else
-/        ПРЕДЫДУЩАЯ СТАТЬЯ
-/    .navigation_publication__right__next
-/      - if @next_publication.present?
-/        = link_to 'СЛЕДУЮЩАЯ СТАТЬЯ', dress_path(@next_publication)
-/      - else
-/        СЛЕДУЮЩАЯ СТАТЬЯ
 .navigation_publication
   .navigation_publication__left
     = link_to 'ВСЕ ПУБЛИКАЦИИ ', publications_path

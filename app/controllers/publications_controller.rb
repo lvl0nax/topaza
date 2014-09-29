@@ -5,7 +5,9 @@ class PublicationsController < ApplicationController
 
   def show
     @publication = Publication.friendly.find(params[:id])
-    @prev_publication = @publication == Publication.first ? nil : Publication.find(@publication.id-1)
-    @next_publication = @publication == Publication.last ? nil : Publication.find(@publication.id+1)
+    publications = Publication.order(:created_at)
+    current_index = publications.index(@publication)
+    @prev_publication = current_index-1 >= 0 ? publications[current_index-1] : nil
+    @next_publication = current_index+1 <= publications.length ? publications[current_index+1] : nil
   end
 end
