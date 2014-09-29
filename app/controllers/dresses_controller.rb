@@ -15,8 +15,9 @@ class DressesController < ApplicationController
 
   def show
     @dress = Dress.friendly.find(params[:id])
-    @dresses = Dress.paginate(:page => params[:page], :per_page => 1)
-    @prev_dress = @dress == Dress.first ? nil : Dress.find(@dress.id-1)
-    @next_dress = @dress == Dress.last ? nil : Dress.find(@dress.id+1)
+    dresses = Dress.order(:created_at)
+    current_index = dresses.index(@dress)
+    @prev_dress = current_index-1 >= 0 ? dresses[current_index-1] : nil
+    @next_dress = current_index+1 <= dresses.length ? dresses[current_index+1] : nil
   end
 end
