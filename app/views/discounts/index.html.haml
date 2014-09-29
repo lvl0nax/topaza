@@ -4,7 +4,7 @@
   .index_discounts-header-middle_line
   .index_discounts-header-text
     В приватных беседах с нашими гостями мы уловили одну тенденцию. Красиво одеваться, независимо от повода, хочет каждая женщина. Однако просто "одеться красиво" - это только половина мечты.
-- @discounts.each do |discount|
+- @discounts.each_with_index do |discount, i|
   .index_discounts-item
     = image_tag discount.picture.url(:discount)
     .index_discounts-item-right
@@ -16,3 +16,6 @@
         = discount.body
       .index_discounts-item-right-link
         = link_to discount.button_name, discount.button_url
+  - if i == 1
+    - @banners.each do |banner|
+      = render 'banners/show', banner: banner
