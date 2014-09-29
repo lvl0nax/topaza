@@ -11,7 +11,7 @@
     .body__header__middle_line
 .body__dresses
   .body__dresses__item
-    = image_tag Category.first.picture.url
+    = image_tag Category.first.picture.url(:category)
   .body__dresses__item
     .body__dresses__item__title-top
       СВАДЕБНЫЕ
@@ -26,7 +26,7 @@
       %br
       ПЛАТЬЯ
   .body__dresses__item
-    = image_tag Category.offset(1).first.picture.url
+    = image_tag Category.offset(1).first.picture.url(:category)
 .body__histories
   .body__histories__left
     .body__histories__left__title
