@@ -21,9 +21,27 @@
   .navigation_dress__left
     = link_to 'ВСЕ ПУБЛИКАЦИИ ', dresses_path
   .navigation_dress__right
-    = link_to 'СЛЕДУЮЩАЯ СТАТЬЯ', dresses_path
+    .navigation_dress__right__wrapper
+      .prev
+        - if @prev_dress.present?
+          = link_to '<', dress_path(@prev_dress)
+        - else
+          <
+      .image
+        = link_to '#' do
+          = image_tag 'наведение_на_платье.png'
+      .next
+        - if @next_dress.present?
+          = link_to '>', dress_path(@next_dress)
+        - else
+          >
+      //= will_paginate @dresses, previous_label: '<', next_label: '>'
 
 :javascript
+  $('.pagination').find('a:not(.next_page)').remove();
+  $('.pagination').find('.current').remove();
+  $('.pagination').append('<a href="#"><img src="/assets/наведение_на_платье.png" /></a>');
+
   $(window).bind("load", function() {
     var $bgobj = $('.js-big-dress'); // создаем объект
     var m = $bgobj.width()/$(document).width()*100

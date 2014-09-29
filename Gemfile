@@ -64,3 +64,4 @@ gem 'capistrano' #, group: :development
 gem 'activeadmin', github: 'activeadmin'
 gem 'devise'
 gem 'ckeditor'
+gem 'will_paginate', '~> 3.0.5'
