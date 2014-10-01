@@ -5,4 +5,10 @@ class Dress < ActiveRecord::Base
   has_many :images, as: :imageable, dependent: :destroy
   has_and_belongs_to_many :dress_consists, dependent: :nullify
   belongs_to :category
+
+  before_save :set_main_image
+
+  def set_main_image
+    images.first.update_attribute('main', true)
+  end
 end
