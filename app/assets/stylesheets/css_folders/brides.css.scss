@@ -99,11 +99,13 @@ a.submit_button{
 }
 
 .bride_item{
-  width: 466px;
-  height: 680px;
+  width: 33.3%;
   margin: -1.5px -2px;
   overflow: hidden;
   display: inline-block;
+  img{
+    width: 100%;
+  }
   &:hover{
     .bride_item__info{
       background-color: rgba(0,0,0,0.5);

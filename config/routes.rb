@@ -12,7 +12,12 @@ Topaza::Application.routes.draw do
   resources :pages, only: :show
   resources :histories, only: :index
   resources :discounts, only: :index
-  resources :fittings, only: [:new, :create]
+  resources :fittings, only: [:new, :create] do
+    collection do
+      get :disabled_times
+    end
+  end
+
 
   mount Ckeditor::Engine => '/ckeditor'
 
