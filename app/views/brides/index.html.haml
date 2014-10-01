@@ -31,5 +31,7 @@
       = render 'add_bride_item'
       - @brides.limit(5).offset(6).each do |b|
         = render partial: 'bride_item', locals: {bride: b}
+  .navigation_publication
+    = will_paginate @brides, previous_label: 'ОБРАТНО', next_label: 'ДАЛЬШЕ'
 
 

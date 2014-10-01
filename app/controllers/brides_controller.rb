@@ -1,7 +1,7 @@
 class BridesController < ApplicationController
 
   def index
-    @brides = Bride.approved.all
+    @brides = Bride.approved.paginate(:page => params[:page], :per_page => 6)
   end
 
   def create

@@ -101,11 +101,35 @@
   }
   .navigation_dress__left{
     float: left;
-    margin-left: 3%;
+    width: 33%;
+    text-align: center;
   }
   .navigation_dress__right{
+    width: 66%;
     float: right;
-    margin-right: 3%;
+    text-align: center;
+  }
+  .navigation_dress__right__wrapper{
+    padding: 0 90px;
+  }
+  .prev{
+    float: left;
+    display: inline-block;
+    width: 10%;
+  }
+  .image {
+    display: inline-block;
+    width: 80%;
+    img{
+      width: 50px;
+      height: auto;
+      padding-top: 7px;
+    }
+  }
+  .next{
+    width: 8%;
+    display: inline-block;
+    float: right;
   }
 }
 
@@ -216,8 +240,6 @@
   width: 20%;
   left: 40%;
   height: 13%;
-  border: 2px solid #f7f7fa;
-  border-radius: 60px;
   display: none;
 }
 
