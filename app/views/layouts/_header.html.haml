@@ -1,14 +1,15 @@
 .header_container
-  .header_container__shop_link.header_link
-    .header_store_image
-      = image_tag 'коробка.png'
-    .header_store_text
-      %a ОНЛАЙН-МАГАЗИН
-  .header_container__fitting.header_link
-    .header_record_image
-      = image_tag 'лупа.png'
-    .header_record_text
-      %a{ href: new_fitting_path } ЗАПИСЬ НА ПРИМЕРКУ
+  .header_container_wrapper
+    .header_container__shop_link.header_link
+      .header_store_image
+        = image_tag 'коробка.png'
+      .header_store_text
+        %a ОНЛАЙН-МАГАЗИН
+    .header_container__fitting.header_link
+      .header_record_image
+        = image_tag 'лупа.png'
+      .header_record_text
+        %a{ href: new_fitting_path } ЗАПИСЬ НА ПРИМЕРКУ
   .header_container__title
     TOPAZA PELLA
   .header_container__menu

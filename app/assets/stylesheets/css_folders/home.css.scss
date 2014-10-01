@@ -86,14 +86,14 @@
 
 
 .body__histories{
-  height: 436px;
+  //height: 436px;
   width: 100%;
   margin: 0 auto;
   min-width: 1024px;
   max-width: 1400px;
   background-size: 100% auto;
   .body__histories__left{
-    height: 436px;
+    //height: 436px;
     display: inline-block;
     width: 33%;
     //overflow: hidden;
@@ -104,21 +104,21 @@
     }
   }
   .body__histories__right{
-    height: 436px;
+    //height: 436px;
     display: inline-block;
-    width: 66%;
+    width: 67%;
+    position: relative;
     img {
-      position: relative;
-      top: -196px;
+      max-width: 100%;
     }
   }
 }
 .body__histories__right__girl{
   width: 126px;
-  position: relative;
-  z-index: 1;
-  top: 220px;
-  left: 780px;
+  position: fixed;
+  top: 288px;
+  right: 20px;
+  z-index: 1000;
   img {
     width:auto;
     max-width:100%;
@@ -126,8 +126,8 @@
   }
 }
 .body__histories__right__girl__hanger{
-  position: relative;
-  top: -80px;
+  position: absolute;
+  top: 45px;
   left: 25px;
   img {
     width:auto;
@@ -136,11 +136,11 @@
   }
 }
 .body__histories__right__girl__count{
-  position: relative;
+  position: absolute;
   color: #FFF;
   font-size: 35px;
-  top: -310px;
-  left: 70px;
+  top: 37px;
+  left: 52%;
 }
 .body__histories__item__title__years{
   margin: 0 auto;
@@ -194,13 +194,16 @@
   font-family: 'baufra';
   height: 119px;
   padding-top: 40px;
+  width: 100%;
+  margin: 0 auto;
+  min-width: 1024px;
+  max-width: 1400px;
 }
 
 
 
 
 .body__collections{
-  height: 672px;
   width: 100%;
   margin: 0 auto;
   min-width: 1024px;
@@ -256,12 +259,13 @@
   text-align: center;
   font-size: 30px;
   font-family: 'baufra';
-  padding: 30px 0;
   width: 100%;
   margin: 0 auto;
   min-width: 1024px;
   max-width: 1400px;
   overflow: hidden;
+  position: relative;
+  background-color: #f1edea;
 }
 .body__discount__title{
   margin: 0 auto;
@@ -299,36 +303,46 @@
   margin-top: 20px;
 }
 .body__discount__image-left{
-  position: relative;
-  height: 0;
-  right: 420px;
-  bottom: 23px;
+  position: absolute;
+  height: auto;
+  left: -29px;
+  width: 358px;
+  img{
+    max-width: 100%;
+  }
 }
 .body__discount__image-right{
-  position: relative;
-  height: 0;
-  left: 480px;
-  bottom: 300px;
+  position: absolute;
+  height: auto;
+  right: 0px;
+  top: -76px;
+  width: 317px;
+  img{
+    max-width: 100%;
+  }
 
 }
 
 
 
 .body__article{
-  height: 437px;
-  width: 1400px;
+  max-width: 1400px;
   min-width: 1024px;
   margin: 0 auto;
+  width: 100%;
+  overflow: hidden;
   .body__article__left{
     display: inline-block;
     width: 64%;
-    height: 437px;
+    float: left;
+    img{
+      max-width: 100%;
+    }
   }
   .body__article__right{
     display: inline-block;
     width: 33%;
     overflow: hidden;
-    height: 437px;
   }
 }
 .body__article__right__tittle{
