@@ -6,4 +6,7 @@ class Publication < ActiveRecord::Base
   friendly_id :title, use: :slugged
 
   has_many :images, as: :imageable, dependent: :destroy
+
+  scope :next, ->(id){where('id > ?', id).first}
+  scope :prev, ->(id){where('id < ?', id).first}
 end
