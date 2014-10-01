@@ -81,9 +81,10 @@ html, body {
   float: left;
   margin-right: 5px;
   margin-top: 7px;
+  display: inline-block;
 }
 .header_record_text{
-  width: 200px;
+  display: inline-block;
 }
 .header_container{
   max-width: 1200px;
@@ -107,14 +108,19 @@ html, body {
   height: 11px;
   margin-top: 25px;
 }
+.header_container_wrapper{
+  width: 100%;
+  margin: 0 auto;
+  min-width: 1024px;
+  max-width: 1400px;
+}
 .header_container__shop_link{
   float: left;
   text-align: left;
 }
 .header_container__fitting{
-  top: 0px;
-  position: absolute;
-  right: 22px;
+  float: right;
+  width: 193px;
 }
 .header_container__menu{
   margin-top: 10px;
