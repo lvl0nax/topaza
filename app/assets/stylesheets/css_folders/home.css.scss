@@ -86,14 +86,14 @@
 
 
 .body__histories{
-  height: 436px;
+  //height: 436px;
   width: 100%;
   margin: 0 auto;
   min-width: 1024px;
   max-width: 1400px;
   background-size: 100% auto;
   .body__histories__left{
-    height: 436px;
+    //height: 436px;
     display: inline-block;
     width: 33%;
     //overflow: hidden;
@@ -104,21 +104,19 @@
     }
   }
   .body__histories__right{
-    height: 436px;
+    //height: 436px;
     display: inline-block;
-    width: 66%;
+    width: 67%;
     img {
-      position: relative;
-      top: -196px;
+      max-width: 100%;
     }
   }
 }
 .body__histories__right__girl{
   width: 126px;
-  position: relative;
-  z-index: 1;
-  top: 220px;
-  left: 780px;
+  position: absolute;
+  top: 21%;
+  left: 87%;
   img {
     width:auto;
     max-width:100%;
@@ -139,8 +137,8 @@
   position: relative;
   color: #FFF;
   font-size: 35px;
-  top: -310px;
-  left: 70px;
+  top: -113px;
+  left: 52%;
 }
 .body__histories__item__title__years{
   margin: 0 auto;
