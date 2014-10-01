@@ -1,0 +1,55 @@
+.brides_header
+  %h1.brides_header__title ЗАПИСЬ НА ПРИМЕРКУ
+  .publications_index__item
+  .brides_message
+    Примерка проходит по адресу Белинского д. 1. Выберите для примерки лучшее время, чтобы ни о чем больше не волноваться.
+.fitting_content
+  .fitting_content__checkbox__dresses
+    %input.topaza_checkbox{type: 'checkbox'}
+    примерить понравившиеся платья
+  .fitting_content__dress_list
+
+  .fitting-content__dress_text
+    Каждое платье должно сесть идеально. Разумеется, выбранные экземпляры потребуют подгонки, или могут вовсе не подойти. Тем не менее предлагаем указать до 6 моделей, чтобы мы учли выши предпочтения. Кроме того, узнать о наличии и размерах каждой модели вы можете по телефону 8(812) 272-55-84.
+  .fitting_content__date_select
+    .fitting_content__date_select__title
+      ВЫБЕРИТЕ ПОДХОДЯЩИЙ ДЕНЬ
+    .fitting_content__date_select__calendar
+
+  .fitting-content__time_text
+    И ВРЕМЯ, КОГДА НИ ЧТО НЕ БУДЕТ ОТВЛЕКАТЬ
+  .fitting-content__time_select
+    .fitting-content__time_select__case.js_time_select{ data: { time: '13:00' }}
+      13:00
+    .fitting-content__time_select__case.js_time_select{ data: { time: '15:00' }}
+      15:00
+    .fitting-content__time_select__case.js_time_select.disabled_time{ data: { time: '17:00' }}
+      17:00
+
+  .fitting-content__submit_block
+    .fitting-content__submit_block__title
+      ПРЕКРАСНО!
+    .fitting-content__submit_block__content
+      Мы будем ждать вас
+      %b.js_date_text
+      в
+      %b.js_time_text
+      в доме №1 на улице Белинского. Пожалуйста, оставьте номер телефона, чтобы мы могли подтвердить время вашей примерки
+
+    %form.new_bride_popup__form
+      .bride_name
+        %input.grey_with_underline{type: 'text', name: 'fitting[name]', id: 'fitting_name', placeholder: 'ВАШЕ ИМЯ' }
+      .dress_name
+        %input.grey_with_underline{type: 'text', name: 'fitting[phone]', id: 'fitting_phone', placeholder: 'Телефон' }
+
+    .fitting-content__submit_block__errors
+
+    .fitting-content__submit_block__button
+      %a.js_fitting_submit.submit_button ЗАПИСАТЬСЯ
+
+    .fitting-content__submit_block__advice
+      .fitting-content__submit_block__advice__title
+        Маленький совет
+      .fitting-content__submit_block__advice__body
+        Подберите для примерки белье телесного цвета - такое, чтобы не стесняло движений и не смущало перед помошницами.
+
