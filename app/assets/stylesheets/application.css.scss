@@ -112,8 +112,9 @@ html, body {
   text-align: left;
 }
 .header_container__fitting{
-  float: right;
-  text-align: right;
+  top: 0px;
+  position: absolute;
+  right: 22px;
 }
 .header_container__menu{
   margin-top: 10px;

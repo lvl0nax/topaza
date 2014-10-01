@@ -124,8 +124,8 @@
   }
 }
 .body__histories__right__girl__hanger{
-  position: relative;
-  top: -80px;
+  position: absolute;
+  top: 45px;
   left: 25px;
   img {
     width:auto;
@@ -134,10 +134,10 @@
   }
 }
 .body__histories__right__girl__count{
-  position: relative;
+  position: absolute;
   color: #FFF;
   font-size: 35px;
-  top: -113px;
+  top: 37px;
   left: 52%;
 }
 .body__histories__item__title__years{
@@ -314,9 +314,10 @@
 
 .body__article{
   height: 437px;
-  width: 1400px;
+  max-width: 1400px;
   min-width: 1024px;
   margin: 0 auto;
+  width: 100%;
   .body__article__left{
     display: inline-block;
     width: 64%;
