@@ -11,7 +11,7 @@
     .body__header__middle_line
 .body__dresses
   .body__dresses__item
-    = image_tag Category.first.picture.url
+    = image_tag Category.first.picture.url(:category)
   .body__dresses__item
     .body__dresses__item__title-top
       СВАДЕБНЫЕ
@@ -26,7 +26,7 @@
       %br
       ПЛАТЬЯ
   .body__dresses__item
-    = image_tag Category.offset(1).first.picture.url
+    = image_tag Category.offset(1).first.picture.url(:category)
 .body__histories
   .body__histories__left
     .body__histories__left__title
@@ -80,22 +80,8 @@
     //      .publications_index__item
     //      .body__collections__item__dress_name
     //        = d.title
-.body__discount
-  .body__discount__image-left
-    = image_tag 'мал_роза_главная_баннер.png'
-  .body__discount__title
-    .body__discount__title__years
-      .body__discount__title__years__middle_line
-      10%
-      .body__discount__title__years__middle_line
-    .body__discount__title__text
-      Модели в нашем онлайн-магазине
-      %br
-      дешевле на 10% процентов.
-    .index_discounts-item-right-link
-      = link_to Discount.first.button_name, Discount.first.button_url
-  .body__discount__image-right
-    = image_tag 'роза_главная_баннер.png'
+- @banners.each do |banner|
+  = render 'banners/show', banner: banner
 .body__article
   .body__article__left
     = image_tag 'платья_публикации.png'

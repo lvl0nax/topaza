@@ -1,12 +1,21 @@
 = semantic_form_for [:admin, @banner]  do |f|
   = f.semantic_errors *f.object.errors.keys
+  =f.inputs 'Title' do
+    = f.input :title, label: false
+  =f.inputs 'Body' do
+    = f.input :body, label: false
+  =f.inputs 'Button name' do
+    = f.input :button_name, label: false
   =f.inputs 'Url' do
     = f.input :url, label: false, placeholder: 'http://google.com'
   =f.inputs 'Positions' do
-    = f.input :positions, label: false, as: :check_boxes, collection: [['Main', 1, checked: @banner.positions.include?('1')], ['Publicatons', 2, checked: @banner.positions.include?('2')]]
-  = f.inputs 'Picture' do
-    = f.input :picture, as: :file, label: false
-    - if @banner.present?
-      = image_tag(@banner.picture.url(:banner))
+    = f.input :positions, label: false, as: :check_boxes, collection: [['Главная', 1, checked: @banner.positions.include?('1')],
+                                                                       ['Публикации', 2, checked: @banner.positions.include?('2')],
+                                                                       ['Платья', 3, checked: @banner.positions.include?('3')],
+                                                                       ['Скидки', 4, checked: @banner.positions.include?('4')]]
+  /= f.inputs 'Picture' do
+  /  = f.input :picture, as: :file, label: false
+  /  - if @banner.present?
+  /    = image_tag(@banner.picture.url(:banner))
 
   = f.actions

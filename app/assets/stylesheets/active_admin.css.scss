@@ -11,6 +11,10 @@
 @import "active_admin/mixins";
 @import "active_admin/base";
 
+@import 'css_folders/home';
+@import 'fonts';
+@import 'css_folders/discounts';
+
 // Overriding any non-variable SASS must be done after the fact.
 // For example, to change the default status-tag color:
 //
