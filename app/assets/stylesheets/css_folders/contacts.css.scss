@@ -2,6 +2,8 @@
   height: 180px;
   background-color:  rgba(225, 225, 234, 0.5);
   width: 100%;
+  min-width: 1024px;
+  margin: 0 auto;
   text-align: center;
   .contacts_header__title{
     font-family: 'Open Sans';
@@ -60,7 +62,7 @@
     }
 
   }
-  .contacts_body_map{
+  #contacts_body_map{
     height: 633px;
     width: 65%;
     float: right;
