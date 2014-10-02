@@ -1,5 +1,5 @@
 CKEDITOR.editorConfig = function( config ) {
-    config.language = 'ru';
+    config.language = 'en';
     config.uiColor = '#D4D4D4';
     config.toolbar = 'Basic';
     config.filebrowserBrowseUrl = "/ckeditor/attachment_files";
