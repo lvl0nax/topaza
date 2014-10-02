@@ -15,5 +15,10 @@
 #= require turbolinks
 #= require handlebars.runtime
 #= require_tree ./templates
-#= require_tree .
+#= require brides
+#= require dresses
+#= require fitting
 #=------------------------------------------------------------------------
+
+$(document).on 'click', '.js_to_fitting', (e)->
+  console.log 'event fired from application js'
