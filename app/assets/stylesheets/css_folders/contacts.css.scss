@@ -81,15 +81,16 @@
     color: #13131C;
   }
   .contacts_agency_items{
-    width: 1400px;
+    width: 100%;
+    max-width: 1400px;
     min-width: 1024px;
     margin: 0 auto;
     .contacts_agency_item{
-      width: 24%;
+      width: 290px;
       margin-bottom: 50px;
       display: inline-block;
-      font-size: 18px;
-      padding-left: 10px;
+      font-size: 16px;
+      margin-left: 46px;
       vertical-align: top;
       font-family: 'Open Sans';
       src: url('Open_Sans/OpenSans-Bold.ttf');
