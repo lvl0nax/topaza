@@ -183,7 +183,8 @@
 }
 .dress_item{
   display: inline-block;
-  width: 33%;
+  width: 33.3%;
+  margin: -1.5px -2px;
   overflow: hidden;
   cursor: pointer;
 }
@@ -250,7 +251,7 @@
 .dresses_info_block__title{
   font-family: 'baufra';
   color:  #13131c;
-  font-size: 42px;
+  font-size: 35px;
   line-height: 55px;
   width: 75%;
   margin: 0 auto 7%;

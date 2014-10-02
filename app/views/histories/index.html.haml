@@ -8,6 +8,8 @@
   - @histories.each_with_index do |history, index|
     - unless index % 2 == 0
       .index_histories-item
+        .index_histories-item-right_image
+          = image_tag history.picture.url(:history)
         .index_histories-item-left
           .index_histories-item-left-number
             .middle_line
@@ -18,8 +20,6 @@
           .index_histories-header-middle_line
           .index_histories-item-left-body
             = raw(history.body)
-        .index_histories-item-right_image
-          = image_tag history.picture.url(:history)
     - else
       .index_histories-item
         .index_histories-item-left_image
