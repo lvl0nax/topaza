@@ -267,7 +267,32 @@
 }
 /*------------ end new fitting page ------------------*/
 /*------------ confirmation page ------------------*/
-.confirm_header{
-
+.confirm-wrapper{
+  width: 100%;
+  min-width: 1024px;
+  text-align: center;
+  background-color: #EFEFF4;
+}
+.confirm-header{
+  width: 100%;
+  min-width: 1024px;
+  font-family: 'baufra';
+  font-size: 36px;
+  text-align: center;
+  background-color: #EFEFF4;
+}
+.confirm-header-underline{
+  background-color: #a6a5ad;
+  width: 300px;
+  height: 1px;
+  margin: 20px auto;
+}
+.confirm-text{
+  width: 100%;
+  min-width: 1024px;
+  font-family: 'baufra';
+  font-size: 36px;
+  text-align: center;
+  background-color: #EFEFF4;
 }
 /*------------ end confirmation page ------------------*/
