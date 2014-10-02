@@ -1,9 +1,37 @@
+= javascript_include_tag "http://api-maps.yandex.ru/2.0/?load=package.full&lang=ru-RU&key=AEgoLVQBAAAAqP_JFAIAiL4dpwfmuzuJZa7m5LFRiB-Dgv4AAAAAAAAAAABiefu-PBE1rbgv6A-RD5PwTI2Ewg=="
 .confirm-wrapper
   .confirm-header
     ВПЕРЕДИ - САМОЕ ПРИЯТНОЕ!
     .confirm-header-underline
   .confirm-text
-    Будем ждать вас 19 августа в 15:00 по адресу ул.Белинского, д.1
+    Будем ждать вас
+    %b 19 августа
+    в 15:00 по адресу
+    %b ул.Белинского, д.1
     %br
     Если ваши планы изменятся, пожалуйста, предупредите нас по телефону.
+  #confirm-maps
+:javascript
+  ymaps.ready(init);
 
+  function init () {
+      var myMap = new ymaps.Map('confirm-maps', {
+              center: [59.937886, 30.342604],
+              zoom: 17
+          }),
+          markBelinskogo = new ymaps.Placemark([59.937856, 30.344454], {
+              hintContent: 'Собственный значок метки'
+          }, {
+              // Опции.
+              // Необходимо указать данный тип макета.
+              iconLayout: 'default#image',
+              // Своё изображение иконки метки.
+              iconImageHref: '/assets/mark.png',
+              // Размеры метки.
+              iconImageSize: [55, 70],
+              // Смещение левого верхнего угла иконки относительно
+              // её "ножки" (точки привязки).
+              iconImageOffset: [-30, -65]
+          });
+      myMap.geoObjects.add(markBelinskogo);
+  }
