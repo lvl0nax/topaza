@@ -34,7 +34,7 @@ Topaza::Application.configure do
 
   # Version of your assets, change this if you want to expire all your assets.
   config.assets.version = '1.0'
-  config.assets.precompile += %w( ckeditor/* )
+  config.assets.precompile += %w( ckeditor/* application.js.coffee bridal.js.coffee dresses.js.coffee fitting.js.coffee )
   config.assets.precompile << /\.(?:svg|eot|woff|ttf|otf)\z/
 
   # Specifies the header that your server uses for sending files.
