@@ -12,6 +12,7 @@
 #
 #= require jquery
 #= require jquery_ujs
+#= require jquery-ui
 #= require turbolinks
 #= require handlebars.runtime
 #= require_tree ./templates
@@ -20,5 +21,3 @@
 #= require fitting
 #=------------------------------------------------------------------------
 
-$(document).on 'click', '.js_to_fitting', (e)->
-  console.log 'event fired from application js'

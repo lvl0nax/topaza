@@ -237,6 +237,7 @@ DEPENDENCIES
   handlebars_assets
   jbuilder (~> 1.2)
   jquery-rails
+  jquery-ui-rails
   mime-types
   mini_magick
   pg

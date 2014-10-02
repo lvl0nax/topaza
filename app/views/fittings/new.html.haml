@@ -53,3 +53,63 @@
       .fitting-content__submit_block__advice__body
         Подберите для примерки белье телесного цвета - такое, чтобы не стесняло движений и не смущало перед помошницами.
 
+:javascript
+  var check_available_time,
+    __indexOf = [].indexOf || function(item) { for (var i = 0, l = this.length; i < l; i++) { if (i in this && this[i] === item) return i; } return -1; };
+
+  check_available_time = function() {
+    var date;
+    $('.disabled_time').removeClass('disabled_time');
+    date = $(".fitting_content__date_select__calendar").val();
+    return $.ajax({
+      type: 'get',
+      dataType: "json",
+      url: "/fittings/disabled_times",
+      data: {
+        date: date
+      }
+    }).done(function(data) {
+      if (__indexOf.call(data.disabled_times, '13:00') >= 0) {
+        $('[data-time="13:00"]').addClass('disabled_time');
+      }
+      if (__indexOf.call(data.disabled_times, '15:00') >= 0) {
+        $('[data-time="15:00"]').addClass('disabled_time');
+      }
+      if (__indexOf.call(data.disabled_times, '17:00') >= 0) {
+        return $('[data-time="17:00"]').addClass('disabled_time');
+      }
+    });
+  };
+
+  check_available_time();
+
+  $(".fitting_content__date_select__calendar").datepicker({
+    dayNamesMin: ["Вс", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб"],
+    dateFormat: "dd-mm-yy",
+    firstDay: 1,
+    nextText: ">",
+    prevText: "<",
+    minDate: new Date(),
+    monthNames: ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"],
+    onSelect: function(date) {
+      return check_available_time();
+    }
+  });
+
+  var get_dresses;
+
+  get_dresses = function() {
+    $(".fitting_content__dress_list").html("");
+    if (localStorage["dresses"].length > 1) {
+      return localStorage["dresses"].split(";").forEach(function(i) {
+        if (i.length > 1) {
+          return $(".fitting_content__dress_list").append(JST["fittings/dress"]({
+            id: i.split(",")[0],
+            image_src: i.split(",")[1]
+          }));
+        }
+      });
+    }
+  };
+
+  get_dresses();
