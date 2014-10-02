@@ -19,5 +19,6 @@
 #= require brides
 #= require dresses
 #= require fitting
+#= require map
 #=------------------------------------------------------------------------
 
