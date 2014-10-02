@@ -4,7 +4,8 @@
   margin: 0 auto;
   min-width: 1024px;
   max-width: 1400px;
-  background: url('/assets/главная_хедер.png');
+  //background: url('/assets/главная_хедер.png');
+  background: image-url('главная_хедер.png');
   background-size: cover;
   color: #000000;
   .body__header__text{

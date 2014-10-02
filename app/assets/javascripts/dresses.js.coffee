@@ -4,6 +4,7 @@ $(document).on 'click', '.js-clickable-dress-img', (e)->
   $('.js-big-dress').css('background-image', "url(#{src})")
 
 $(document).on 'click', '.js_to_fitting', (e)->
+  console.log 'event fired from application js'
   e.preventDefault()
   $(e.currentTarget).css('opacity', 0)
   id = $(e.currentTarget).data('id')
