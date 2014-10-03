@@ -93,11 +93,11 @@
         .body__histories__item__title__middle_line
     .body__article__right__text
       О том, с чего начинали, к чему сремимся, и о том, как день за днём мы приближаемся к невозможному - идеальному свадебному платью.
-.body__text
+.body__text.home__brides
   .body__discount__title__years__middle_line
   НЕВЕСТЫ
   .body__discount__title__years__middle_line
-.brides__container
+.brides__container.home__brides__container
   .brides_container__before_banner
     - Bride.first(3).each do |b|
       = render partial: 'brides/bride_item', locals: {bride: b}

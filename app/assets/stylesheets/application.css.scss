@@ -140,7 +140,7 @@ html, body {
   min-width: 800px;
   min-height: 350px;
   color: #8b8b9f;
-  background-color: rgba(225, 225, 234, 0.5);
+  background-color: #E1E1EA;
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -208,6 +208,9 @@ html, body {
 
 .footer_container__social_links{
   font-family: 'Oldsman';
+  height: 70px;
+  line-height: 70px;
+  background-color: white;
   a{
     padding: 2%;
     color:  #13131c;
