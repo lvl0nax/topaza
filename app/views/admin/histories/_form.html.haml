@@ -8,8 +8,8 @@
     = f.input :picture, as: :file, label: false
     - if @history.present?
       = image_tag(@history.picture.url(:history))
-  =f.inputs 'Date' do
-    = f.input :date, label: false, :start_year => 1995, :end_year => Date.today.year
+  -#=f.inputs 'Date' do
+  -#  = f.input :date, label: false, :start_year => 1995, :end_year => Date.today.year
 
   = f.actions
 
