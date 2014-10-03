@@ -6,7 +6,7 @@
     Мода существует только в настоящем времени. Последние 20 лет, мы напоминаем себе об этом каждый день. Эти 20 лет - непрерывный поиск вдохновения, преодоления трудностей. Но всё же, как и рубиновый колибри topaza pella - больше половины времени мы проводим в полёте.
 .index_histories-items
   - @histories.each_with_index do |history, index|
-    - unless index % 2 == 0
+    - if index.even?
       .index_histories-item
         .index_histories-item-right_image
           = image_tag history.picture.url(:history)
