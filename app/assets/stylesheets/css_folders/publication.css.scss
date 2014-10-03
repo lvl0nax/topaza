@@ -5,6 +5,9 @@
   width: 100%;
   position: relative;
   margin: 0 auto;
+  a{
+    text-decoration: none;
+  }
 }
 
 .show_publication__left{
@@ -56,6 +59,7 @@
   margin: 50px 5%;
   text-align: left;
   font-family: 'Open Sans';
+  color: #808080;
 }
 .navigation_publication{
   height: 65px;
