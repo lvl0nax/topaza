@@ -2,11 +2,11 @@
   - @dresses.each_with_index do |dress, i|
     = render 'dress_item', dress: dress
     - if i == 0
-      = render 'firts_bridal_info_block', dress: dress
+      = render 'first_bridal_info_block', dress: dress
     - if i == 4
       = render 'second_bridal_info_block', dress: dress
     - if i == 6
       - @banners.each do |banner|
         = render 'banners/show', banner: banner
-    - if i == 12
+    - if i == 11
       = render 'third_bridal_info_block', dress: dress
