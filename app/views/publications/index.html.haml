@@ -3,20 +3,21 @@
 .publications_index
   .show_publication
     - @publications.each_with_index do |publication, index|
-      .show_publication_item
-        .show_publication__left
-          = image_tag publication.images.first.name_url(:p_index)
-        .show_publication__right
-          .show_publication__right__date
-            .middle_line
-            = Russian::strftime(publication.created_at, '%B %Y')
-            .middle_line
-          .show_publication__right__title
-            = publication.title
-            .publication_underline
-          .show_publication__right__body
-            = publication.short_body
-        .clearfix
+      = link_to publication_path(publication) do
+        .show_publication_item
+          .show_publication__left
+            = image_tag publication.images.first.name_url(:p_index)
+          .show_publication__right
+            .show_publication__right__date
+              .middle_line
+              = Russian::strftime(publication.created_at, '%B %Y')
+              .middle_line
+            .show_publication__right__title
+              = publication.title
+              .publication_underline
+            .show_publication__right__body
+              = publication.short_body
+          .clearfix
       - if index == 1
         .publications_index__banner
           ЗДЕСЬ МОГЛА БЫТЬ ВАША РЕКЛАМА

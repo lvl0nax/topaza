@@ -11,7 +11,8 @@
       .header_record_text
         %a{ href: new_fitting_path } ЗАПИСЬ НА ПРИМЕРКУ
   .header_container__title
-    TOPAZA PELLA
+    = link_to root_path do
+      = image_tag 'logo.png'
   .header_container__menu
     = link_to 'СВАДЕБНЫЕ', bridal_dresses_path
     = link_to 'ВЕЧЕРНИЕ', evening_dresses_path
