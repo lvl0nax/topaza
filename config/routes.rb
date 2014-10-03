@@ -15,6 +15,7 @@ Topaza::Application.routes.draw do
   resources :fittings, only: [:new, :create] do
     collection do
       get :disabled_times
+      get :confirmation
     end
   end
 

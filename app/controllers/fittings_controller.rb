@@ -9,7 +9,8 @@ class FittingsController < ApplicationController
     fitting = Fitting.new(args)
     fitting.dresses = Dress.find(ids) if ids.present?
     if fitting.save!
-      render json: {path: contacts_path}
+      #render json: {path: contacts_path}
+      render 'confirmation'
     else
       render json: {status: 0}
     end
