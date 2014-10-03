@@ -1,11 +1,11 @@
 .bride_item
-  = image_tag bride.picture_url(:thumb)
-  .bride_item__info
-    .bride_item__info__bordered
+  .bride_item__image_container
+    = image_tag bride.picture_url(:thumb)
+    .bride_item__info
       .birde_item__name
         = bride.name
       .publications_index__item
       .birde_item__dress_name
         = bride.dress_name
-      .bride_item__comment
-        = bride.comment
+    .bride_item__comment
+      = bride.comment
