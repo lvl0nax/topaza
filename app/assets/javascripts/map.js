@@ -6,7 +6,7 @@ function init () {
             zoom: 11
         }),
         markRudneva = new ymaps.Placemark([60.048392, 30.367005], {
-            hintContent: 'Собственный значок метки'
+            hintContent: 'ул. Руднева, д.22/1'
         }, {
             // Опции.
             // Необходимо указать данный тип макета.
@@ -20,7 +20,7 @@ function init () {
             iconImageOffset: [-3, -42]
         }),
         markBelinskogo = new ymaps.Placemark([59.937886, 30.344604], {
-            hintContent: 'Собственный значок метки'
+            hintContent: 'ул. Белинского, д.1'
         }, {
             // Опции.
             // Необходимо указать данный тип макета.
