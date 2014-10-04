@@ -1,17 +1,20 @@
 .index_discounts-header
   .index_discounts-header-title
-    СКИДКИ
+    АКЦИИ И СПЕЦИАЛЬНЫЕ ЦЕНЫ
   .index_discounts-header-middle_line
   .index_discounts-header-text
-    В приватных беседах с нашими гостями мы уловили одну тенденцию. Красиво одеваться, независимо от повода, хочет каждая женщина. Однако просто "одеться красиво" - это только половина мечты.
+    Особенными могут быть не только наши платья, но и предложения. Возможно, это ваш счастливый случай.
 - @discounts.each_with_index do |discount, i|
   .index_discounts-item
     = image_tag discount.picture.url(:discount)
     .index_discounts-item-right
+      .index_discounts-item-right-header
+        .middle_line
+        АКЦИЯ
+        .middle_line
       .index_discounts-item-right-title
-        .middle_line
         = discount.title
-        .middle_line
+      .index_discounts-header-middle_line
       .index_discounts-item-right-body
         = discount.body
       .index_discounts-item-right-link
