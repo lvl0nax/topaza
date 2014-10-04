@@ -1,0 +1,8 @@
+.brides_header
+  %h1.brides_header__title ВАШ ВЫБОР
+  .footer_container__fitting_button
+    %a{ href: new_fitting_path } ЗАПИСАТЬСЯ НА ПРИМЕРКУ
+
+.dress_index.selected_dresses
+  - @dresses.each do |dress|
+    = render 'dress_item', dress: dress

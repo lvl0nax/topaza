@@ -16,6 +16,7 @@ Topaza::Application.routes.draw do
     collection do
       get :disabled_times
       get :confirmation
+      get :selected_dresses
     end
   end
 

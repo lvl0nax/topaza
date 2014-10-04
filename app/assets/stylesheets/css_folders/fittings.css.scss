@@ -8,10 +8,9 @@
 }
 
 .fitting_content__checkbox__dresses{
-  font-family: 'baufra_light';
+  font-family: 'baufra';
   color:  #13131c;
   font-size: 25px;
-  font-weight: bold;
   line-height: 65px;
   text-align: center;
 }
@@ -47,12 +46,11 @@
 }
 
 .fitting-content__dress_text{
-  font-family: 'opensans';
+  font-family: 'Open Sans';
   width: 780px;
-  margin: 20px 3px;
+  margin: 20px;
   color:  #48485d;
   font-size: 16px;
-  font-weight: 300;
   line-height: 23px;
 }
 
@@ -63,10 +61,9 @@
 }
 
 .fitting_content__date_select__title{
-  font-family: 'baufra_light';
+  font-family: 'baufra';
   color:  #13131c;
   font-size: 25px;
-  font-weight: bold;
   line-height: 40px;
   padding: 30px 0 20px;
 }
@@ -96,7 +93,7 @@
   .ui-datepicker-header{
     width: 590px;
     margin: 0 auto;
-    font-family: 'oldsman';
+    font-family: 'Oldsman';
     color:  #48485d;
     font-size: 30px;
     line-height: 35px;
@@ -110,17 +107,15 @@
     font-family: 'Open Sans';
     color:  #48485d;
     font-size: 16px;
-    font-weight: 300;
     line-height: 23px;
     th{
       text-align: center;
     }
   }
   tbody{
-    font-family: 'oldsman';
+    font-family: 'Oldsman';
     color:  rgba(72, 72, 93, 0.33);
     font-size: 35px;
-    font-weight: 400;
     line-height: 35px;
     text-align: center;
     td{
@@ -144,19 +139,17 @@
 }
 
 .fitting-content__time_text{
-  font-family: 'baufra_light';
+  font-family: 'baufra';
   color:  #13131c;
   font-size: 25px;
-  font-weight: bold;
   line-height: 40px;
   text-align: center;
   margin: 20px 0
 }
 .fitting-content__time_select{
-  font-family: 'oldsman';
+  font-family: 'Oldsman';
   color:  #48485d;
   font-size: 49.94px;
-  font-weight: 400;
   line-height: 35px;
   text-align: center;
   margin-bottom: 30px;
@@ -174,6 +167,7 @@
 }
 .fitting-content__time_select__case.disabled_time{
   background-color: lightgrey;
+  cursor: auto;
   &:hover{
     color:  #48485d;
   }
@@ -196,19 +190,18 @@
 }
 
 .fitting-content__submit_block__title{
-  font-family: 'baufra_light';
+  font-family: 'baufra';
   color:  #13131c;
   font-size: 25px;
   line-height: 40px;
 }
 
 .fitting-content__submit_block__content{
-  font-family: 'baufra_light';
+  font-family: 'baufra';
   color:  #13131c;
-  font-size: 25px;
-  font-weight: bold;
-  line-height: 40px;
-  width: 880px;
+  font-size: 16px;
+  line-height: 25px;
+  width: 580px;
   margin: 0 auto 40px;
 }
 
@@ -220,9 +213,8 @@
   border-bottom: 1px solid #babac7 !important;
   width: 340px !important;
   margin: 17px 0;
-  font-family: 'baufra_light' !important;
+  font-family: 'baufra' !important;
   font-size: 20px !important;
-  font-weight: bold !important;
   line-height: 35px;
 }
 
@@ -240,7 +232,7 @@
   height: 150px;
 }
 .fitting-content__submit_block__advice__title{
-  font-family: 'opensans';
+  font-family: 'Open Sans';
   color:  #ffefdd;
   font-size: 16px;
   font-weight: 300;
@@ -248,7 +240,7 @@
 }
 .fitting-content__submit_block__advice__body{
   margin: 0 auto;
-  font-family: 'opensans';
+  font-family: 'Open Sans';
   color:  #ffffff;
   font-size: 13px;
   font-weight: 300;
@@ -258,8 +250,7 @@
 }
 
 .js_dress_to_remove{
-  background-image: image-url('to_fitting.png');
-  background-repeat: no-repeat;
+  background: image-url('to_fitting.png') no-repeat;
   width: 70px;
   height: 70px;
   margin: -147px auto 0;
@@ -302,3 +293,10 @@
   margin: 45px auto 25px;
 }
 /*------------ end confirmation page ------------------*/
+/*-------------selected dresses -----------------------*/
+.selected_dresses{
+  .js_dress_to_remove{
+    margin: -55px auto 0;
+  }
+}
+/*-------------end selected dresses -------------------*/

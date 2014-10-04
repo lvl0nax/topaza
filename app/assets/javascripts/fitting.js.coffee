@@ -3,14 +3,16 @@ $(document).on 'click', '.js_dress_to_remove', (e)->
   id = $(e.currentTarget).data('id')
   arr = []
   localStorage['dresses'].split(';').forEach (i) ->
-    if parseInt(i) != parseInt(id) && i.length > 0
-      arr.push(i+';')
-  localStorage['dresses'] = arr
-  $(e.currentTarget).parents('.fitting_content__dress_list__dress').remove()
+    if (parseInt(i) != parseInt(id)) && (i.length > 3)
+      arr.push(i)
+  localStorage['dresses'] = arr.join(';')
+  $(e.currentTarget).parents('.js_dress').remove()
 
 $(document).on 'click', '.js_time_select', (e)->
   e.preventDefault()
   unless $(e.currentTarget).hasClass('disabled_time')
+    $('.js_time_text').text($(e.currentTarget).data('time'))
+    $('.js_date_text').text($(".fitting_content__date_select__calendar").val())
     $('.active_time').removeClass('active_time')
     $(e.currentTarget).addClass('active_time')
 
@@ -59,7 +61,6 @@ validate_fitting = (time, name, phone, ids) ->
     flag = false
     errors.append('<div>Введите телефон.</div>')
   if ids.length == 0 && checkbox.length > 0
-    console.log ids
     flag = false
     errors.append('<div>Добавте платья на примерку.</div>')
   flag
