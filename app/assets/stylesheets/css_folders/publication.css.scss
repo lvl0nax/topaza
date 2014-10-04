@@ -56,10 +56,23 @@
   margin: 20px auto;
 }
 .show_publication__right__body{
-  margin: 50px 5%;
+  margin: 50px 10%;
   text-align: left;
   font-family: 'Open Sans';
   color: #808080;
+  ol {list-style: none; counter-reset: chapter 1;}
+  ol li+li {counter-increment: chapter 1; list-style: none;}
+  ol li{ position: relative; margin-bottom: 5px;}
+  ol li:before {
+    content: counter(chapter);
+    font-family: 'Oldsman';
+    color:  #48485d;
+    font-size: 35px;
+    line-height: 25px;
+    position: absolute;
+    left: -45px;
+    top: 8px;
+  }
 }
 .navigation_publication{
   height: 65px;
@@ -83,6 +96,7 @@
     width: 30%;
     height: 65px;
     line-height: 65px;
+    min-width: 240px;
   }
   .navigation_publication__right{
     margin-left: 30%;
@@ -98,11 +112,14 @@
       /* margin-left: 3%; */
       width: 30%;
       height: 65px;
+      min-width: 300px;
     }
     .navigation_publication__right__wrapper__next{
-      margin-left: 66%;
+      margin-right: 2%;
       /* width: 70%; */
+      text-align: right;
       height: 65px;
+      min-width: 300px;
     }
   }
 }
