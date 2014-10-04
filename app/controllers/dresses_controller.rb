@@ -6,11 +6,11 @@ class DressesController < ApplicationController
   end
 
   def bridal
-    @dresses = Dress.all
+    @dresses = Dress.where(category_id: 1).all
   end
 
   def evening
-    @dresses = Dress.all
+    @dresses = Dress.where(category_id: 2).all
   end
 
   def show

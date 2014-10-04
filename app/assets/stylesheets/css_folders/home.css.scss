@@ -201,9 +201,6 @@
   max-width: 1400px;
 }
 
-
-
-
 .body__collections{
   width: 100%;
   margin: 0 auto;
@@ -252,9 +249,6 @@
   display: none;
 }
 
-
-
-
 .body__discount{
   height: 179px;
   text-align: center;
@@ -273,10 +267,9 @@
   text-align: center;
 }
 .body__discount__title__years{
-  margin: 0 auto;
+  margin: 10px auto;
   text-align: center;
   font-size: 28px;
-  margin-bottom: 10px;
   font-family: 'Oldsman';
 }
 .body__discount__title__years__middle_line{
@@ -290,7 +283,9 @@
 .body__discount__title__text{
   font-family: 'baufra';
   font-size: 28px;
-  height: 80px;
+  height: 65px;
+  width: 865px;
+  margin: 0 auto;
 }
 .body__discount__title__middle_line{
   background-color: #000;
@@ -323,8 +318,6 @@
   }
 
 }
-
-
 
 .body__article{
   max-width: 1400px;
@@ -386,8 +379,17 @@
   margin: 30px auto;
   text-align: center;
   font-family: 'Open Sans';
-  src: url("Open_Sans/OpenSans-Bold.ttf");
+  src: font_url("Open_Sans/OpenSans-Bold.ttf");
   font-size: 16px;
   width: 70%;
   clear: left;
+}
+
+.home__brides{
+  background-color: #E1E1EA;
+  line-height: 119px;
+  padding-top: 0;
+}
+.home__brides__container{
+  background-color: #E1E1EA;
 }
