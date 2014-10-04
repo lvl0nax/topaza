@@ -18,9 +18,8 @@
             .show_publication__right__body
               = publication.short_body
           .clearfix
-      - if index == 1
-        .publications_index__banner
-          ЗДЕСЬ МОГЛА БЫТЬ ВАША РЕКЛАМА
+      - if index == 1 && @banner
+        = render 'banners/show', banner: @banner
   .navigation_publication
     = will_paginate @publications, previous_label: 'ОБРАТНО', next_label: 'ДАЛЬШЕ'
 

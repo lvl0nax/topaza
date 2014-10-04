@@ -1,5 +1,6 @@
 class PublicationsController < ApplicationController
   def index
+    @banner = Banner.publication.last
     @publications = Publication.paginate(:page => params[:page], :per_page => 6)
   end
 

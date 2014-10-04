@@ -10,9 +10,8 @@
     .show_publication__right__title
       = @publication.title
       .publication_underline
-
     .show_publication__right__body
-      = raw(@publication.body)
+      = @publication.body.html_safe
   .clearfix
 .navigation_publication
   .navigation_publication__left
@@ -21,12 +20,12 @@
     .navigation_publication__right__wrapper
       .navigation_publication__right__wrapper__prev
         - if @prev_publication.present?
-          = link_to 'ПРЕДЫДУЩАЯ СТАТЬЯ', dress_path(@prev_publication)
+          = link_to 'ПРЕДЫДУЩАЯ СТАТЬЯ', publication_path(@prev_publication)
         - else
           ПРЕДЫДУЩАЯ СТАТЬЯ
       .navigation_publication__right__wrapper__next
         - if @next_publication.present?
-          = link_to 'СЛЕДУЮЩАЯ СТАТЬЯ', dress_path(@next_publication)
+          = link_to 'СЛЕДУЮЩАЯ СТАТЬЯ', publication_path(@next_publication)
         - else
           СЛЕДУЮЩАЯ СТАТЬЯ
 

@@ -42,6 +42,8 @@ h1, h2, h3, .normal {font-weight: normal;color: #333132;margin: 0 0 0.35em;line-
 }
 html, body {
   height: 100%;
+  min-width: 1024px;
+  max-width: 1400px;
   margin: 0;
   padding: 0;
 }
