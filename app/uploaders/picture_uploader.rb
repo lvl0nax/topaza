@@ -41,7 +41,7 @@ class PictureUploader < CarrierWave::Uploader::Base
     end
 
   version :category, :if => :is_category? do
-    process resize_to_fill: [462, 440]
+    process resize_to_fill: [467, 600]
   end
 
   # Provide a default URL as a default if there hasn't been a file uploaded:
