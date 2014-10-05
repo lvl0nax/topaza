@@ -14,14 +14,14 @@ readUrl = (input)->
         img.src = dataUrl
         width = img.width
         height = img.height
-        if width/height >= 123/167
-          img.height = 167
-          img.width = width*167/height
-          style = "margin-left: -#{(img.width - 123)/2}px;"
+        if width/height >= 126/171
+          img.height = 171
+          img.width = width*171/height
+          style = "margin-left: -#{(img.width - 126)/2}px;"
         else
-          img.width = 123
-          img.height = height*123/width
-          style = "margin-top: -#{(img.height - 167)/2}px;"
+          img.width = 126
+          img.height = height*126/width
+          style = "margin-top: -#{(img.height - 171)/2}px;"
         $('.js_upload_image').html(img)
         $('.js_upload_image img').attr('style', style)
     )(f)

@@ -34,4 +34,8 @@
   .navigation_publication
     = will_paginate @brides, previous_label: 'ОБРАТНО', next_label: 'ДАЛЬШЕ'
 
-
+:javascript
+  $(window).bind("load", function() {
+    var h = $('.bride_item').first().height();
+    $('.add_bride').height(h*0.994);
+  });
