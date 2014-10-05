@@ -42,30 +42,20 @@ a.submit_button{
   color: red;
 }
 .bride_picture__left{
+
   float: left;
   a{
+    background-image: image_url('brides_download.png');
     overflow: hidden;
     display: block;
-    border: 1px dashed #c7aea2;
-    width: 123px;
-    height: 167px;
+    width: 127px;
+    height: 171px;
     text-decoration: none;
-    .circle_with_plus{
-      border-radius: 50%;
-      border: 1px solid #c7aea2;
-      margin: 47px auto;
-      text-align: center;
-      line-height: 67px;
-      width: 67px;
-      height: 67px;
-      font-size: 55px;
-      color: #c7aea2;
-    }
   }
 }
 .bride_picture__right{
   margin-left: 137px;
-  font-family: 'opensans';
+  font-family: 'Open Sans';
   color:  #8b8b9f;
   font-size: 14px;
   line-height: 20px;
@@ -132,7 +122,7 @@ a.submit_button{
     position: absolute;
     top: 70%;
     z-index: 10;
-    width: 100%;
+    width: 90%;
     text-align: center;
   }
   .bride_item__info{
@@ -149,9 +139,9 @@ a.submit_button{
 }
 
 .birde_item__name{
-  font-family: 'oldsman';
+  font-family: 'Oldsman';
   color:  #f7f7fa;
-  font-size: 31px;
+  font-size: 37px;
   font-weight: 400;
   line-height: 35px;
 }
@@ -162,7 +152,7 @@ a.submit_button{
   line-height: 45px;
 }
 .bride_item__comment{
-  top: 70%;
+  left: 5%;
   height: 140px;
   font-family: 'Open Sans';
   color:  #ffffff;
@@ -177,11 +167,11 @@ a.submit_button{
 }
 
 .brides_container__banner_subscribe{
+  background: #f5f2f1 image_url('rose_brides.png') no-repeat;
   min-width: 800px;
   width: 100%;
   min-height: 250px;
   max-height: 500px;
-  background-color:  #f5f2f1;
   text-align: center;
 }
 .banner__text{
@@ -218,7 +208,7 @@ a.submit_button{
   margin: 10px auto 10px;
 }
 .banner__links__title{
-  font-family: 'oldsman';
+  font-family: 'Oldsman';
   color:  #ffffff;
   font-size: 35px;
   line-height: 50px;
@@ -231,6 +221,12 @@ a.submit_button{
 }
 
 .add_bride{
+  margin-bottom: 0.1%;
+  width: 33.2%;
+  margin-left: 0.01%;
+  margin-right: 0.01%;
+  background: image_url('gemchug.png') no-repeat;
+  background-size: 100%;
   text-align: center;
   outline: 1px solid #7c7c8a;
 }
@@ -249,7 +245,7 @@ a.submit_button{
   background-color: #7c7c8a;
 }
 .add_bride__text{
-  font-family: 'opensans';
+  font-family: 'Open Sans';
   color:  #48485d;
   font-size: 16px;
   line-height: 25px;

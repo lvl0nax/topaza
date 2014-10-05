@@ -14,7 +14,6 @@
         %input{id: 'new_bride_fileupload', type: 'file', name: 'bride[picture]'}
       .bride_picture__left
         %a.js_upload_image{href: '#'}
-          .circle_with_plus +
       .bride_picture__right
         Присыллайте фотографии вертикального формата размером не менее 600x800px.
       .clearfix
