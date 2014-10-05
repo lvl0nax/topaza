@@ -5,8 +5,8 @@
     Примерка проходит по адресу Белинского д. 1. Выберите для примерки лучшее время, чтобы ни о чем больше не волноваться.
 .fitting_content
   .fitting_content__checkbox__dresses
-    %input.topaza_checkbox{type: 'checkbox'}
-    примерить понравившиеся платья
+    %input.topaza_checkbox{type: 'checkbox', checked: 'checked'}
+    ПРИМЕРИТЬ ПОНРАВИВШИЕСЯ ПЛАТЬЯ
   .fitting_content__dress_list
 
   .fitting-content__dress_text
@@ -59,6 +59,7 @@
 
   check_available_time = function() {
     var date;
+    $('.active_time').removeClass('active_time');
     $('.disabled_time').removeClass('disabled_time');
     date = $(".fitting_content__date_select__calendar").val();
     return $.ajax({

@@ -1,4 +1,4 @@
-%a{ href: '/fittings/new' }
+%a.js_to_selected_dresses{ href: '' }
   .body__histories__right__girl
     = image_tag 'тетка_для_вешалки.png'
     .body__histories__right__girl__hanger
@@ -8,9 +8,16 @@
 
 :javascript
   var count = 0;
+  var href;
+  var arr = [];
   if (localStorage['dresses']){
     count = localStorage['dresses'].split(';').length;
+    $.each(localStorage['dresses'].split(';'), function( index, value ) {
+      arr.push(parseInt(value));
+    })
+    href = '/fittings/selected_dresses?dresses='+arr.join(',');
   } else {
-    count = 0;
+    href = 'javascript:void(0);'
   }
+  $('.js_to_selected_dresses').attr('href', href);
   $('.body__histories__right__girl__count').html(count);

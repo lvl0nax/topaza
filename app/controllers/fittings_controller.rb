@@ -9,8 +9,7 @@ class FittingsController < ApplicationController
     fitting = Fitting.new(args)
     fitting.dresses = Dress.find(ids) if ids.present?
     if fitting.save!
-      #render json: {path: contacts_path}
-      render 'confirmation'
+      render json: {path: confirmation_fittings_path({time: params[:try_time], date: params[:try_date]})}
     else
       render json: {status: 0}
     end
@@ -20,6 +19,10 @@ class FittingsController < ApplicationController
     date = params[:date].to_date
     times = Fitting.where(try_date: date).pluck(:try_time).map{ |t| t.to_s(:time) }
     render json: { disabled_times: times }
+  end
+
+  def selected_dresses
+    @dresses = Dress.find(params['dresses'].split(','))
   end
 
   private
