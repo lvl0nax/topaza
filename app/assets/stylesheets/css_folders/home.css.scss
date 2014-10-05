@@ -6,7 +6,7 @@
   max-width: 1400px;
   //background: url('/assets/главная_хедер.png');
   background: image-url('главная_хедер.png');
-  background-size: cover;
+  background-size: 100% 100%;
   color: #000000;
   .body__header__text{
     margin: 0 auto;
@@ -44,38 +44,41 @@
 }
 
 .body__dresses{
-  height: 600px;
   width: 100%;
   margin: 0 auto;
   min-width: 1024px;
   max-width: 1400px;
   background-size: 100% auto;
-  .body__dresses__item{
-    display: inline-block;
-    width: 33.43%;
-    margin: -1.5px -2px;
-    overflow: hidden;
-    height: 600px;
-    .body__dresses__item__title-top{
-      font-size: 35px;
-      width: 100%;
-      text-align: center;
-      padding-top: 90px;
-      font-family: 'baufra';
-    }
-    .body__dresses__item__center-block{
-      text-align: center;
-      margin: 30px;
-    }
-    .body__dresses__item__title-bottom{
-      font-size: 35px;
-      width: 100%;
-      text-align: center;
-      padding-bottom: 90px;
-      font-family: 'baufra';
-    }
+}
+.body__dresses__item{
+  display: inline-block;
+  width: 33.3%;
+  margin: 0px -2.5px -4px -0.45px;
+  overflow: hidden;
+  //height: 600px;
+  img {
+    max-width: 100%;
   }
 }
+.body__dresses__item__title-top{
+  font-size: 35px;
+  width: 100%;
+  text-align: center;
+  padding-top: 90px;
+  font-family: 'baufra';
+}
+.body__dresses__item__center-block{
+  text-align: center;
+  margin: 30px;
+}
+.body__dresses__item__title-bottom{
+  font-size: 35px;
+  width: 100%;
+  text-align: center;
+  padding-bottom: 90px;
+  font-family: 'baufra';
+}
+
 .body__dresses__item__center-block__middle-line{
   background-color: #000;
   width: 70px;
@@ -94,10 +97,11 @@
   min-width: 1024px;
   max-width: 1400px;
   background-size: 100% auto;
+  overflow: hidden;
   .body__histories__left{
     //height: 436px;
     display: inline-block;
-    width: 33.2%;
+    width: 33.3%;
     //overflow: hidden;
     float: left;
     .body__histories__left__title{
@@ -107,7 +111,7 @@
   }
   .body__histories__right{
     display: inline-block;
-    width: 66.8%;
+    width: 66.7%;
     margin: -1.5px 0px;
     img {
       width: 100%;
@@ -404,7 +408,7 @@
 .body__article{
   max-width: 1400px;
   min-width: 1024px;
-  margin: 0 auto;
+  margin: -2px auto;
   width: 100%;
   overflow: hidden;
   .body__article__left{
@@ -477,6 +481,7 @@
   background-color: #f7f6fb;
   line-height: 119px;
   padding-top: 0;
+  margin-top: -4px;
 }
 .home__brides__container{
   background-color: #E1E1EA;

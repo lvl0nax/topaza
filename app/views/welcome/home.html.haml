@@ -114,4 +114,15 @@
 .brides__container.home__brides__container
   .brides_container__before_banner
     - Bride.first(3).each do |b|
-      = render partial: 'brides/bride_item', locals: {bride: b}
+      .bride_item
+        .bride_item__image_container
+          = image_tag b.picture_url(:thumb)
+          .bride_item__info
+            .birde_item__name
+              = b.name
+            .publications_index__item
+            .birde_item__dress_name
+              = b.dress_name
+          .bride_item__comment
+            = b.comment
+      //= render partial: 'brides/bride_item', locals: {bride: b}
