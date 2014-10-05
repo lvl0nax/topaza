@@ -52,8 +52,8 @@
   background-size: 100% auto;
   .body__dresses__item{
     display: inline-block;
-    width: 33.43%;
-    margin: -1.5px -2px;
+    width: 33.162%;
+    margin: 0.5px 0px;
     overflow: hidden;
     height: 600px;
     .body__dresses__item__title-top{
@@ -404,7 +404,7 @@
 .body__article{
   max-width: 1400px;
   min-width: 1024px;
-  margin: 0 auto;
+  margin: -2px auto;
   width: 100%;
   overflow: hidden;
   .body__article__left{
@@ -477,6 +477,7 @@
   background-color: #f7f6fb;
   line-height: 119px;
   padding-top: 0;
+  margin-top: -4px;
 }
 .home__brides__container{
   background-color: #E1E1EA;
