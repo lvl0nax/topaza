@@ -213,7 +213,7 @@ html, body {
   font-family: 'Oldsman';
   height: 70px;
   line-height: 70px;
-  background-color: #EFEFF4;
+  background-color: white;
   a{
     padding: 2%;
     color:  #13131c;
@@ -251,3 +251,28 @@ html, body {
   box-shadow: 0px 0px 10px #000;
 }
 /*--------------END poopup---------------------*/
+
+/*-------------- general styles ---------------*/
+.custom_checkbox{
+  display: none;
+}
+
+.custom_checkbox + label{
+  cursor: pointer;
+  margin-top: 9px;
+}
+
+.custom_checkbox + label::before {
+  content: "";
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  background: image_url('checkbox_styles.png') no-repeat;
+  background-position: -1px 0;
+  background-size: 130px;
+}
+
+.custom_checkbox:checked + label::before {
+  background-position: -36px 0;
+}
+/*-------------- end general styles ---------------*/
