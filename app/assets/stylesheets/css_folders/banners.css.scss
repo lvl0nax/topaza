@@ -1,0 +1,71 @@
+.body__discount{
+  height: 179px;
+  text-align: center;
+  font-size: 30px;
+  font-family: 'baufra';
+  width: 100%;
+  margin: 0 auto;
+  min-width: 1024px;
+  max-width: 1400px;
+  overflow: hidden;
+  position: relative;
+  background-color: #f1edea;
+  margin-top: -4px;
+  margin-left: -2px;
+}
+.body__discount__title{
+  margin: 0 auto;
+  text-align: center;
+}
+.body__discount__title__years{
+  margin: 10px auto;
+  text-align: center;
+  font-size: 28px;
+  font-family: 'Oldsman';
+}
+.body__discount__title__years__middle_line{
+  background-color: #000;
+  width: 70px;
+  height: 1px;
+  margin: 11px;
+  line-height: 25px;
+  display: inline-block;
+}
+.body__discount__title__text{
+  font-family: 'baufra';
+  font-size: 28px;
+  height: 65px;
+  width: 618px;
+  margin: 0 auto;
+}
+.body__discount__title__middle_line{
+  background-color: #000;
+  width: 70%;
+  height: 1px;
+  margin-left: 70px;
+  line-height: 25px;
+  float: left;
+  display: inline-block;
+  text-align: center;
+  margin-top: 20px;
+}
+.body__discount__image-left{
+  position: absolute;
+  height: auto;
+  left: -29px;
+  width: 358px;
+  img{
+    max-width: 100%;
+  }
+}
+.body__discount__image-right{
+  position: absolute;
+  height: auto;
+  right: 0px;
+  top: -76px;
+  width: 317px;
+  img{
+    max-width: 100%;
+  }
+
+}

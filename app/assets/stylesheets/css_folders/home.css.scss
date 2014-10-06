@@ -6,7 +6,7 @@
   max-width: 1400px;
   //background: url('/assets/главная_хедер.png');
   background: image-url('главная_хедер.png');
-  background-size: cover;
+  background-size: 100% 100%;
   color: #000000;
   .body__header__text{
     margin: 0 auto;
@@ -44,37 +44,41 @@
 }
 
 .body__dresses{
-  height: 439px;
   width: 100%;
   margin: 0 auto;
   min-width: 1024px;
   max-width: 1400px;
   background-size: 100% auto;
-  .body__dresses__item{
-    height: 439px;
-    display: inline-block;
-    width: 33%;
-    overflow: hidden;
-    .body__dresses__item__title-top{
-      font-size: 35px;
-      width: 100%;
-      text-align: center;
-      padding-top: 90px;
-      font-family: 'baufra';
-    }
-    .body__dresses__item__center-block{
-      text-align: center;
-      margin: 30px;
-    }
-    .body__dresses__item__title-bottom{
-      font-size: 35px;
-      width: 100%;
-      text-align: center;
-      padding-bottom: 90px;
-      font-family: 'baufra';
-    }
+}
+.body__dresses__item{
+  display: inline-block;
+  width: 33.3%;
+  margin: 0px -2.5px -4px -0.45px;
+  overflow: hidden;
+  //height: 600px;
+  img {
+    max-width: 100%;
   }
 }
+.body__dresses__item__title-top{
+  font-size: 35px;
+  width: 100%;
+  text-align: center;
+  padding-top: 90px;
+  font-family: 'baufra';
+}
+.body__dresses__item__center-block{
+  text-align: center;
+  margin: 30px;
+}
+.body__dresses__item__title-bottom{
+  font-size: 35px;
+  width: 100%;
+  text-align: center;
+  padding-bottom: 90px;
+  font-family: 'baufra';
+}
+
 .body__dresses__item__center-block__middle-line{
   background-color: #000;
   width: 70px;
@@ -93,10 +97,11 @@
   min-width: 1024px;
   max-width: 1400px;
   background-size: 100% auto;
+  overflow: hidden;
   .body__histories__left{
     //height: 436px;
     display: inline-block;
-    width: 33%;
+    width: 33.3%;
     //overflow: hidden;
     float: left;
     .body__histories__left__title{
@@ -105,12 +110,11 @@
     }
   }
   .body__histories__right{
-    //height: 436px;
     display: inline-block;
-    width: 67%;
-    position: relative;
+    width: 66.7%;
+    margin: -1.5px 0px;
     img {
-      max-width: 100%;
+      width: 100%;
     }
   }
 }
@@ -146,13 +150,13 @@
 .body__histories__item__title__years{
   margin: 0 auto;
   text-align: center;
-  font-size: 19px;
-  margin-bottom: 10px;
+  font-size: 34px;
+  margin-bottom: 20px;
   font-family: 'Oldsman';
   margin-top: 52px;
 }
 .body__histories__item__title__years__middle_line{
-  background-color: #000;
+  background-color: #9A9A9A;
   width: 70px;
   height: 1px;
   margin: 11px;
@@ -161,13 +165,13 @@
 }
 .body__histories__item__title__text{
   font-family: 'baufra';
-  font-size: 18px;
+  font-size: 35px;
   height: 40px;
   text-align: center;
 }
 .body__histories__item__title__middle_line{
-  background-color: #000;
-  width: 47%;
+  background-color: #7C7C8A;
+  width: 224px;
   height: 1px;
   align: center;
   /* line-height: 25px; */
@@ -175,17 +179,17 @@
   /* display: inline-block; */
   /* text-align: center; */
   /* margin-top: 20px; */
-  margin: 20px auto;
-  /* padding: 0 20px; */
+  margin: 25px auto 10px;
+  /* color: #7C7C8A; */
 }
 .body__histories__item__text{
   margin: 0 auto;
   text-align: center;
   font-family: 'Open Sans';
   src: url("Open_Sans/OpenSans-Bold.ttf");
-  font-size: 16px;
-  width: 55%;
-  margin-top: 40px;
+  font-size: 20px;
+  width: 83%;
+  margin-top: 88px;
 }
 
 
@@ -207,50 +211,114 @@
   min-width: 1024px;
   max-width: 1400px;
   background-size: 100% auto;
-  .body__collections__item{
-    height: 500px;
-    display: inline-block;
-    width: 33%;
-    overflow: hidden;
-  }
-}
-.body__collections__item__info{
-  padding: 30px;
-  text-align: center;
-  margin-top: -685px;
-  height: 500px;
-}
-.body__collections__item__info__bordered{
-  width: 100%;
-  height: 500px;
-  padding-top: 230px;
-}
-.publications_index__item{
-  width: 200px;
-  margin: 10px auto 0;
-  color: white;
-  height: 1px;
-  position: relative;
-}
-.body__collections__item__name{
-  font-family: 'oldsman';
-  color:  #f7f7fa;
-  font-size: 34px;
-  font-weight: bold;
-  line-height: 35px;
-}
-.body__collections__item__dress_name{
-  font-family: 'baufra';
-  color:  #f7f7fa;
-  font-size: 21px;
-  line-height: 45px;
-}
-.body__collections__item__comment{
-  display: none;
 }
 
-.body__discount{
-  height: 179px;
+
+.body__collections__item{
+  display: inline-block;
+  width: 33.3%;
+  margin: -1.5px -2px;
+  overflow: hidden;
+  cursor: pointer;
+}
+.body__collections__items__image_container{
+  position: relative;
+  img{
+    width: 100%;
+  }
+}
+.body__collections__items__image_container:after {
+  content: ' ';
+  height: 99.5%;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.body__collections__items__image_container:hover{
+  .dress_item__to_fitting{
+    display: block;
+  }
+  &:after {
+    opacity: 0.6;
+    background-color: #000;
+  }
+}
+.body__collections__item__name{
+  position: absolute;
+  top: 42.5%;
+  z-index: 10;
+  width: 100%;
+  text-align: center;
+  font-family: 'Oldsman';
+  color:  #f7f7fa;
+  font-size: 82px;
+  font-weight: 400;
+  line-height: 35px;
+
+}
+.body__collections__item__underline{
+  position: absolute;
+  top: 52.5%;
+  z-index: 10;
+  width: 40%;
+  left: 30%;
+  background-color: #f7f7fa;
+  height: 1px;
+}
+.body__collections__item__to_fitting{
+  position: absolute;
+  top: 55%;
+  z-index: 10;
+  width: 100%;
+  left: 22%;
+  height: 13%;
+  /* display: none; */
+  font-size: 22px;
+  font-family: baufra_medium;
+  color: #FFF;
+}
+
+
+
+//.body__collections__item__info{
+//  padding: 30px;
+//  text-align: center;
+//  margin-top: -685px;
+//  height: 500px;
+//}
+//.body__collections__item__info__bordered{
+//  width: 100%;
+//  height: 500px;
+//  padding-top: 230px;
+//}
+//.publications_index__item{
+//  width: 200px;
+//  margin: 10px auto 0;
+//  color: white;
+//  height: 1px;
+//  position: relative;
+//}
+//.body__collections__item__name{
+//  font-family: 'oldsman';
+//  color:  #f7f7fa;
+//  font-size: 34px;
+//  font-weight: bold;
+//  line-height: 35px;
+//}
+//.body__collections__item__dress_name{
+//  font-family: 'baufra';
+//  color:  #f7f7fa;
+//  font-size: 21px;
+//  line-height: 45px;
+//}
+//.body__collections__item__comment{
+//  display: none;
+//}
+
+.main_page__body__discount{
+  height: 246px;
   text-align: center;
   font-size: 30px;
   font-family: 'baufra';
@@ -261,18 +329,20 @@
   overflow: hidden;
   position: relative;
   background-color: #f1edea;
+  margin-top: -4px;
+  margin-left: -2px;
 }
-.body__discount__title{
+.main_page__body__discount__text{
   margin: 0 auto;
   text-align: center;
 }
-.body__discount__title__years{
-  margin: 10px auto;
+.main_page__body__discount__text__title{
+  margin: 21px auto;
   text-align: center;
-  font-size: 28px;
+  font-size: 35px;
   font-family: 'Oldsman';
 }
-.body__discount__title__years__middle_line{
+.main_page__body__discount__text__title__middle_line{
   background-color: #000;
   width: 70px;
   height: 1px;
@@ -280,14 +350,14 @@
   line-height: 25px;
   display: inline-block;
 }
-.body__discount__title__text{
+.main_page__body__discount__text__body{
   font-family: 'baufra';
-  font-size: 28px;
-  height: 65px;
-  width: 865px;
+  font-size: 34px;
+  width: 618px;
   margin: 0 auto;
+  margin-bottom: 12px;
 }
-.body__discount__title__middle_line{
+.main_page__body__discount__text__middle_line{
   background-color: #000;
   width: 70%;
   height: 1px;
@@ -298,44 +368,61 @@
   text-align: center;
   margin-top: 20px;
 }
-.body__discount__image-left{
+.main_page__body__discount__image-left{
   position: absolute;
   height: auto;
-  left: -29px;
-  width: 358px;
+  left: -464px;
+  width: 100%;
+  top: 15px;
   img{
     max-width: 100%;
   }
 }
-.body__discount__image-right{
+.main_page__body__discount__image-right{
   position: absolute;
   height: auto;
-  right: 0px;
-  top: -76px;
-  width: 317px;
+  right: -487px;
+  top: -100px;
+  width: 100%;
   img{
     max-width: 100%;
   }
-
+}
+.main_page__index_discounts-item-right-link {
+  text-align: center;
+  a{
+    padding: 12px 17px;
+    text-decoration: none;
+    font-family: 'baufra';
+    color:  #7c7c8a;
+    font-size: 19.4px;
+    border: 1px solid #7c7c8a;
+    line-height: 50px;
+    &:hover{
+      color:  #13131c;
+      border: 1px solid #13131c;
+    }
+  }
 }
 
 .body__article{
   max-width: 1400px;
   min-width: 1024px;
-  margin: 0 auto;
+  margin: -2px auto;
   width: 100%;
   overflow: hidden;
   .body__article__left{
     display: inline-block;
-    width: 64%;
+    width: 66%;
     float: left;
+    margin-left: 20px;
     img{
       max-width: 100%;
     }
   }
   .body__article__right{
     display: inline-block;
-    width: 33%;
+    width: 32%;
     overflow: hidden;
   }
 }
@@ -354,15 +441,19 @@
   background-color: #000;
   width: 70px;
   height: 1px;
-  margin: 11px;
+  margin: 7px;
   line-height: 25px;
   display: inline-block;
 }
 .body__article__right__title__text{
   font-family: 'baufra';
-  font-size: 18px;
-  height: 40px;
+  font-size: 29px;
+  /* height: 40px; */
   text-align: center;
+  width: 281px;
+  color: #000;
+  margin: 25px auto 20px;
+  /* line-height: 37px; */
 }
 .body__article__right__title__middle_line{
   background-color: #000;
@@ -376,19 +467,21 @@
   margin-top: 20px;
 }
 .body__article__right__text{
-  margin: 30px auto;
+  margin: 0 auto;
   text-align: center;
   font-family: 'Open Sans';
-  src: font_url("Open_Sans/OpenSans-Bold.ttf");
-  font-size: 16px;
+  src: url(/assets/Open_Sans/OpenSans-Bold.ttf);
+  font-size: 14px;
   width: 70%;
-  clear: left;
+  /* clear: left; */
+  color: #7C7C8A;
 }
 
 .home__brides{
-  background-color: #E1E1EA;
+  background-color: #f7f6fb;
   line-height: 119px;
   padding-top: 0;
+  margin-top: -4px;
 }
 .home__brides__container{
   background-color: #E1E1EA;

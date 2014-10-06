@@ -32,14 +32,14 @@
     .body__histories__left__title
       .body__histories__item__title__years
         .body__histories__item__title__years__middle_line
-        2012-2014
+        1996-2014
         .body__histories__item__title__years__middle_line
       .body__histories__item__title__text
         ИСТОРИЯ
         %br
         TOPAZA PELLA
         //.body__histories__item__title__middle_line
-        %hr{:align => 'center', :width => '250'}
+        %hr{:align => 'center', :width => '297'}
     .body__histories__item__text
       О том, с чего начинали, к чему сремимся, и о том, как день за днём мы приближаемся к невозможному - идеальному свадебному платью.
   .body__histories__right
@@ -59,13 +59,14 @@
   КОТОРЫЙ ВЫ ДАВНО ДЛЯ СЕБЯ ЗАГАДАЛИ
 .body__collections
   - Dress.first(3).each do |d|
-    .dress_item
-      .dress_items__image_container
+    .body__collections__item
+      .body__collections__items__image_container
         = image_tag d.images.where(main:true).first.name.url(:dress_small)
-        .dress_item__name
+        .body__collections__item__name
           = d.title
-        .dress_item__underline
-        .dress_item__to_fitting
+        .body__collections__item__underline
+        .body__collections__item__to_fitting
+          = d.category.title
     //.body__collections__item
     //  = image_tag d.images.where(main:true).first.name.url
     //  .body__collections__item__info
@@ -75,8 +76,23 @@
     //      .publications_index__item
     //      .body__collections__item__dress_name
     //        = d.title
-- @banners.each do |banner|
-  = render 'banners/show', banner: banner
+.main_page__body__discount
+  .main_page__body__discount__image-left{:style => ('bottom: 177px' if controller_name=='discounts')}
+    = image_tag 'мал_роза_главная_баннер.png'
+  .main_page__body__discount__text
+    .main_page__body__discount__text__title
+      .main_page__body__discount__text__title__middle_line
+      10%
+      .main_page__body__discount__text__title__middle_line
+    .main_page__body__discount__text__body{style: 'line-height:normal'}
+      Модели в нашем онлайн-магазине дешевле на 10% процентов.
+    .main_page__index_discounts-item-right-link
+      = link_to 'ОНЛАЙН-МАГАЗИН', '#'
+  .main_page__body__discount__image-right
+    = image_tag 'роза_главная_баннер.png'
+
+/- @banners.each do |banner|
+/  = render 'banners/show', banner: banner
 .body__article
   .body__article__left
     = image_tag 'платья_публикации.png'
@@ -87,12 +103,10 @@
         СТАТЬЯ
         .body__article__right__title__name__middle_line
       .body__article__right__title__text
-        ИСТОРИЯ
-        %br
-        TOPAZA PELLA
+        ИДЕАЛЬНОЕ ПЛАТЬЕ ДЛЯ ВАШЕЙ ФИГУРЫ
         .body__histories__item__title__middle_line
     .body__article__right__text
-      О том, с чего начинали, к чему сремимся, и о том, как день за днём мы приближаемся к невозможному - идеальному свадебному платью.
+      Наши эксперты подскажут как подобрать платье вашей мечты под любой тип фигуры.
 .body__text.home__brides
   .body__discount__title__years__middle_line
   НЕВЕСТЫ
@@ -100,4 +114,15 @@
 .brides__container.home__brides__container
   .brides_container__before_banner
     - Bride.first(3).each do |b|
-      = render partial: 'brides/bride_item', locals: {bride: b}
+      .bride_item
+        .bride_item__image_container
+          = image_tag b.picture_url(:thumb)
+          .bride_item__info
+            .birde_item__name
+              = b.name
+            .publications_index__item
+            .birde_item__dress_name
+              = b.dress_name
+          .bride_item__comment
+            = b.comment
+      //= render partial: 'brides/bride_item', locals: {bride: b}
