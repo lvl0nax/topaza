@@ -53,7 +53,7 @@
 .body__dresses__item{
   display: inline-block;
   width: 33.3%;
-  margin: 0px -2.5px -4px -0.45px;
+  margin: 0px -2.5px -4px -0.4px;
   overflow: hidden;
   //height: 600px;
   img {
@@ -98,10 +98,11 @@
   max-width: 1400px;
   background-size: 100% auto;
   overflow: hidden;
+  margin-top: -1px;
   .body__histories__left{
     //height: 436px;
     display: inline-block;
-    width: 33.3%;
+    width: 33.25%;
     //overflow: hidden;
     float: left;
     .body__histories__left__title{
@@ -111,7 +112,7 @@
   }
   .body__histories__right{
     display: inline-block;
-    width: 66.7%;
+    width: 66.75%;
     margin: -1.5px 0px;
     img {
       width: 100%;
@@ -216,7 +217,7 @@
 
 .body__collections__item{
   display: inline-block;
-  width: 33.3%;
+  width: 33.4%;
   margin: -1.5px -2px;
   overflow: hidden;
   cursor: pointer;
