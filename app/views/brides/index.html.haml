@@ -9,23 +9,7 @@
       = render partial: 'bride_item', locals: {bride: b}
     - if brides.size < 6
       = render 'add_bride_item'
-  .brides_container__banner_subscribe
-    %span.banner__text
-      ПОДПИСЫВАЙТЕСЬ И СЛЕДИТЕ ЗА ОБНОВЛЕНИЯМИ
-    %span.banner__links
-      %a.banner__links__vk
-        .banner__links__title
-          VKONTAKTE
-        .banner__links__underline
-        .banner__links__address
-          vk.com/topazapella
-      %a.banner__links__instagram
-        .banner__links__title
-          INSTAGRAM
-        .banner__links__underline
-        .banner__links__address
-          @topazapell_couture
-    .clearfix
+  = render 'banners/subscribe_banner'
   - if brides.size == 6
     .brides_container__after_banner
       = render 'add_bride_item'
