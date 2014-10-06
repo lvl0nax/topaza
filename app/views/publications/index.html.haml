@@ -1,5 +1,8 @@
 .publications__title
-  %h1 НОВОСТИ И СТАТЬИ
+  %h1 МЫ О МОДЕ И МОДА О НАС
+  .publications_index__item
+  .publications_index__text
+    Постоянные изменения и обновления, (не говоря уже о новых коллекциях), помогают нам оставаться молодой не устающей компанией. Нам всегда есть, что рассказать — следите за новостями и публикациями о Topaza Pella.
 .publications_index
   .show_publication
     - @publications.each_with_index do |publication, index|
@@ -19,7 +22,7 @@
               = publication.short_body
           .clearfix
       - if index == 1 && @banner
-        = render 'banners/show', banner: @banner
+        = render 'banners/subscribe_banner'
   .navigation_publication
     = will_paginate @publications, previous_label: 'ОБРАТНО', next_label: 'ДАЛЬШЕ'
 

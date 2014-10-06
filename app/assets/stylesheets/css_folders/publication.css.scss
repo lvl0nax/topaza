@@ -45,7 +45,6 @@
   color:  #13131c;
   font-size: 42px;
   line-height: 55px;
-  margin-top: 20px;
   width: 90%;
   padding: 0 5%;
 }
@@ -53,7 +52,7 @@
   background-color: #a6a5ad;
   width: 300px;
   height: 1px;
-  margin: 20px auto;
+  margin: 10px auto 0;
 }
 .show_publication__right__body{
   margin: 50px 10%;
@@ -140,6 +139,10 @@
   h1{
     font-weight: bold;
   }
+  .publications_index__item{
+    width: 400px;
+    margin: 15px auto;
+  }
 }
 
 
@@ -151,6 +154,13 @@
 
 .publications_index__item{
   border-bottom: 1px solid #dddce4;
+}
+
+.publications_index__text{
+  width: 520px;
+  margin: 0 auto 25px;
+  font-family: 'Open Sans';
+  font-size: 16px;
 }
 
 .show_publication_item{
