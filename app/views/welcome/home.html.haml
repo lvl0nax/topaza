@@ -57,37 +57,32 @@
   .body__histories__right
     = image_tag 'истории_главная2.png'
     = render 'partials/girl'
-    //.body__histories__right__girl
-    //  = image_tag 'тетка_для_вешалки.png'
-    //.body__histories__right__girl__hanger
-    //  = image_tag 'вешалка.png'
-    //.body__histories__right__girl__count
-    //  5
-  //.body__histories__item
-  //  = image_tag DressConsist.where(property: 'Material').first.picture.url
 .body__text
   ПЛАТЬЕ TOPAZA PELLA ПОМОЖЕТ СОЗДАТЬ ОБРАЗ,
   %br
   КОТОРЫЙ ВЫ ДАВНО ДЛЯ СЕБЯ ЗАГАДАЛИ
 .body__collections
-  - Dress.first(3).each do |d|
-    .body__collections__item
-      .body__collections__items__image_container
-        = image_tag d.images.where(main:true).first.name.url(:dress_small)
-        .body__collections__item__name
-          = d.title
-        .body__collections__item__underline
-        .body__collections__item__to_fitting
-          = d.category.title
-    //.body__collections__item
-    //  = image_tag d.images.where(main:true).first.name.url
-    //  .body__collections__item__info
-    //    .body__collections__item__info__bordered
-    //      .body__collections__item__name
-    //        = d.title
-    //      .publications_index__item
-    //      .body__collections__item__dress_name
-    //        = d.title
+  - Dress.first(3).each do |dress|
+    %a{ href: url_for(dress) }
+      .dress_item
+        .dress_items__image_container
+          = image_tag dress.images.first.name_url(:dress_small)
+          .body__collections__item__name
+            = dress.title
+          .body__collections__item__underline
+          .body__collections__item__to_fitting
+            = dress.category.title
+          .dress_item__to_fitting
+            %span.js_to_fitting{ href: '#', data: { id: dress.id, image_src: dress.images.first.name_url(:dress_small) } }
+              = image_tag asset_path('to_fitting.png')
+    /.body__collections__item
+    /  .body__collections__items__image_container
+    /    = image_tag d.images.where(main:true).first.name.url(:dress_small)
+    /    .body__collections__item__name
+    /      = d.title
+    /    .body__collections__item__underline
+    /    .body__collections__item__to_fitting
+    /      = d.category.title
 .main_page__body__discount
   .main_page__body__discount__image-left{:style => ('bottom: 177px' if controller_name=='discounts')}
     = image_tag 'мал_роза_главная_баннер.png'
