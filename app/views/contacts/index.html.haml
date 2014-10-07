@@ -1,4 +1,4 @@
-= javascript_include_tag '//api-maps.yandex.ru/2.0/?load=package.full&lang=ru-RU', 'map'
+= javascript_include_tag '//api-maps.yandex.ru/2.0/?load=package.full&lang=ru-RU'
 
 .contacts_header
   %h1.contacts_header__title TOPAZA PELLA В САНКТ-ПЕТЕРБУРГЕ
@@ -62,5 +62,5 @@
       = render 'contacts/contacts_item', contact: contact, index: index
 .clearfix
 
-
+= javascript_include_tag 'map'
 

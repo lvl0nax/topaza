@@ -82,26 +82,28 @@
     color: #13131C;
   }
   .contacts_agency_items{
-    width: 100%;
+    text-align: justify;
+    padding: 0 2%;
+    width: 96%;
     max-width: 1400px;
     min-width: 1024px;
     margin: 0 auto;
     .contacts_agency_item{
       width: 290px;
+      text-align: left;
       margin-bottom: 50px;
       display: inline-block;
       font-size: 16px;
-      margin-left: 46px;
       vertical-align: top;
       font-family: 'Open Sans';
-      src: url('Open_Sans/OpenSans-Bold.ttf');
       .contacts_agency_item_city{
         font-size: 24px;
         margin-bottom: 10px;
         font-family: 'baufra';
         height: 30px;
       }
-      .contacts_agency_item_name{font-weight: bold;
+      .contacts_agency_item_name{
+        font-weight: bold;
       }
       .contacts_agency_item_address{margin: 3px 0}
       .contacts_agency_item_tel{margin: 3px 0}
