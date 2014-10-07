@@ -1,6 +1,7 @@
 ru:
   dresses:
     zero: платьев
+    many: платьев
     one: платье
     few: платья
     other: платьев

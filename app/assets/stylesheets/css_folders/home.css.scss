@@ -243,12 +243,11 @@
 
 .body__histories{
   width: 100%;
-  margin: 0 auto;
   min-width: 1024px;
   max-width: 1400px;
   background-size: 100% auto;
   overflow: hidden;
-  margin-top: -1px;
+  margin: -1px auto 0;
   .body__histories__left{
     display: inline-block;
     width: 33.25%;
@@ -329,7 +328,6 @@
   margin: 0 auto;
   text-align: center;
   font-family: 'Open Sans';
-  src: url("Open_Sans/OpenSans-Bold.ttf");
   font-size: 20px;
   width: 83%;
   margin-top: 88px;
@@ -464,8 +462,7 @@
   font-family: 'baufra';
   font-size: 34px;
   width: 618px;
-  margin: 0 auto;
-  margin-bottom: 12px;
+  margin: 0 auto 12px;
 }
 .main_page__body__discount__text__middle_line{
   background-color: #000;
@@ -578,7 +575,6 @@
   margin: 0 auto;
   text-align: center;
   font-family: 'Open Sans';
-  src: url(/assets/Open_Sans/OpenSans-Bold.ttf);
   font-size: 14px;
   width: 70%;
   color: #7C7C8A;
