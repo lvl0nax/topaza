@@ -18,7 +18,7 @@
   .clearfix
 .navigation_dress
   .navigation_dress__left
-    = link_to 'ВСЕ ПУБЛИКАЦИИ ', dresses_path
+    = link_to 'ВСЕ ПЛАТЬЯ ', dresses_path
   .navigation_dress__right
     .navigation_dress__right__wrapper
       .prev
@@ -27,13 +27,15 @@
         - else
           <
       .image
-        = link_to '#' do
+        = link_to '#', {class: 'js_to_fitting', data: { id: @dress.id, image_src: @dress.images.first.name_url(:dress_small) }} do
           = image_tag 'наведение_на_платье.png'
       .next
         - if @next_dress.present?
           = link_to '>', dress_path(@next_dress)
         - else
           >
+
+= render 'partials/girl'
 
 :javascript
   var pagination = $('.pagination');
