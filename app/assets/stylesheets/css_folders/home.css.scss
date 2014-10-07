@@ -4,7 +4,6 @@
   margin: 0 auto;
   min-width: 1024px;
   max-width: 1400px;
-  //background: url('/assets/главная_хедер.png');
   background: image-url('главная_хедер.png');
   background-size: 100% 100%;
   color: #000000;
@@ -52,13 +51,167 @@
 }
 .body__dresses__item{
   display: inline-block;
-  width: 33.3%;
-  margin: 0px -2.5px -4px -0.4px;
+  width: 33.8%;
+  margin: 0px -2.5px -2px -0.4px;
   overflow: hidden;
-  //height: 600px;
+  float: left;
+  position: relative;
+}
+.body__dresses__item__image__bridal{
+  display: inline-block;
+  width: 33.3%;
+  margin: 0px -2.5px -2px -0.4px;
+  float: left;
+  position: relative;
   img {
     max-width: 100%;
   }
+}
+.body__dresses__item__image__bridal:after {
+  content: ' ';
+  height: 99.5%;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.body__dresses__item__image__bridal:hover{
+  &:after {
+    opacity: 0.6;
+    background-color: #000;
+  }
+  .body__dresses__item__image__bridal__count{
+    display: block;
+    position: absolute;
+    top: 20%;
+    z-index: 10;
+    width: 90%;
+    text-align: center;
+    font-size: 180px;
+    left: 4%;
+    font-family: Oldsman;
+    color: #FFF;
+  }
+  .body__dresses__item__image__bridal__text{
+    display: block;
+    position: absolute;
+    top: 55%;
+    z-index: 10;
+    width: 90%;
+    text-align: center;
+    font-size: 57px;
+    left: 5%;
+    font-family: Oldsman;
+    color: #FFF;
+  }
+}
+.body__dresses__item__image__bridal__count{
+  display: none;
+}
+.body__dresses__item__image__bridal__text{
+  display: none;
+}
+
+
+
+.body__dresses__item__image__evening{
+  display: inline-block;
+  width: 33.3%;
+  margin: 0px -2.5px -2px -0.4px;
+  overflow: hidden;
+  position: relative;
+  float: left;
+  img {
+    max-width: 100%;
+  }
+}
+.body__dresses__item__image__evening:after {
+  content: ' ';
+  height: 99.5%;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.body__dresses__item__image__evening:hover{
+  &:after {
+    opacity: 0.6;
+    background-color: #000;
+  }
+  .body__dresses__item__image__evening__count{
+    display: block;
+    position: absolute;
+    top: 20%;
+    z-index: 10;
+    width: 90%;
+    text-align: center;
+    font-size: 180px;
+    left: 4%;
+    font-family: Oldsman;
+    color: #FFF;
+  }
+  .body__dresses__item__image__evening__text{
+    display: block;
+    position: absolute;
+    top: 55%;
+    z-index: 10;
+    width: 90%;
+    text-align: center;
+    font-size: 57px;
+    left: 5%;
+    font-family: Oldsman;
+    color: #FFF;
+  }
+
+}
+.body__dresses__item__image__evening__count{
+  display: none;
+}
+.body__dresses__item__image__evening__text{
+  display: none;
+}
+
+.body__dresses__item__evening{
+  font-size: 35px;
+  width: 100%;
+  text-align: center;
+  font-family: 'baufra';
+  height: 50%;
+  overflow: hidden;
+  a{
+    text-decoration: none;
+    color: #000000;
+    &:hover{
+      color: #ad9082;
+    }
+  }
+}
+.body__dresses__item__bridal__wrapper{
+  margin-top: 35%;
+}
+.body__dresses__item__bridal{
+  font-size: 35px;
+  width: 100%;
+  text-align: center;
+  font-family: 'baufra';
+  height: 50%;
+  overflow: hidden;
+  a{
+    text-decoration: none;
+    color: #000000;
+    &:hover{
+      color: #ad9082;
+    }
+  }
+}
+.body__dresses__item__title{
+  font-size: 35px;
+  text-align: center;
+  font-family: 'baufra';
+  margin: 0 auto;
+  width: 70%;
 }
 .body__dresses__item__title-top{
   font-size: 35px;
@@ -88,10 +241,7 @@
   display: inline-block;
 }
 
-
-
 .body__histories{
-  //height: 436px;
   width: 100%;
   margin: 0 auto;
   min-width: 1024px;
@@ -100,10 +250,8 @@
   overflow: hidden;
   margin-top: -1px;
   .body__histories__left{
-    //height: 436px;
     display: inline-block;
     width: 33.25%;
-    //overflow: hidden;
     float: left;
     .body__histories__left__title{
       margin: 0 auto;
@@ -175,13 +323,7 @@
   width: 224px;
   height: 1px;
   align: center;
-  /* line-height: 25px; */
-  /* float: left; */
-  /* display: inline-block; */
-  /* text-align: center; */
-  /* margin-top: 20px; */
   margin: 25px auto 10px;
-  /* color: #7C7C8A; */
 }
 .body__histories__item__text{
   margin: 0 auto;
@@ -272,51 +414,14 @@
   position: absolute;
   top: 55%;
   z-index: 10;
-  width: 100%;
+  width: 56%;
   left: 22%;
   height: 13%;
-  /* display: none; */
   font-size: 22px;
   font-family: baufra_medium;
   color: #FFF;
+  text-align: center;
 }
-
-
-
-//.body__collections__item__info{
-//  padding: 30px;
-//  text-align: center;
-//  margin-top: -685px;
-//  height: 500px;
-//}
-//.body__collections__item__info__bordered{
-//  width: 100%;
-//  height: 500px;
-//  padding-top: 230px;
-//}
-//.publications_index__item{
-//  width: 200px;
-//  margin: 10px auto 0;
-//  color: white;
-//  height: 1px;
-//  position: relative;
-//}
-//.body__collections__item__name{
-//  font-family: 'oldsman';
-//  color:  #f7f7fa;
-//  font-size: 34px;
-//  font-weight: bold;
-//  line-height: 35px;
-//}
-//.body__collections__item__dress_name{
-//  font-family: 'baufra';
-//  color:  #f7f7fa;
-//  font-size: 21px;
-//  line-height: 45px;
-//}
-//.body__collections__item__comment{
-//  display: none;
-//}
 
 .main_page__body__discount{
   height: 246px;
@@ -336,6 +441,10 @@
 .main_page__body__discount__text{
   margin: 0 auto;
   text-align: center;
+  position: absolute;
+  left: 30%;
+  width: 40%;
+  z-index: 1;
 }
 .main_page__body__discount__text__title{
   margin: 21px auto;
@@ -449,12 +558,10 @@
 .body__article__right__title__text{
   font-family: 'baufra';
   font-size: 29px;
-  /* height: 40px; */
   text-align: center;
   width: 281px;
   color: #000;
   margin: 25px auto 20px;
-  /* line-height: 37px; */
 }
 .body__article__right__title__middle_line{
   background-color: #000;
@@ -474,7 +581,6 @@
   src: url(/assets/Open_Sans/OpenSans-Bold.ttf);
   font-size: 14px;
   width: 70%;
-  /* clear: left; */
   color: #7C7C8A;
 }
 

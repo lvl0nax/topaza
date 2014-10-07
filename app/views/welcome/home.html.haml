@@ -10,23 +10,35 @@
       СВАДЕБНЫХ ПЛАТЬЕВ
     .body__header__middle_line
 .body__dresses
+  = link_to bridal_dresses_path do
+    .body__dresses__item__image__bridal
+      = image_tag Category.first.picture.url(:category)
+      .body__dresses__item__image__bridal__count
+        = @dresses_bridal_count
+      .body__dresses__item__image__bridal__text
+        = t('dresses', :count => @dress_bridal_count)
   .body__dresses__item
-    = image_tag Category.first.picture.url(:category)
-  .body__dresses__item
-    .body__dresses__item__title-top
-      СВАДЕБНЫЕ
-      %br
-      ПЛАТЬЯ
+    .body__dresses__item__bridal__wrapper
+      .body__dresses__item__bridal
+        = link_to bridal_dresses_path do
+          .body__dresses__item__title
+            СВАДЕБНЫЕ ПЛАТЬЯ
     .body__dresses__item__center-block
       .body__dresses__item__center-block__middle-line
       = image_tag 'AND_для_категорий.png'
       .body__dresses__item__center-block__middle-line
-    .body__dresses__item__title-bottom
-      ВЕЧЕРНИЕ
-      %br
-      ПЛАТЬЯ
-  .body__dresses__item
-    = image_tag Category.offset(1).first.picture.url(:category)
+    .body__dresses__item__evening__wrapper
+      .body__dresses__item__evening
+        = link_to evening_dresses_path do
+          .body__dresses__item__title
+            ВЕЧЕРНИЕ ПЛАТЬЯ
+  = link_to evening_dresses_path do
+    .body__dresses__item__image__evening
+      = image_tag Category.offset(1).first.picture.url(:category)
+      .body__dresses__item__image__evening__count
+        = @dresses_evening_count
+      .body__dresses__item__image__evening__text
+        = t('dresses', :count => @dress_evening_count)
 .body__histories
   .body__histories__left
     .body__histories__left__title
@@ -45,37 +57,32 @@
   .body__histories__right
     = image_tag 'истории_главная2.png'
     = render 'partials/girl'
-    //.body__histories__right__girl
-    //  = image_tag 'тетка_для_вешалки.png'
-    //.body__histories__right__girl__hanger
-    //  = image_tag 'вешалка.png'
-    //.body__histories__right__girl__count
-    //  5
-  //.body__histories__item
-  //  = image_tag DressConsist.where(property: 'Material').first.picture.url
 .body__text
   ПЛАТЬЕ TOPAZA PELLA ПОМОЖЕТ СОЗДАТЬ ОБРАЗ,
   %br
   КОТОРЫЙ ВЫ ДАВНО ДЛЯ СЕБЯ ЗАГАДАЛИ
 .body__collections
-  - Dress.first(3).each do |d|
-    .body__collections__item
-      .body__collections__items__image_container
-        = image_tag d.images.where(main:true).first.name.url(:dress_small)
-        .body__collections__item__name
-          = d.title
-        .body__collections__item__underline
-        .body__collections__item__to_fitting
-          = d.category.title
-    //.body__collections__item
-    //  = image_tag d.images.where(main:true).first.name.url
-    //  .body__collections__item__info
-    //    .body__collections__item__info__bordered
-    //      .body__collections__item__name
-    //        = d.title
-    //      .publications_index__item
-    //      .body__collections__item__dress_name
-    //        = d.title
+  - Dress.first(3).each do |dress|
+    %a{ href: url_for(dress) }
+      .dress_item
+        .dress_items__image_container
+          = image_tag dress.images.first.name_url(:dress_small)
+          .body__collections__item__name
+            = dress.title
+          .body__collections__item__underline
+          .body__collections__item__to_fitting
+            = dress.category.title
+          .dress_item__to_fitting
+            %span.js_to_fitting{ href: '#', data: { id: dress.id, image_src: dress.images.first.name_url(:dress_small) } }
+              = image_tag asset_path('to_fitting.png')
+    /.body__collections__item
+    /  .body__collections__items__image_container
+    /    = image_tag d.images.where(main:true).first.name.url(:dress_small)
+    /    .body__collections__item__name
+    /      = d.title
+    /    .body__collections__item__underline
+    /    .body__collections__item__to_fitting
+    /      = d.category.title
 .main_page__body__discount
   .main_page__body__discount__image-left{:style => ('bottom: 177px' if controller_name=='discounts')}
     = image_tag 'мал_роза_главная_баннер.png'
