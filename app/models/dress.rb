@@ -9,6 +9,9 @@ class Dress < ActiveRecord::Base
 
   before_save :set_main_image
 
+  scope :evening, ->{where(category_id: Category.where(title: 'Свадебная коллекция'))}
+  scope :bridal, ->{where(category_id: Category.where(title: 'Вечерняя коллекция'))}
+
   def set_main_image
     images.first.update_attribute('main', true)
   end

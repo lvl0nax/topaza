@@ -180,6 +180,13 @@
   font-family: 'baufra';
   height: 50%;
   overflow: hidden;
+  a{
+    text-decoration: none;
+    color: #000000;
+    &:hover{
+      color: #ad9082;
+    }
+  }
 }
 .body__dresses__item__bridal__wrapper{
   margin-top: 35%;
@@ -191,20 +198,20 @@
   font-family: 'baufra';
   height: 50%;
   overflow: hidden;
+  a{
+    text-decoration: none;
+    color: #000000;
+    &:hover{
+      color: #ad9082;
+    }
+  }
 }
-.body__dresses__item__bridal:hover{
-  color: #ad9082;
-}
-.body__dresses__item__evening:hover{
-  color: #ad9082;
-}
-
 .body__dresses__item__title{
   font-size: 35px;
   text-align: center;
   font-family: 'baufra';
   margin: 0 auto;
-  width: 71%;
+  width: 70%;
 }
 .body__dresses__item__title-top{
   font-size: 35px;
@@ -434,6 +441,10 @@
 .main_page__body__discount__text{
   margin: 0 auto;
   text-align: center;
+  position: absolute;
+  left: 30%;
+  width: 40%;
+  z-index: 1;
 }
 .main_page__body__discount__text__title{
   margin: 21px auto;
