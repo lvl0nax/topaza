@@ -14,7 +14,7 @@
     .body__dresses__item__image__bridal
       = image_tag Category.first.picture.url(:category)
       .body__dresses__item__image__bridal__count
-        = @dress_bridal_count
+        = @dresses_bridal_count
       .body__dresses__item__image__bridal__text
         = t('dresses', :count => @dress_bridal_count)
   .body__dresses__item
@@ -36,7 +36,7 @@
     .body__dresses__item__image__evening
       = image_tag Category.offset(1).first.picture.url(:category)
       .body__dresses__item__image__evening__count
-        = @dress_evening_count
+        = @dresses_evening_count
       .body__dresses__item__image__evening__text
         = t('dresses', :count => @dress_evening_count)
 .body__histories

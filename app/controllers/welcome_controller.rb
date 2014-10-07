@@ -2,7 +2,8 @@ class WelcomeController < ApplicationController
 
   def home
     @banners = Banner.home
-    @dress_bridal_count = Dress.bridal.count
-    @dress_evening_count = Dress.evening.count
+    dresses_group_count = Dress.group(:category_id).count
+    @dresses_bridal_count = dresses_group_count[1]
+    @dresses_evening_count = dresses_group_count[2]
   end
 end
