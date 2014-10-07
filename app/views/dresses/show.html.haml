@@ -48,7 +48,6 @@
     var m = $bgobj.width()/$(document).width()*100
     var h = $('.header').height()
     var footer = $(document).height() - ($('.js-left-column').height() + $('.header').height())
-    console.log('============='+footer)
     $bgobj.css('backround-size', m + '%;')
     var yPos = h-($(window).scrollTop() * ((1452 * ($bgobj.width()/800)) - $(window).height() + h + footer) / ($(document).height() - $(window).height()));
     var coords = '100% '+ yPos + 'px';
