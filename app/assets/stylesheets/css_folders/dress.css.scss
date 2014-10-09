@@ -176,7 +176,7 @@
 .dress_index{
   min-width: 1024px;
   max-width: 1400px;
-  margin: 0 auto;
+  margin: 3px auto 0;
   a{
     text-decoration: none;
   }
@@ -263,7 +263,7 @@
 }
 .dresses_info_block__description{
   color: #48485d;
-  margin: 0 auto 55%;
+  margin: 0 auto 31%;
   font-family: 'Open Sans';
   font-size: 16px;
   line-height: 25px;
@@ -273,7 +273,11 @@
   background: image-url('rose_dresses.png') no-repeat 0 bottom;
 }
 .info_block__gem{
+  padding-top: 8%;
   background: image-url('gemchug.png') no-repeat;
+  .dresses_info_block__title{
+    margin-top: 12%;
+  }
 }
 .info_block__silk{
   background: image-url('silk_dresses.png') no-repeat 0 bottom;

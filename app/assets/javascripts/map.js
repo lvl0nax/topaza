@@ -1,5 +1,4 @@
 ymaps.ready(init);
-
 function init () {
     var myMap = new ymaps.Map('contacts_body_map', {
             center: [59.98, 30.45],
