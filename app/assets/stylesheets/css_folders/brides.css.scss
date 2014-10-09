@@ -106,7 +106,11 @@ a.submit_button{
     width: 100%;
   }
 }
-
+.add_bride{
+  &:after{
+    display: none;
+  }
+}
 .bride_item:hover{
   &:after{
     border: 1px solid white;

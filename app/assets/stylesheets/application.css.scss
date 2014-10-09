@@ -275,4 +275,8 @@ html, body {
 .custom_checkbox:checked + label::before {
   background-position: -36px 0;
 }
+
+.gray_block{
+  background-color: #EFEFF4 !important;
+}
 /*-------------- end general styles ---------------*/
