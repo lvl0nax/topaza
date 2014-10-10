@@ -177,7 +177,7 @@
 .dress_index{
   min-width: 1024px;
   max-width: 1400px;
-  margin: 3px auto 0;
+  margin: 3px auto -3px;
   a{
     text-decoration: none;
   }
@@ -274,14 +274,17 @@
   background: image-url('rose_dresses.png') no-repeat 0 bottom;
 }
 .info_block__gem{
-  padding-top: 8%;
+  padding-top: 4%;
   background: image-url('gemchug.png') no-repeat;
   .dresses_info_block__title{
-    margin-top: 12%;
+    margin-top: 0;
   }
 }
 .info_block__silk{
   background: image-url('silk_dresses.png') no-repeat 0 bottom;
   background-size: 102%;
+}
+.dream_block{
+  background-position-y: -209px;
 }
 /*------------------------------ end dresses index page ---------------------------------*/

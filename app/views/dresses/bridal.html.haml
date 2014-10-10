@@ -11,3 +11,13 @@
     - if i == 11
       = render 'third_bridal_info_block', dress: dress
 = render 'partials/girl'
+:javascript
+  var h;
+  $(window).bind("load", function() {
+    h = $('.dress_item').first().height();
+    if (h < 596){
+      $('.dresses_info_block').height(h);
+      $('.info_block__gem').css('paddingTop', 0)
+    }
+  });
+
