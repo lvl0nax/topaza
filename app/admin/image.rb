@@ -17,6 +17,11 @@ ActiveAdmin.register Image do
   controller do
     def destroy
       @image = Image.find(params[:id].to_i)
+      if model_name(@image).constantize == Dress && @image.main
+        all_images = model_name(@image).constantize.find(@image.imageable_id).images.pluck(:id)
+        all_images.delete(@image.id)
+        Image.find(all_images.first).update_attribute('main', true)
+      end
       notice = @image.destroy ? 'Image was successfully destroyed' : 'Image not destroyed'
       set_redirect_path(notice, @image)
     end
