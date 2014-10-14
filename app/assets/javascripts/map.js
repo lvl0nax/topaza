@@ -1,8 +1,8 @@
 ymaps.ready(init);
 function init () {
     var myMap = new ymaps.Map('contacts_body_map', {
-            center: [59.98, 30.45],
-            zoom: 11
+            center: [59.937886, 30.344604],
+            zoom: 17
         }),
         markRudneva = new ymaps.Placemark([60.048392, 30.367005], {
             hintContent: 'ул. Руднева, д.22/1 <br/> (812) 517-83-84'
