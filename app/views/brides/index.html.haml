@@ -17,6 +17,7 @@
         = render partial: 'bride_item', locals: {bride: b}
   .navigation_publication
     = will_paginate @brides, previous_label: 'ОБРАТНО', next_label: 'ДАЛЬШЕ'
+= render 'layouts/footer_contacts'
 
 :javascript
   var h;
