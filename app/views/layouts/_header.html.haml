@@ -14,10 +14,10 @@
     = link_to root_path do
       = image_tag 'logo.png'
   .header_container__menu
-    = link_to 'СВАДЕБНЫЕ', bridal_dresses_path
-    = link_to 'ВЕЧЕРНИЕ', evening_dresses_path
-    = link_to 'ИСТОРИЯ', histories_path
-    = link_to 'ПУБЛИКАЦИИ', publications_path
-    = link_to 'НЕВЕСТЫ', brides_path
-    = link_to 'СКИДКИ', discounts_path
-    = link_to 'КОНТАКТЫ', contacts_path
+    = link_to 'СВАДЕБНЫЕ', bridal_dresses_path, {class: ('current_page_link' if current_page?(bridal_dresses_path))}
+    = link_to 'ВЕЧЕРНИЕ', evening_dresses_path, {class: ('current_page_link' if current_page?(evening_dresses_path))}
+    = link_to 'ИСТОРИЯ', histories_path, {class: ('current_page_link' if current_page?(histories_path))}
+    = link_to 'ПУБЛИКАЦИИ', publications_path, {class: ('current_page_link' if current_page?(publications_path))}
+    = link_to 'НЕВЕСТЫ', brides_path, {class: ('current_page_link' if current_page?(brides_path))}
+    = link_to 'СКИДКИ', discounts_path, {class: ('current_page_link' if current_page?(discounts_path))}
+    = link_to 'КОНТАКТЫ', contacts_path, {class: ('current_page_link' if current_page?(contacts_path))}
