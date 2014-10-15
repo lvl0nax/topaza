@@ -9,7 +9,7 @@
       %br
       СВАДЕБНЫХ ПЛАТЬЕВ
     .body__header__middle_line
-.body__dresses
+.body__dresses.dresses_categories
   = link_to bridal_dresses_path do
     .body__dresses__item__image__bridal
       = image_tag Category.first.picture.url(:category)
@@ -39,6 +39,7 @@
         = @dresses_evening_count
       .body__dresses__item__image__evening__text
         = I18n.t('dresses', count: @dresses_evening_count)
+  .clearfix
 .body__histories
   .body__histories__left
     .body__histories__left__title
@@ -76,20 +77,23 @@
             %span.js_to_fitting{ href: '#', data: { id: dress.id, image_src: dress.images.first.name_url(:dress_small) } }
               = image_tag asset_path('to_fitting.png')
 
-.main_page__body__discount
-  .main_page__body__discount__image-left{:style => ('bottom: 177px' if controller_name=='discounts')}
-    = image_tag 'мал_роза_главная_баннер.png'
-  .main_page__body__discount__text
-    .main_page__body__discount__text__title
-      .main_page__body__discount__text__title__middle_line
-      10%
-      .main_page__body__discount__text__title__middle_line
-    .main_page__body__discount__text__body{style: 'line-height:normal'}
-      Модели в нашем онлайн-магазине дешевле на 10% процентов.
-    .main_page__index_discounts-item-right-link
-      = link_to 'ОНЛАЙН-МАГАЗИН', '#'
-  .main_page__body__discount__image-right
-    = image_tag 'роза_главная_баннер.png'
+- @banners.each do |banner|
+  = render 'banners/show', banner: banner
+
+-#.main_page__body__discount
+-#  .main_page__body__discount__image-left{:style => ('bottom: 177px' if controller_name=='discounts')}
+-#    = image_tag 'мал_роза_главная_баннер.png'
+-#  .main_page__body__discount__text
+-#    .main_page__body__discount__text__title
+-#      .main_page__body__discount__text__title__middle_line
+-#      10%
+-#      .main_page__body__discount__text__title__middle_line
+-#    .main_page__body__discount__text__body{style: 'line-height:normal'}
+-#      Модели в нашем онлайн-магазине дешевле на 10% процентов.
+-#    .main_page__index_discounts-item-right-link
+-#      = link_to 'ОНЛАЙН-МАГАЗИН', '#'
+-#  .main_page__body__discount__image-right
+-#    = image_tag 'роза_главная_баннер.png'
 
 .body__article
   .body__article__left
