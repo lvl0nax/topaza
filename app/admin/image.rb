@@ -8,9 +8,7 @@ ActiveAdmin.register Image do
 
   member_action :main, method: :get do
     @image = Image.find(params[:id].to_i)
-    main_image = model_name(@image).constantize.find(@image.imageable_id).images.where(main: true).first
-    main_image.update_attribute('main', false) if main_image.present?
-    notice = @image.update_attribute('main', true) ? 'Image was successfully mainly' : 'Image not main'
+    notice = @image.update_attribute('main', true) ? 'Главное изображение успешно изменено' : 'Изображение не главное'
     set_redirect_path(notice, @image)
   end
 

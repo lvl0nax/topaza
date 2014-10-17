@@ -8,10 +8,12 @@
     = f.select :category_id, options_from_collection_for_select(Category.all, :id, :title, @dress.category_id), include_blank: false, label: false
   = f.inputs 'Material' do
     = f.fields_for :dress_consist do |dress_consist|
-      = dress_select(dress_consist, 'Material', @dress)
+      =# dress_select(dress_consist, 'Material', @dress)
+      = dress_consist.select :material, options_from_collection_for_select(DressConsist.where(property: 'Material'), :id, :title, default_dress_consists(@dress, 'Material')), include_blank: true, label: false
   = f.inputs 'Embroidery' do
     = f.fields_for :dress_consist do |dress_consist|
-      = dress_select(dress_consist, 'Embroidery', @dress)
+      =# dress_select(dress_consist, 'Embroidery', @dress)
+      = dress_consist.select :embroidery, options_from_collection_for_select(DressConsist.where(property: 'Embroidery'), :id, :title, default_dress_consists(@dress, 'Embroidery')), include_blank: true, label: false
   = f.inputs 'Images' do
     = f.fields_for :image do |image|
       = image.file_field :name, multiple: :true, name: 'image[name][]'

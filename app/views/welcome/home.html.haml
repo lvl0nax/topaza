@@ -67,14 +67,14 @@
     %a{ href: url_for(dress) }
       .dress_item
         .dress_items__image_container
-          = image_tag dress.images.first.name_url(:dress_small)
+          = image_tag dress.images.main.name_url(:dress_small)
           .body__collections__item__name
             = dress.title
           .body__collections__item__underline
           .body__collections__item__to_fitting
             = dress.category.title
           .dress_item__to_fitting
-            %span.js_to_fitting{ href: '#', data: { id: dress.id, image_src: dress.images.first.name_url(:dress_small) } }
+            %span.js_to_fitting{ href: '#', data: { id: dress.id, image_src: dress.images.main.name_url(:dress_small) } }
               = image_tag asset_path('to_fitting.png')
 
 - @banners.each do |banner|
