@@ -7,6 +7,7 @@ class Dress < ActiveRecord::Base
   has_and_belongs_to_many :dresses, dependent: :nullify
   belongs_to :category
 
+  validates_presence_of :images
   before_save :set_main_image
 
   def set_main_image
