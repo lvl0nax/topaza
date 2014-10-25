@@ -65,6 +65,11 @@ ActiveAdmin.register Dress do
       end
     end
 
+    def destroy
+      dress = Dress.friendly.find(params[:id])
+      dress.destroy
+      redirect_to admin_dresses_path
+    end
     def set_relations(dress, hash)
       # params[:image][:name].each {|name| dress.images << Image.create(name: name)} if params[:image].present?
       dress.images.build(params[:image][:name].map{|str| {name: str} }) if params[:image].present?
