@@ -66,7 +66,8 @@ ActiveAdmin.register Dress do
     end
 
     def set_relations(dress, hash)
-      params[:image][:name].each {|name| dress.images << Image.create(name: name)} if params[:image].present?
+      # params[:image][:name].each {|name| dress.images << Image.create(name: name)} if params[:image].present?
+      dress.images.build(params[:image][:name].map{|str| {name: str} }) if params[:image].present?
       dress.dress_consists << DressConsist.find(hash[:dress_consist][:material].to_i) if hash[:dress_consist][:material].present?
       dress.dress_consists << DressConsist.find(hash[:dress_consist][:embroidery].to_i) if hash[:dress_consist][:embroidery].present?
       dress.category = Category.find(hash[:category_id].to_i)
