@@ -1,14 +1,14 @@
 .new_bride_popup
   .new_bride_popup__title
-    ПОДЕЛИТЕСЬ ИСТОРИЕЙ
+    Поделитесь историей
   .new_bride_popup__error
   %form.new_bride_popup__form{enctype: 'multipart/form-data'}
     .bride_name
-      %input.white_with_underline{type: 'text', name: 'bride[name]', id: 'new_bride_name', placeholder: 'ВАШЕ ИМЯ' }
+      %input.white_with_underline{type: 'text', name: 'bride[name]', id: 'new_bride_name', placeholder: 'Ваше имя' }
     .dress_name
-      %input.white_with_underline{type: 'text', name: 'bride[dress_name]', id: 'new_bride_dress_name', placeholder: 'НАЗВАНИЕ ПЛАТЬЯ' }
+      %input.white_with_underline{type: 'text', name: 'bride[dress_name]', id: 'new_bride_dress_name', placeholder: 'Модель вашего платья' }
     .comment
-      %input.white_with_underline{type: 'text', name: 'bride[comment]', id: 'new_bride_comment', placeholder: 'КОММЕНТАРИЙ' }
+      %textarea.white_with_underline{style:"height: 173px; width: 90px;", type: 'comment', name: 'bride[comment]', id: 'new_bride_comment', placeholder: 'Расскажите нам о своих впечатлениях, выборе платья или образа, реакции вашего любимого или о том, о чём захотите.' }
     .bride_picture
       .bride_picture__input
         %input{id: 'new_bride_fileupload', type: 'file', name: 'bride[picture]'}
