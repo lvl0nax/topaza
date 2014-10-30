@@ -4,17 +4,16 @@
   .brides_message
     В приватных беседах с нашими гостями мы уловили одну тенденцию. Красиво одеваться, независимо от повода, хочет каждая женщина. Однако просто "одеться красиво" - это только половина мечты.
 .brides__container
-  .brides_container__before_banner
-    - (brides = @brides.first(6)).each do |b|
-      = render partial: 'bride_item', locals: {bride: b}
-    - if brides.size < 6
+  - @brides.each_with_index do |b, i|
+    = render partial: 'bride_item', locals: {bride: b}
+    - if i == 5
+      = render 'banners/subscribe_banner'
       = render 'add_bride_item'
-  = render 'banners/subscribe_banner'
-  - if brides.size == 6
-    .brides_container__after_banner
-      = render 'add_bride_item'
-      - @brides.limit(5).offset(6).each do |b|
-        = render partial: 'bride_item', locals: {bride: b}
+
+  - if @brides.size < 6
+    = render 'add_bride_item'
+    = render 'banners/subscribe_banner'
+
   .navigation_publication
     = will_paginate @brides, previous_label: 'ОБРАТНО', next_label: 'ДАЛЬШЕ'
 = render 'layouts/footer_contacts'
