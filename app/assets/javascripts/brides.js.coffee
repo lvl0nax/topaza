@@ -1,10 +1,8 @@
 PopUpShow = ->
   $(".popup_container").show()
-  div_with_text = $(".comment__length")
   $("#new_bride_comment").keyup ->
     count = 255 - $("#new_bride_comment").val().length
-    div_with_text.empty()
-    div_with_text.append "Осталось " + count + " символа(ов). <br/>"
+    $(".comment__length").html "Осталось " + count + " символа(ов)."
 
 PopUpHide = ->
   $(".popup_container").hide()
