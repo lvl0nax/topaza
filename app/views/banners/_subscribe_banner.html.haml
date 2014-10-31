@@ -1,17 +1,19 @@
 .brides_container__banner_subscribe
   %span.banner__text
-    ПОДПИСЫВАЙТЕСЬ И СЛЕДИТЕ ЗА ОБНОВЛЕНИЯМИ
+    Читайте о нас и наших невестах
   %span.banner__links
-    %a.banner__links__vk
-      .banner__links__title
-        VKONTAKTE
-      .banner__links__underline
-      .banner__links__address
-        vk.com/topazapella
-    %a.banner__links__instagram
-      .banner__links__title
-        INSTAGRAM
-      .banner__links__underline
-      .banner__links__address
-        @topazapell_couture
+    = link_to 'http://vk.com/topazapella' do
+      .banner__links__vk
+        .banner__links__title
+          VKONTAKTE
+        .banner__links__underline
+        .banner__links__address
+          vk.com/topazapella
+    = link_to 'http://instagram.com/topazapella_couture' do
+      .banner__links__instagram
+        .banner__links__title
+          INSTAGRAM
+        .banner__links__underline
+        .banner__links__address
+          @topazapella_couture
   .clearfix

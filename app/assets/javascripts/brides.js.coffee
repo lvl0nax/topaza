@@ -1,5 +1,8 @@
 PopUpShow = ->
   $(".popup_container").show()
+  $("#new_bride_comment").keyup ->
+    count = 255 - $("#new_bride_comment").val().length
+    $(".comment__length").html "Осталось " + count + " символа(ов)."
 
 PopUpHide = ->
   $(".popup_container").hide()
@@ -75,6 +78,6 @@ $(document).on 'click', '.js_submit_button', (e)->
       processData: false
     ).done (msg)->
       if msg['status'] == 0
-        alert 'Не предвиденная ошибка. Пожалуйста, повторите попытку позже.'
+        alert 'Непредвиденная ошибка. Пожалуйста, повторите попытку позже.'
     PopUpHide()
 
