@@ -1,7 +1,7 @@
 ymaps.ready(init);
 function init () {
     var myMap = new ymaps.Map('contacts_body_map', {
-            center: [59.937886, 30.344604],
+            center: [59.93609814, 30.35774577],
             zoom: 17
         }),
         markRudneva = new ymaps.Placemark([60.048392, 30.367005], {
@@ -18,8 +18,8 @@ function init () {
             // её "ножки" (точки привязки).
             iconImageOffset: [-3, -42]
         }),
-        markBelinskogo = new ymaps.Placemark([59.937886, 30.344604], {
-            hintContent: "ул. Белинского, д.1 <br/>(812) 272-55-84"
+        markBelinskogo = new ymaps.Placemark([59.93609814, 30.35774577], {
+            hintContent: "ул. Жуковского, д.22 <br/>(812) 272-55-84"
         }, {
             // Опции.
             // Необходимо указать данный тип макета.
