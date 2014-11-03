@@ -15,4 +15,13 @@ module ApplicationHelper
       else 790
     end
   end
+
+  def text_subscribe_banner
+    if controller_name == 'brides'
+       concat "Читайте о нас и наших невестах"
+    else
+       concat "ПОДПИСЫВАЙТЕСЬ И СЛЕДИТЕ ЗА ОБНОВЛЕНИЯМИ"
+    end
+  end
 end
+
