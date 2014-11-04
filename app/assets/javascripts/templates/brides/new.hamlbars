@@ -8,7 +8,7 @@
     .dress_name
       %input.white_with_underline{type: 'text', name: 'bride[dress_name]', id: 'new_bride_dress_name', placeholder: 'Модель вашего платья' }
     .comment
-      %textarea.white_with_underline{style:"height: 173px; width: 90px;", type: 'comment', name: 'bride[comment]', id: 'new_bride_comment', placeholder: 'Расскажите нам о своих впечатлениях, выборе платья или образа, реакции вашего любимого или о том, о чём захотите.' }
+      %textarea.white_with_underline{style:"height: 176px; width: 90px;", type: 'comment', name: 'bride[comment]', id: 'new_bride_comment', placeholder: 'Расскажите нам о своих впечатлениях, выборе платья или образа, реакции вашего любимого или о том, о чём захотите.' }
     .comment__length
     .bride_picture
       .bride_picture__input
