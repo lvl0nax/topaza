@@ -1,8 +1,12 @@
 PopUpShow = ->
   $(".popup_container").show()
-  $("#new_bride_comment").keyup ->
+  $("#new_bride_comment").keydown (e)->
     count = 255 - $("#new_bride_comment").val().length
-    $(".comment__length").html "Осталось " + count + " символа(ов)."
+    if count < 0
+      e.preventDefault()
+      $(".comment__length").html '<p style="color: red">Сообщение может содержать не более 255 символов</p>'
+    else
+      $(".comment__length").html "Осталось " + count + " символа(ов)."
 
 PopUpHide = ->
   $(".popup_container").hide()
