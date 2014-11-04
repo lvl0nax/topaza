@@ -18,9 +18,9 @@ module ApplicationHelper
 
   def text_subscribe_banner
     if controller_name == 'brides'
-       concat "Читайте о нас и наших невестах"
+      'Читайте о нас и наших невестах'
     else
-       concat "ПОДПИСЫВАЙТЕСЬ И СЛЕДИТЕ ЗА ОБНОВЛЕНИЯМИ"
+      'ПОДПИСЫВАЙТЕСЬ И СЛЕДИТЕ ЗА ОБНОВЛЕНИЯМИ'
     end
   end
 end
