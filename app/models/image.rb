@@ -1,8 +1,9 @@
 class Image < ActiveRecord::Base
   mount_uploader :name, ImageUploader
   belongs_to :imageable, polymorphic: true
+  acts_as_list
 
-  default_scope { order('id') }
+  default_scope { order('position') }
 
   scope :main, ->{ where(main: true).exists? ? where(main: true).first : first }
 

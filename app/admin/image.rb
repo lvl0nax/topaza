@@ -12,6 +12,14 @@ ActiveAdmin.register Image do
     set_redirect_path(notice, @image)
   end
 
+  collection_action :sort, :method => :post do
+    @images = Dress.find(Image.find(params[:image_id].to_i).imageable_id).images
+    @images.each do |image|
+      image.update_attribute('position', params[:sortable].index(image.id.to_s) + 1)
+    end
+    render nothing: true
+  end
+
   controller do
     def destroy
       @image = Image.find(params[:id].to_i)
