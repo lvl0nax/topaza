@@ -1,7 +1,9 @@
 - if item.persisted?
-  - item.images.each do |image|
-    %br
-    = image_tag(image.name.url(:admin_show))
-    - unless image.main
-      = link_to 'Сделать главной', main_admin_image_path(image), data: { confirm: 'Вы правда хотите сделать это изображение главным?' }
-    = link_to 'Удалить', admin_image_path(image), method: :delete, data: { confirm: 'Вы уверены, что хотите удалить изображение?' }
+  %ul#images_list
+    - item.images.each do |image|
+      %li{:id => "image_#{image.id}"}
+        %span{:class => ("handle" if controller_name == 'dresses')}
+          = image_tag(image.name.url(:admin_show))
+        - unless image.main
+          = link_to 'Сделать главной', main_admin_image_path(image), data: { confirm: 'Вы правда хотите сделать это изображение главным?' }
+        = link_to 'Удалить', admin_image_path(image), method: :delete, data: { confirm: 'Вы уверены, что хотите удалить изображение?' }

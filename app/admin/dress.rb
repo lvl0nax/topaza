@@ -1,6 +1,10 @@
 ActiveAdmin.register Dress do
   form partial: 'admin/dresses/form'
+  config.sort_order = 'position_asc'
 
+  index do
+    render 'admin/dresses/index'
+  end
   show do |dress|
     attributes_table do
       row :title
@@ -25,6 +29,14 @@ ActiveAdmin.register Dress do
       end
     end
     active_admin_comments
+  end
+
+  collection_action :sort, :method => :post do
+    @dresses = Dress.all
+    @dresses.each do |dress|
+      dress.update_attribute('position', params[:sortable].index(dress.id.to_s) + 1)
+    end
+    render nothing: true
   end
 
   controller do

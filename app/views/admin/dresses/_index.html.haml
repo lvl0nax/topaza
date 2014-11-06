@@ -1,0 +1,68 @@
+%table#index_table_images.index_table.index{:border => '0', :cellpadding => '0', :cellspacing => '0', :paginator => 'true'}
+  %thead
+    %tr
+      %th.col.col-selectable
+        .resource_selection_toggle_cell
+          %input#collection_selection_toggle_all.toggle_all{:name => 'collection_selection_toggle_all', :type => 'checkbox'}
+      %th.sortable.sorted-desc.col.col-id
+        %a{:href => '/admin/dresses?order=id_asc'} Id
+      %th.sortable.col.col-title
+        %a{:href => '/admin/dresses?order=title_desc'} Title
+      %th.sortable.col.col-body
+        %a{:href => '/admin/dresses?order=body_desc'} Body
+      %th.sortable.col.col-seo_title
+        %a{:href => '/admin/dresses?order=seo_title_desc'} Seo Title
+      %th.sortable.col.col-seo_description
+        %a{:href => '/admin/dresses?order=seo_description_desc'} Seo Description
+      %th.sortable.col.col-seo_keywords
+        %a{:href => '/admin/dresses?order=seo_keywords_desc'} Seo Keywords
+      %th.sortable.col.col-created_at
+        %a{:href => '/admin/dresses?order=created_at_desc'} Created At
+      %th.sortable.col.col-updated_at
+        %a{:href => '/admin/dresses?order=updated_at_desc'} Updated At
+      %th.sortable.col.col-slug
+        %a{:href => '/admin/dresses?order=slug_desc'} Slug
+      %th.col.col-actions
+  %tbody
+    - @dresses.each do |dress|
+      %tr{:id => "dress_#{dress.id}"}
+        %td.col.col-selectable
+          .resource_selection_cell
+            %input#batch_action_item_12.collection_selection{:name => 'collection_selection[]', :type => 'checkbox', :value => '12'}
+        %td.col.col-id
+          %a.resource_id_link{:href => "/admin/dresses/#{dress.slug}"} #{dress.id}
+        %td.col.col-title #{dress.title}
+        %td.col.col-body #{dress.body}
+        %td.col.col-seo_title #{dress.seo_title}
+        %td.col.col-seo_description #{dress.seo_title}
+        %td.col.col-seo_keywords #{dress.seo_title}
+        %td.col.col-created_at #{dress.seo_title}
+        %td.col.col-updated_at #{dress.seo_title}
+        %td.col.col-slug #{dress.seo_title}
+        %td.col.col-actions
+          %a.member_link.view_link{:href => admin_dress_path(dress)} Открыть
+          %a.member_link.edit_link{:href => edit_admin_dress_path(dress)} Изменить
+          %a.member_link.delete_link{'data-confirm' => 'Вы уверены, что хотите удалить это?', 'data-method' => 'delete', :href => admin_dress_path(dress), :rel => 'nofollow'} Удалить
+
+:javascript
+  $("tbody:last").sortable({
+    axis: "y",
+    dropOnEmpty: false,
+    cursor: "crosshair",
+    items: "tr",
+    opacity: 0.4,
+    scroll: true,
+    update: function() {
+      return $.ajax({
+        type: "post",
+        data: {
+          sortable: $("tbody:last").sortable("serialize")
+        },
+        dataType: "script",
+        complete: function(request) {
+          return $("tbody:last").effect("highlight");
+        },
+        url: "/admin/dresses/sort"
+      });
+    }
+  });
