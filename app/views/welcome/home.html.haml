@@ -40,7 +40,7 @@
       .body__dresses__item__image__evening__text
         = I18n.t('dresses', count: @dresses_evening_count)
   .clearfix
-.body__histories
+%a.body__histories{href: histories_path}
   .body__histories__left
     .body__histories__left__title
       .body__histories__item__title__years
@@ -52,7 +52,7 @@
         %br
         TOPAZA PELLA
         //.body__histories__item__title__middle_line
-        %hr{:align => 'center', :width => '297'}
+        %hr{align: 'center', width: '299', color: '#a6a5ad', size: '1px'}
     .body__histories__item__text
       О том, как мы начинали, к чему стремимся, и о том, как день за днём мы приближаемся к невозможному — идеальному свадебному платью.
   .body__histories__right
