@@ -34,7 +34,7 @@ ActiveAdmin.register Dress do
   collection_action :sort_wedding, :method => :post do
     @dresses = Category.first.dresses
     @dresses.each do |dress|
-      dress.update_attribute('position', params[:sortable].index(dress.id.to_s) + 1)
+      dress.update_attribute('position', params[:sortable].gsub('dress[]=', '').split('&').index(dress.id.to_s))
     end
     render nothing: true
   end
@@ -42,7 +42,7 @@ ActiveAdmin.register Dress do
   collection_action :sort_evening, :method => :post do
     @dresses = Category.last.dresses
     @dresses.each do |dress|
-      dress.update_attribute('position', params[:sortable].index(dress.id.to_s) + 1)
+      dress.update_attribute('position', params[:sortable].gsub('dress[]=', '').split('&').index(dress.id.to_s))
     end
     render nothing: true
   end
