@@ -1,10 +1,10 @@
 ActiveAdmin.register Dress do
   form partial: 'admin/dresses/form'
   config.sort_order = 'position_asc'
-
-  index do
-    render 'admin/dresses/index'
-  end
+#
+  #index do
+  #  render 'admin/dresses/index'
+  #end
   show do |dress|
     attributes_table do
       row :title

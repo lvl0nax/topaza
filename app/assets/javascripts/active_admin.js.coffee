@@ -16,19 +16,3 @@ $(document).ready ->
         complete: (request) ->
           $("#images_list").effect "highlight"
         url: "/admin/images/sort"
-
-  $("tbody:last").sortable
-    axis: "y"
-    dropOnEmpty: false
-    cursor: "crosshair"
-    items: "tr"
-    opacity: 0.4
-    scroll: true
-    update: ->
-      $.ajax
-        type: "post"
-        data: sortable: $("tbody:last").sortable("serialize")
-        dataType: "script"
-        complete: (request) ->
-          $("tbody:last").effect "highlight"
-        url: "/admin/dresses/sort"
