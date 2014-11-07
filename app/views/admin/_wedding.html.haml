@@ -10,7 +10,7 @@
       %tr{:id => "dress_#{dress.id}"}
         %td.col.col-title #{dress.title}
         %td.col.col-image
-          = image_tag dress.images.main.name.url(:dress_small)
+          = image_tag dress.images.main.name.url(:dress_small), class: 'img-for-dress'
 
 :javascript
   $("tbody:last").sortable({
@@ -30,7 +30,7 @@
         complete: function(request) {
           return $("tbody:last").effect("highlight");
         },
-        url: "/admin/dresses/sort"
+        url: "/admin/dresses/sort_wedding"
       });
     }
   });

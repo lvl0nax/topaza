@@ -31,8 +31,16 @@ ActiveAdmin.register Dress do
     active_admin_comments
   end
 
-  collection_action :sort, :method => :post do
-    @dresses = Dress.all
+  collection_action :sort_wedding, :method => :post do
+    @dresses = Category.first.dresses
+    @dresses.each do |dress|
+      dress.update_attribute('position', params[:sortable].index(dress.id.to_s) + 1)
+    end
+    render nothing: true
+  end
+
+  collection_action :sort_evening, :method => :post do
+    @dresses = Category.last.dresses
     @dresses.each do |dress|
       dress.update_attribute('position', params[:sortable].index(dress.id.to_s) + 1)
     end
