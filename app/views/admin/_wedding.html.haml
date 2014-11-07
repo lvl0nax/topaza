@@ -1,0 +1,36 @@
+%table#index_table_images.index_table.index{:border => '0', :cellpadding => '0', :cellspacing => '0', :paginator => 'true'}
+  %thead
+    %tr
+      %th.sortable.col.col-title
+        %a{:href => '/admin/dresses?order=title_desc'} Title
+      %th.sortable.col.col-image
+        %a{:href => '/admin/dresses?order=body_desc'} Image
+  %tbody
+    - Category.first.dresses.each do |dress|
+      %tr{:id => "dress_#{dress.id}"}
+        %td.col.col-title #{dress.title}
+        %td.col.col-image
+          = image_tag dress.images.main.name.url(:dress_small)
+
+:javascript
+  $("tbody:last").sortable({
+    axis: "y",
+    dropOnEmpty: false,
+    cursor: "crosshair",
+    items: "tr",
+    opacity: 0.4,
+    scroll: true,
+    update: function() {
+      return $.ajax({
+        type: "post",
+        data: {
+          sortable: $("tbody:last").sortable("serialize")
+        },
+        dataType: "script",
+        complete: function(request) {
+          return $("tbody:last").effect("highlight");
+        },
+        url: "/admin/dresses/sort"
+      });
+    }
+  });
