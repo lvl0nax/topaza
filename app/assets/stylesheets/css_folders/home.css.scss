@@ -363,6 +363,13 @@ a.body__histories{
   min-width: 1024px;
   max-width: 1400px;
   background-size: 100% auto;
+  text-align: justify;
+  .dress_sketch{
+    width: 33%;
+    display: inline-block;
+    text-align: center;
+    overflow-x: hidden;
+  }
 }
 
 

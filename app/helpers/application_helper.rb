@@ -23,5 +23,20 @@ module ApplicationHelper
       'ПОДПИСЫВАЙТЕСЬ И СЛЕДИТЕ ЗА ОБНОВЛЕНИЯМИ'
     end
   end
+
+  def title(page_title)
+    content_for(:title) { page_title.to_s + ' - Topaza Pella' }
+  end
+
+  def meta_keywords(content)
+    content_for(:keywords) { content.to_s }
+  end
+
+  def meta_description(content)
+    if content.present?
+      content_for(:description) { strip_tags(content.truncate(150, separator: ' ').to_s) }
+    end
+  end
+
 end
 

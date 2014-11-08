@@ -1,7 +1,9 @@
 !!!
 %html
   %head
-    %title Topaza
+    %title= content_for?(:title) ? yield(:title) : "Свадебный салон - Topaza Pella"
+    %meta{ name: 'keywords', content: content_for?(:keywords) ? yield(:keywords) : 'Topaza Pella, топаза пелла, свадебные платья, вечерние платья, платья ручной работы' }
+    %meta{ name: 'description', content: content_for?(:description) ? yield(:description) : 'Topaza Pella - свадебные платья и вечерние платья ручной работы.' }
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => false
     = javascript_include_tag 'application', 'data-turbolinks-track' => false
     = csrf_meta_tags

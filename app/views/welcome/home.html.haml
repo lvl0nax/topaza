@@ -63,37 +63,12 @@
   %br
   КОТОРЫЙ ВЫ ДАВНО ДЛЯ СЕБЯ ЗАГАДАЛИ
 .body__collections
-  - Dress.first(3).each do |dress|
-    %a{ href: url_for(dress) }
-      .dress_item
-        .dress_items__image_container
-          = image_tag dress.images.main.name_url(:dress_small)
-          .body__collections__item__name
-            = dress.title
-          .body__collections__item__underline
-          .body__collections__item__to_fitting
-            = dress.category.title
-          .dress_item__to_fitting
-            %span.js_to_fitting{ href: '#', data: { id: dress.id, image_src: dress.images.main.name_url(:dress_small) } }
-              = image_tag asset_path('to_fitting.png')
+  - (1..9).to_a.sample(3).each do |sketch|
+    .dress_sketch
+      = image_tag asset_path("#{sketch}.jpg")
 
 - @banners.each do |banner|
   = render 'banners/show', banner: banner
-
--#.main_page__body__discount
--#  .main_page__body__discount__image-left{:style => ('bottom: 177px' if controller_name=='discounts')}
--#    = image_tag 'мал_роза_главная_баннер.png'
--#  .main_page__body__discount__text
--#    .main_page__body__discount__text__title
--#      .main_page__body__discount__text__title__middle_line
--#      10%
--#      .main_page__body__discount__text__title__middle_line
--#    .main_page__body__discount__text__body{style: 'line-height:normal'}
--#      Модели в нашем онлайн-магазине дешевле на 10% процентов.
--#    .main_page__index_discounts-item-right-link
--#      = link_to 'ОНЛАЙН-МАГАЗИН', '#'
--#  .main_page__body__discount__image-right
--#    = image_tag 'роза_главная_баннер.png'
 
 .body__article
   .body__article__left
