@@ -44,6 +44,10 @@ class PictureUploader < CarrierWave::Uploader::Base
     process resize_to_fill: [467, 600]
   end
 
+  version :history_main_image, :if => :is_main_image? do
+    process resize_to_fill: [451, 420]
+  end
+
   # Provide a default URL as a default if there hasn't been a file uploaded:
   # def default_url
   #   # For Rails 3.1+ asset pipeline compatibility:
@@ -95,6 +99,10 @@ class PictureUploader < CarrierWave::Uploader::Base
 
   def is_category? picture
     model.class.name == 'Category'
+  end
+
+  def is_main_image? picture
+    model.class.name == 'MainImage'
   end
 
 end

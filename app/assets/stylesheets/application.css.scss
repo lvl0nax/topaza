@@ -296,3 +296,10 @@ html, body {
 .current_page_link{
   font-weight: bold;
 }
+
+.pagination{
+  .current{
+    font-weight: bold;
+    font-style: italic;
+  }
+}

@@ -4,7 +4,7 @@
   margin: 0 auto;
   min-width: 1024px;
   max-width: 1400px;
-  background: image-url('главная_хедер.png');
+  background: image-url('главная_хедер.jpg');
   background-size: 100% 100%;
   color: #000000;
   .body__header__text{
@@ -117,7 +117,7 @@
 
 .body__dresses__item__image__evening{
   display: inline-block;
-  width: 33.3%;
+  width: 33.35%;
   margin: 0px -2.5px -2px -0.4px;
   overflow: hidden;
   position: relative;
@@ -271,7 +271,8 @@ a.body__histories{
     width: 66.75%;
     margin: -1.5px 0px;
     img {
-      width: 100%;
+      width: 50%;
+      float: left;
     }
   }
 }
@@ -364,12 +365,6 @@ a.body__histories{
   max-width: 1400px;
   background-size: 100% auto;
   text-align: justify;
-  .dress_sketch{
-    width: 33%;
-    display: inline-block;
-    text-align: center;
-    overflow-x: hidden;
-  }
 }
 
 
@@ -541,8 +536,12 @@ a.body__histories{
     width: 66%;
     float: left;
     margin-left: 20px;
-    img{
-      max-width: 100%;
+    .dress_sketch{
+      padding-top: 5px;
+      width: 33%;
+      display: inline-block;
+      text-align: center;
+      overflow-x: hidden;
     }
   }
   .body__article__right{
