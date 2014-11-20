@@ -9,7 +9,7 @@
       = link_to publication_path(publication) do
         .show_publication_item
           .show_publication__left
-            = image_tag publication.images.first.name_url(:p_index)
+            = image_tag publication.images.main.name_url(:p_index)
           .show_publication__right
             .show_publication__right__date
               .middle_line
