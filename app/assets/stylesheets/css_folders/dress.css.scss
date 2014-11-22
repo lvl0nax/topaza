@@ -187,7 +187,6 @@
   width: 33.3%;
   margin: -3px -2px;
   overflow: hidden;
-  cursor: pointer;
 }
 .dress_items__image_container{
   position: relative;
@@ -270,18 +269,41 @@
   line-height: 25px;
   width: 69%;
 }
-.info_block__rose{
-  background: image-url('rose_dresses.png') no-repeat 0 bottom;
-}
-.info_block__gem{
-  padding-top: 4%;
-  background: image-url('gemchug.png') no-repeat;
-  .dresses_info_block__title{
-    margin-top: 0;
+.dress_info{
+  position: relative;
+  img{
+    width: 100%;
   }
 }
-.info_block__silk{
-  background: image-url('silk_dresses.png') no-repeat 0 bottom;
-  background-size: 102%;
+.dress_info__bridal1{
+  position: absolute;
+  top: calc(50% - 120px);
+}
+
+.dress_info__title{
+  width: 90%;
+  padding: 0 5%;
+  margin: 0;
+  text-align: center;
+}
+.dress_info__underline{
+  width: 40%;
+  margin: 10px 30% 20px;
+}
+.dress_info__text{
+  width: 70%;
+  margin: 0 15%;
+  text-align: center;
+}
+.dress_info__bridal2{
+  position: absolute;
+  top: calc(50% - 158px);
+  .dresses_info_block__title{
+    line-height: 50px;
+  }
+}
+.dress_info__bridal3{
+  position: absolute;
+  top: calc(50% - 147px);
 }
 /*------------------------------ end dresses index page ---------------------------------*/
