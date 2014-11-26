@@ -44,13 +44,13 @@ ssh_options[:forward_agent] = true
 set :application,     "topaza"
 
 # Сервер размещения проекта.
-set :deploy_server,   "neon.locum.ru"
+set :deploy_server,   "sulfur.locum.ru"
 
 # Не включать в поставку разработческие инструменты и пакеты тестирования.
 set :bundle_without,  [:development, :test]
 
-set :user,            "hosting_lvl0nax"
-set :login,           "lvl0nax"
+set :user,            "hosting_topazapella"
+set :login,           "topazapella"
 set :use_sudo,        false
 set :deploy_to,       "/home/#{user}/projects/#{application}"
 set :unicorn_conf,    "/etc/unicorn/#{application}.#{login}.rb"
