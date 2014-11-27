@@ -2,6 +2,7 @@
 %html
   %head
     %title= content_for?(:title) ? yield(:title) : "Свадебный салон - Topaza Pella"
+    = favicon_link_tag 'favicon.ico', type: 'image/x-icon', href: '/favicon.ico'
     %meta{ name: 'keywords', content: content_for?(:keywords) ? yield(:keywords) : 'Topaza Pella, топаза пелла, свадебные платья, вечерние платья, платья ручной работы' }
     %meta{ name: 'description', content: content_for?(:description) ? yield(:description) : 'Topaza Pella - свадебные платья и вечерние платья ручной работы.' }
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => false
