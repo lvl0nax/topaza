@@ -22,7 +22,6 @@
 }
 .show_dress__left__title{
   font-family: 'Oldsman';
-  src: url('Oldsman-No_1/Oldsman-No.1.otf');
   color:  #13131c;
   font-size: 60px;
   line-height: 55px;
@@ -277,12 +276,12 @@
 }
 .dress_info__bridal1{
   position: absolute;
-  top: calc(50% - 120px);
+  top: 30%;
 }
 
 .dress_info__title{
-  width: 90%;
-  padding: 0 5%;
+  width: 96%;
+  padding: 0 2%;
   margin: 0;
   text-align: center;
 }
@@ -291,19 +290,19 @@
   margin: 10px 30% 20px;
 }
 .dress_info__text{
-  width: 70%;
-  margin: 0 15%;
+  width: 80%;
+  margin: 0 10%;
   text-align: center;
 }
 .dress_info__bridal2{
   position: absolute;
-  top: calc(50% - 158px);
+  top: 25%;
   .dresses_info_block__title{
     line-height: 50px;
   }
 }
 .dress_info__bridal3{
   position: absolute;
-  top: calc(50% - 147px);
+  top: 25%;
 }
 /*------------------------------ end dresses index page ---------------------------------*/

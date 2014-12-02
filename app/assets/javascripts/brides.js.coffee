@@ -19,16 +19,21 @@ readUrl = (input)->
         dataUrl = e.target.result
         img = document.createElement('img')
         img.src = dataUrl
-        width = img.width
-        height = img.height
-        if width/height >= 126/171
+        if (img.width == 0 && img.height == 0)
           img.height = 171
-          img.width = width*171/height
-          style = "margin-left: -#{(img.width - 126)/2}px;"
-        else
           img.width = 126
-          img.height = height*126/width
-          style = "margin-top: -#{(img.height - 171)/2}px;"
+          style = ''
+        else
+          width = img.width
+          height = img.height
+          if width/height >= 126/171
+            img.height = 171
+            img.width = width*171/height
+            style = "margin-left: -#{(img.width - 126)/2}px;"
+          else
+            img.width = 126
+            img.height = height*126/width
+            style = "margin-top: -#{(img.height - 171)/2}px;"
         $('.js_upload_image').html(img)
         $('.js_upload_image img').attr('style', style)
     )(f)
@@ -61,7 +66,10 @@ $(document).on 'click', '.js_add_new_bride', (e)->
   e.preventDefault()
   $('.popup_content').html(JST['brides/new'])
   PopUpShow()
-  $( "body" ).scrollTop(10);
+  if window.chrome?
+    $( "body" ).scrollTop(10);
+  else
+    $('html').animate({scrollTop:0}, 'slow');
 
 $(document).on 'click', '.js_close_popup', (e)->
   e.preventDefault()

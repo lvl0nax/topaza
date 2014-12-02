@@ -61,7 +61,8 @@ a.submit_button{
   line-height: 20px;
 }
 .bride_picture__input{
-  display: none;
+  position: absolute;
+  visibility: hidden;
 }
 .comment__length{
   color: #868686;
