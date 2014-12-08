@@ -19,8 +19,11 @@ require 'bundler/capistrano'
 after "deploy:update_code", :copy_database_config
 task :copy_database_config, roles => :app do
   db_config = "#{shared_path}/config/database.yml"
-  prod_config = "#{shared_path}/config/production.rb"
   run "cp #{db_config} #{release_path}/config/database.yml"
+end
+after "deploy:update_code", :copy_config_production
+task :copy_config_production, roles => :app do
+  prod_config = "#{shared_path}/config/production.rb"
   run "cp #{prod_config} #{release_path}/config/environments/production.rb"
 end
 

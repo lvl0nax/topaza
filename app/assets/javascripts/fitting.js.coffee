@@ -27,8 +27,9 @@ $(document).on 'click', '.js_fitting_submit', (e)->
   name = $('#fitting_name').val()
   phone = $('#fitting_phone').val()
   ids = []
-  localStorage['dresses'].split(';').forEach (i) ->
-    ids.push(parseInt(i)) if i.length > 0
+  if localStorage['dresses']?
+    localStorage['dresses'].split(';').forEach (i) ->
+      ids.push(parseInt(i)) if i.length > 0
 
   if validate_fitting(time, name, phone, ids)
     $.ajax(
