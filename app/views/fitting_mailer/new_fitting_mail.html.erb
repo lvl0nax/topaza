@@ -8,7 +8,7 @@
       ФИО: <%= @fitting.name %><br/>
       Телефон: <%= @fitting.phone %><br/>
       Дата: <%=  @fitting.try_date %><br/>
-      Время: <%= @fitting.try_time %><br/>
+      Время: <%= @fitting.try_time.strftime("%H:%M") %><br/>
       <%- @fitting.dresses.each do |dress| %>
         <%= link_to dress_url(dress) do %>
           <%= image_tag(dress.images.main.name_url(:admin_show)) %>
