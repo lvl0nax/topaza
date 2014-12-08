@@ -60,9 +60,9 @@ validate_fitting = (time, name, phone, ids) ->
   unless phone
     flag = false
     errors.append('<div>Введите телефон.</div>')
-  if ids.length == 0 && checkbox.length > 0
-    flag = false
-    errors.append('<div>Добавте платья на примерку.</div>')
+  #if ids.length == 0 && checkbox.length > 0
+  #  flag = false
+  #  errors.append('<div>Добавте платья на примерку.</div>')
   flag
 
 check_available_time = ()->

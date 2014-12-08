@@ -239,6 +239,7 @@ DEPENDENCIES
   jbuilder (~> 1.2)
   jquery-rails
   jquery-ui-rails
+  mail
   mime-types
   mini_magick
   pg

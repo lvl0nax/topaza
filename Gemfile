@@ -65,3 +65,5 @@ gem 'devise'
 gem 'ckeditor'
 gem 'will_paginate', '~> 3.0.5'
 gem 'acts_as_list'
+
+gem 'mail'

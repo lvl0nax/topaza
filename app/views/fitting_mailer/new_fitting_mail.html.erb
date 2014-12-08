@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <p>
+      ФИО: <%= @fitting.name %><br/>
+      Телефон: <%= @fitting.phone %><br/>
+      Дата: <%=  @fitting.try_date %><br/>
+      Время: <%= @fitting.try_time %><br/>
+      <%- @fitting.dresses.each do |dress| %>
+        <%= link_to dress_url(dress) do %>
+          <%= image_tag(dress.images.main.name_url(:admin_show)) %>
+        <%- end %>
+        <br/>
+      <%- end %>
+    </p>
+
+  </body>
+</html>

@@ -9,6 +9,7 @@ class FittingsController < ApplicationController
     fitting = Fitting.new(args)
     fitting.dresses = Dress.find(ids) if ids.present?
     if fitting.save!
+      FittingMailer.new_fitting_mail(fitting).deliver
       render json: {path: confirmation_fittings_path({time: params[:try_time], date: params[:try_date]})}
     else
       render json: {status: 0}
