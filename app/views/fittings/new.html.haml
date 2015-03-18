@@ -87,11 +87,10 @@
     });
   };
 
-  check_available_time();
-
   $(".fitting_content__date_select__calendar").datepicker({
     dayNamesMin: ["Вс", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб"],
     dateFormat: "dd-mm-yy",
+    defaultDate: new Date(),
     firstDay: 1,
     nextText: ">",
     prevText: "<",
@@ -101,6 +100,8 @@
       return check_available_time();
     }
   });
+
+  check_available_time();
 
   var get_dresses;
 
