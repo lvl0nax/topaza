@@ -32,7 +32,7 @@ ActiveAdmin.register Fitting do
     column :phone
     column :try_date
     column :try_time do |fitting|
-      fitting.try_time.to_s(:time)
+      fitting.try(:try_time).try(:to_s, :time)
     end
     actions
   end
