@@ -16,7 +16,7 @@
 .body__dresses.dresses_categories
   = link_to bridal_dresses_path do
     .body__dresses__item__image__bridal
-      = image_tag Category.first.picture.url(:category)
+      = image_tag Category.first.picture.url(:category) if Category.first
       .body__dresses__item__image__bridal__count
         = @dresses_bridal_count
       .body__dresses__item__image__bridal__text
@@ -38,7 +38,7 @@
             ВЕЧЕРНИЕ ПЛАТЬЯ
   = link_to evening_dresses_path do
     .body__dresses__item__image__evening
-      = image_tag Category.offset(1).first.picture.url(:category)
+      = image_tag Category.offset(1).first.picture.url(:category) if Category.offset(1).first
       .body__dresses__item__image__evening__count
         = @dresses_evening_count
       .body__dresses__item__image__evening__text
